@@ -205,16 +205,17 @@ function bootstrap_dss_elc_preprocess_page(&$variables) {
   }
 
   /**
-   *browscap integration
+   * browscap integration
+   *
+   * @todo Resolve using EDDC-76
    * Capture from the User-Agent value the type of device being used to browse the page
    * (Probably should be decoupled and integrated into CSS and JavaScript)
    *
    */
   $browser = browscap_get_browser();
 
-  dpm($browser);
-
-  $is_smartphone_browser = $browser['ismobiledevice'] && preg_match('/iPhone|(?:Android.*?Mobile)|(?:Windows Phone)/', $browser['useragent']);
+  //$is_smartphone_browser = $browser['ismobiledevice'] && preg_match('/iPhone|(?:Android.*?Mobile)|(?:Windows Phone)/', $browser['useragent']);
+  $is_smartphone_browser = false;
 
   /**
    * Ensure that the "Contact Us" link directs users to the Drupal Node only for non-smartphone devices
