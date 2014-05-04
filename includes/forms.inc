@@ -6,6 +6,17 @@
    *
    */
 
+function bootstrap_dss_elc_form_islandora_dss_solr_advanced_search_form_alter(&$form, $form_state, $form_id) {
+
+  foreach($form['terms'] as $key => &$term) {
+
+    if(is_numeric($key)) {
+
+      $term['field-wrapper']['search']['#size'] = 40;
+    }
+  }
+  }
+
 /**
  * griffinj
  * Implements hook_form_alter()
@@ -16,31 +27,6 @@
 function bootstrap_dss_elc_form_alter(&$form, $form_state, $form_id) {
 
   switch($form_id) {
-
-  case 'islandora_dss_solr_advanced_search_form':
-
-    foreach($form['terms'] as $key => &$term) {
-
-      if(is_numeric($key)) {
-
-	$term['field-wrapper']['search']['#size'] = 40;
-      }
-    }
-    break;
-
-    /**
-     * @author griffinj@lafayette.edu
-     * Islandora search functionality needed to be overridden
-     * @see islandora_dss_solr_theme()
-     *
-     */
-    /*
-  case 'islandora_solr_advanced_search_form':
-
-    // Push/append a theming callback on to the array of theming callbacks for the individual form element
-    $form['#theme'] = array('bootstrap_dss_elc_islandora_solr_advanced_search_form');
-    break;
-    */
 
   case 'islandora_solr_simple_search_form':
 
@@ -78,9 +64,14 @@ function bootstrap_dss_elc_form_alter(&$form, $form_state, $form_id) {
     */
     //$form['simple']['#suffix'] = '<a href="#advanced-search-modal" data-toggle="lafayette-dss-modal">Advanced Search</a>';
 
-    
-    
+    //if (isset($form['#form_id']) && !in_array($form['#form_id'], $form_ids) && !isset($form['#node_edit_form']) && isset($form['actions']) && ($form['actions']['#type'] == 'actions')) {
+
     break;
+  }
+
+  if(!array_key_exists('#type', $form['actions'])) {
+
+    $form['actions']['#type'] = 'actions';
   }
 }
 
@@ -89,23 +80,9 @@ function bootstrap_dss_elc_form_alter(&$form, $form_state, $form_id) {
  *
  * @see islandora-solr-advanced-search-form.tpl.php
  */
-function bootstrap_dss_elc_preprocess_bootstrap_lafayette_lib_dss_islandora_solr_advanced_search_form(&$variables) {
 
-  //$form = $variables['form'];
+/*
+function bootstrap_dss_elc_preprocess_islandora_dss_solr_advanced_search_form(&$variables) {
 
-  //foreach($form['terms'] as $key => &$value) {
-  foreach($variables['form']['terms'] as $key => &$value) {
-
-    if(is_numeric($key)) {
-
-      $value['add']['#value'] = '<span class="icon-large"></span>';
-      /*
-	$value['add']['#value'] = '<span class="icon-large"></span>';
-	$value['add']['#ajax']['callback'] = '_bootstrap_dss_elc_islandora_solr_advanced_search_terms';
-
-	$value['search']['#value'] = '';
-	//dpm($value);
-	*/
-    }
-  }
 }
+*/

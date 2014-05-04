@@ -70,8 +70,6 @@ function bootstrap_dss_elc_menu_link__main_menu(&$variables) {
 
 function bootstrap_dss_elc_menu_tree__menu_footer_menu(&$variables) {
 
-  //dpm($variables);
-
   return theme_menu_tree($variables);
 }
 
@@ -83,15 +81,6 @@ function bootstrap_dss_elc_menu_tree__menu_footer_menu(&$variables) {
 function bootstrap_dss_elc_menu_link__menu_footer_menu(&$variables) {
 
   $variables['element']['#attributes']['class'][] = 'footer-menu-item';
-
-  // CSS for "piping" effect
-  // HTML for semantically encoded content
-  /*
-  if(!in_array('last', $variables['element']['#attributes']['class'])) {
-
-    $variables['element']['#below']['#markup'] = '<span class="footer-menu-divider">|</span>';
-  }
-  */
 
   return theme_menu_link($variables);
 }
@@ -114,9 +103,6 @@ function bootstrap_dss_elc_menu_link__menu_authentication_cas(&$variables) {
   */
   $variables['element']['#title'] = '<span title="Lafayette College" class="hybridauth-icon hybridauth-icon-hybridauth-32 hybridauth-icon-hybridauth-32-lafayette"></span><span>&nbsp;Lafayette College</span>';
   $variables['element']['#localized_options']['html'] = TRUE;
-
-  dpm($variables);
-
 
   return theme_menu_link($variables);
 }

@@ -13,13 +13,18 @@
     Drupal.theme.prototype.bootstrapDssLdr = function() {
 
 	/**
-	 * @author griffinj
+	 * @author griffinj@lafayette.edu
+	 * Ensure that menu dropdowns are properly initialized
+	 */
+	$('.dropdown-toggle').dropdown();
+
+	/**
+	 * @author griffinj@lafayette.edu
 	 * Ensure that the navbar collapse is triggered
 	 *
 	 */
 	$('#menu-toggle-icon').click(function(e) {
 
-		//$('.nav-collapse').collapse();
 		$('.nav-collapse').collapse('toggle');
 	    });
 
@@ -37,11 +42,6 @@
 	     */
 	    if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.appVersion) ) {
 
-		//if($( window ).width() <= 510) {
-		//if($( window ).width() <= 494) {
-		//if($( window ).width() <= 459) {
-		//if($( window ).width() <= 478) {
-		//if($( window ).width() <= 508) {
 		if($( window ).width() <= 534) {
 
 		    $('.navbar-inner').addClass('navbar-fixed-width');		    
@@ -52,7 +52,6 @@
 	    }
 
 	    // Ensure that the menu items are displayed in a format appropriate to smartphone and tablet devices
-	    //if($( window ).width() <= 480) {
 	    if($( window ).width() < 1008) {
 
 		$('.navbar-inner-container').insertAfter($('.menu-toggle-container'));
@@ -63,32 +62,12 @@
 	    } else {
 
 		$('.navbar-inner-container').insertBefore($('.auth-share-simple-search-container'));
-		//$('.navbar-inner-container').addClass('desktop');
-		//$('#menu-toggle-control-container').css('display', 'none');
 	    }
 
-	    // Adjust the DSS link in response to the size of the browser
-	    //if($( window ).width() <= 754 ) {
 	    if($( window ).width() <= 736 ) {
-
-		// Refactor
-		/*
-		if($('#navbar .navbar-header h1 a').text() != 'DSS') {
-
-		    $(document).data('Drupal.theme.bootstrap.dss', $('#navbar .navbar-header h1 a').text());
-		    $('#navbar .navbar-header h1 a').text('DSS');
-		}
-		*/
 
 		$('#navbar .navbar-header h1 a').addClass('navbar-header-collapsed');
 	    } else {
-
-		/*
-		if($('#navbar .navbar-header h1 a').text() == 'DSS') {
-
-		    $('#navbar .navbar-header h1 a').text( $(document).data('Drupal.theme.bootstrap.dss'));
-		}
-		*/
 
 		$('#navbar .navbar-header h1 a').removeClass('navbar-header-collapsed');
 	    }
@@ -97,7 +76,6 @@
 	     * @todo Refactor all
 	     *
 	     */
-	    //if($( window ).width() <= 480 ) {
 	    if($( window ).width() <= 470 ) {
 
 		$('#carousel-featured-collection .carousel-caption-heading').addClass('carousel-collapsed');
@@ -251,24 +229,6 @@
 
 	    $('.main-container').addClass('snap-collapse-left');
 	
-	    /*
-	    $('.snap-trigger').click(function(e) {
-		    
-		    if(/Refine/.exec($(this).text())) {
-
-			//$(this).text('Hide');
-			$(this).html( $(this).html().replace('Refine', 'Hide') );
-		    } else {
-
-			//$(this).text('Refine');
-			//$(this).html();
-			$(this).html( $(this).html().replace('Hide', 'Refine') );
-		    }
-
-		    $('.main-container').toggleClass('snap-expand-left');
-		    $('.snap-drawers').toggleClass('snap-expand-left');
-		}).parent().toggleClass('loaded').children().toggleClass('shown').children('img').toggleClass('shown');
-	    */
 	    snapTriggerHandler();
 	    
 	    /**
