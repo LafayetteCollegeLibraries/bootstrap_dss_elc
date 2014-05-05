@@ -632,3 +632,111 @@ html.js body.html div.search-modal div#advanced-search-modal.lafayette-dss-modal
 	
 	margin-bottom:8px;
 }
+
+/**
+ * @author griffinj@lafayette.edu
+ * Form styling
+ *
+ */
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+
+    height: inherit !important;
+}
+
+.loan-row {
+
+    clear: both;
+    border-bottom: 1px solid grey;
+}
+
+.book-column {
+
+    float: left;
+    width: 100%;
+    margin: auto 8px;
+}
+
+.loan-row-final .book-column {
+
+    float: none;
+}
+
+.book-column.body-field {
+
+    width: 100%;
+}
+
+.book-column.body-field div#body-add-more-wrapper div.text-format-wrapper div.control-group div.controls {
+
+    width: auto;
+}
+
+/**
+ * Restructure this
+ *
+ */
+
+div.controls {
+
+    width: auto !important;
+}
+
+.column-item-format {
+
+    width: 12%;
+}
+
+.column-item-book-periodical {
+
+    width: 80%;
+}
+
+#edit-field-book-or-periodical-und.form-radios div.form-type-radio {
+
+    float: left;
+    width: 10%;
+}
+
+input, textarea, .uneditable-input {
+
+    width: auto !important;
+}
+
+.form-actions {
+
+    background-color: inherit !important;
+}
+
+/**
+ * Tokenized fields
+ *
+ */
+.token-list {
+
+    list-style: none;
+}
+
+.token-list li {
+
+    margin: 8px auto;
+}
+
+.token {
+
+    background-color: grey;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    cursor: pointer;
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    height: 11px;
+    line-height: 11px;
+    padding: 5px;
+}
+
+.token-x {
+
+    font-size: 16px;
+    margin-left: 12px;
+}
