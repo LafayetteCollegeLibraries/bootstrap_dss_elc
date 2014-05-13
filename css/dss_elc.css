@@ -2347,3 +2347,55 @@ article {
 	
 	border:0px;
 }
+
+/* by Thom: borders between divs on add item */
+
+#edit-actions {
+	
+	border:0px;
+}
+
+/* by Thom: backgrounds on divs on add item */
+
+.loan-row {
+	
+	background-color: #f7eedd;
+	border: 1px solid #d6cdbc;
+	overflow:auto;
+	padding:10px;
+}
+
+/* by Thom: position elements on add item */
+
+.book-column {
+	
+	width:auto;
+	clear:both;
+}
+
+.book-column.single-value-field.column-item-book-periodical {
+	
+	clear:none;
+}
+
+#edit-field-book-or-periodical-und.form-radios div.form-type-radio {
+	
+	width:auto;
+	padding-right:10px;
+}
+
+#edit-actions {
+	
+	padding:0px;
+	margin:0px;
+}
+
+#edit-submit {
+	
+	margin-bottom:8px;
+}
+
+#edit-publish {
+	
+	margin-bottom:8px;
+}
