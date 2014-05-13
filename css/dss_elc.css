@@ -2325,7 +2325,7 @@ article {
 
 .table-striped tbody > tr:nth-child(2n+1) > td, .table-striped tbody > tr:nth-child(2n+1) > th {
 	
-	background:#E4DBCA;
+	background:#f7eedd;
 }
 
 /* by Thom: buttons on add person */
@@ -2353,6 +2353,35 @@ article {
 #edit-actions {
 	
 	border:0px;
+}
+
+/* by Thom: hide unnecessary elements on add person */
+
+.field-multiple-drag {
+	
+	display:none;
+}
+
+.tabledrag-toggle-weight-wrapper {
+	
+	display:none;
+}
+
+/* by Thom: backgrounds on divs on add person */
+
+.human-row {
+	
+	background-color: #f7eedd;
+	border: 1px solid #d6cdbc;
+	overflow:auto;
+	padding:10px;
+}
+
+/* by Thom: positioning of elements on add person */
+
+.draggable > td {
+	
+	padding:0px;
 }
 
 /* by Thom: backgrounds on divs on add item */
