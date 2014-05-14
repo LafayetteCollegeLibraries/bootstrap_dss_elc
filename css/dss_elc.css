@@ -2330,15 +2330,29 @@ article {
 
 /* by Thom: buttons on add person */
 
-#edit-publish, #add-human-modal, #edit-field-human-pers-rels-und-add-more {
+#edit-publish, #add-human-modal, .field-add-more-submit.btn.btn-info.form-submit.ajax-processed {
 	
 	background: none repeat scroll 0 0 #F5F5F5;
     border: 1px solid #AAAAAA;
     border-radius: 2px;
     box-shadow: none;
     color: #404040;
-    margin-top: 8px;
     text-shadow: none;
+}
+
+.field-add-more-submit.btn.btn-info.form-submit.ajax-processed {
+	
+	background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #AAAAAA;
+    border-radius: 2px;
+    box-shadow: none;
+    color: #404040;
+    text-shadow: none;
+}
+
+#edit-publish {
+	
+	margin-top:8px;
 }
 
 /* by Thom: borders between divs on add person */
@@ -2377,11 +2391,34 @@ article {
 	padding:10px;
 }
 
-/* by Thom: positioning of elements on add person */
+/* by Thom: position elements on add person */
 
 .draggable > td {
 	
 	padding:0px;
+}
+
+.form-type-radio.form-item-field-human-gender-und.form-item {
+	
+	float:left;
+	padding-right:10px;
+}
+
+#add-human-modal {
+	
+	margin-bottom:10px;
+}
+
+/* by Thom: headings on add forms */
+
+.control-label {
+	
+	font-weight:bold;
+}
+
+#field-bib-rel-object-values > thead > tr > th > label {
+	
+	font-weight:bold;
 }
 
 /* by Thom: backgrounds on divs on add item */
@@ -2427,4 +2464,9 @@ article {
 #edit-publish {
 	
 	margin-bottom:8px;
+}
+
+#edit-field-book-or-periodical-und {
+	
+	margin-top:10px;
 }
