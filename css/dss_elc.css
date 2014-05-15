@@ -2404,11 +2404,6 @@ article {
 	padding-right:10px;
 }
 
-#add-human-modal {
-	
-	margin-bottom:10px;
-}
-
 /* by Thom: headings on add forms */
 
 .control-label {
@@ -2429,9 +2424,11 @@ article {
 	border: 1px solid #d6cdbc;
 	overflow:auto;
 	padding:10px;
+	width:548px;
+	margin-left:calc((100% - 570px) / 2);
 }
 
-/* by Thom: position elements on add item */
+/* by Thom: position and size elements on add item */
 
 .book-column {
 	
@@ -2466,7 +2463,65 @@ article {
 	margin-bottom:8px;
 }
 
-#edit-field-book-or-periodical-und {
+.book-column.single-value-field.column-item-book-periodical {
 	
-	margin-top:10px;
+	vertical-align: middle;
+}
+
+.control-group.error input, .control-group.error select, .control-group.error textarea {
+	
+	width:300px !important;
+}
+
+.book-column > div > div > .control-label, .book-column > div > .control-label {
+	
+	float:left;
+	width:125px;
+}
+
+.book-column.single-value-field.column-item-book-periodical > div > label {
+	
+	width:45px;
+}
+
+.book-column > div > div > .controls, .book-column > div > .controls {
+	
+	float:left;
+}
+
+#edit-body-und-0-value {
+	
+	width:531px !important;
+}
+
+#field-item-was-authored-by-add-more-wrapper > div.control-group {
+	
+	float:left;
+}
+
+#field-item-was-authored-by-add-more-wrapper > div.node-add-author {
+	
+	margin-left:125px;
+}
+
+#edit-field-artifact-was-authored-by-und-tokens, #edit-field-item-number-taxon-und-tokens, #edit-field-item-subject-und-tokens {
+	
+	display:none;
+}
+
+#edit-field-item-format-und {
+	
+	width:190px;
+}
+
+#edit-field-item-number-taxon-und, #edit-field-artifact-external-record-und-0-value {
+	
+	margin-bottom:0px;
+}
+
+/* by Thom: style add person window within add item form */
+
+.human-row {
+	
+	width:auto;
 }
