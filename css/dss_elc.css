@@ -2389,6 +2389,8 @@ article {
 	border: 1px solid #d6cdbc;
 	overflow:auto;
 	padding:10px;
+	width:548px;
+	margin-left:calc((100% - 570px) / 2);
 }
 
 /* by Thom: position elements on add person */
@@ -2404,9 +2406,11 @@ article {
 	padding-right:10px;
 }
 
-.human-column {
+.human-column, #edit-actions {
 	
 	width:auto;
+	float:left;
+	margin:auto 8px;
 }
 
 .human-column > div > div > label, .human-column > div > label, .field-human-pers-rels-fields > div > div > label {
@@ -2415,9 +2419,24 @@ article {
 	width:125px;
 }
 
-#add-human-modal {
+.human-column > div > div > .controls, .human-column > div > .controls {
+	
+	float:left;
+} 
+
+#add-human-modal, #edit-field-human-pers-rels-und-add-more {
 	
 	margin-left:125px;
+}
+
+#edit-field-person-location-und, #edit-field-person-type-und {
+	
+	margin-bottom:0px;
+}
+
+#field-human-pers-rels-values > thead > tr > th {
+	
+	padding-top:0px;
 }
 
 /* by Thom: headings on add forms */
@@ -2528,11 +2547,4 @@ article {
 #edit-field-item-number-taxon-und, #edit-field-artifact-external-record-und-0-value {
 	
 	margin-bottom:0px;
-}
-
-/* by Thom: style add person window within add item form */
-
-.human-row {
-	
-	width:auto;
 }
