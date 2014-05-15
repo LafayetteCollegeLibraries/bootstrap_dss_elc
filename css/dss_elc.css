@@ -2404,14 +2404,25 @@ article {
 	padding-right:10px;
 }
 
-/* by Thom: headings on add forms */
-
-.control-label {
+.human-column {
 	
-	font-weight:bold;
+	width:auto;
 }
 
-#field-bib-rel-object-values > thead > tr > th > label {
+.human-column > div > div > label, .human-column > div > label, .field-human-pers-rels-fields > div > div > label {
+	
+	float:left;
+	width:125px;
+}
+
+#add-human-modal {
+	
+	margin-left:125px;
+}
+
+/* by Thom: headings on add forms */
+
+.control-label, .field-human-pers-rels-fields > div > div > label, .field-label > label, #field-bib-rel-object-values > thead > tr > th > label {
 	
 	font-weight:bold;
 }
@@ -2504,9 +2515,9 @@ article {
 	margin-left:125px;
 }
 
-#edit-field-artifact-was-authored-by-und-tokens, #edit-field-item-number-taxon-und-tokens, #edit-field-item-subject-und-tokens {
+.token-list {
 	
-	display:none;
+	margin:0px;
 }
 
 #edit-field-item-format-und {
