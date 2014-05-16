@@ -541,6 +541,11 @@ form#islandora-dss-solr-advanced-search-form div div#islandora-solr-advanced-ter
     width: 220px;
 }
 
+.form-text.required.error.form-autocomplete, .text-full.form-text.required.error {
+	
+	width:auto !important;
+}
+
 /* style add search field button */
 
 form#islandora-dss-solr-advanced-search-form div div#islandora-solr-advanced-terms button.islandora-solr-search-add {
@@ -2547,4 +2552,34 @@ article {
 #edit-field-item-number-taxon-und, #edit-field-artifact-external-record-und-0-value {
 	
 	margin-bottom:0px;
+}
+
+/* by Thom: position elements on add loan form */
+
+.loan-column > div > label, .loan-column > div > div > label, #field-bib-rel-object-values > thead {
+	
+	float:left;
+	width:125px;
+}
+
+.loan-column > div > div.controls, .loan-column > div > div > div.controls, #field-bib-rel-object-values > tbody {
+	
+	float:left;
+}
+
+#field-bib-rel-object-values > tbody > tr > td > div > label {
+	
+	display:none;
+}
+
+#field-loan-duration-add-more-wrapper > fieldset > legend {
+	
+	display:none;
+}
+
+.date-date > label {
+	
+	clear:both;
+	float:left;
+	width:125px;
 }
