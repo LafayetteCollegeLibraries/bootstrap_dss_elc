@@ -2431,7 +2431,7 @@ article {
 
 #add-human-modal, #edit-field-human-pers-rels-und-add-more {
 	
-	margin-left:125px;
+	margin-left:5px;
 }
 
 #edit-field-person-location-und, #edit-field-person-type-und {
@@ -2562,9 +2562,38 @@ article {
 	width:125px;
 }
 
+.date-no-float.start-date-wrapper.container-inline-date > div > label, .date-no-float.end-date-wrapper.container-inline-date > div > label {
+	
+	float:left;
+	width:125px;
+}
+
 .loan-column > div > div.controls, .loan-column > div > div > div.controls, #field-bib-rel-object-values > tbody {
 	
 	float:left;
+}
+
+.date-no-float.start-date-wrapper.container-inline-date > div > div.controls, .date-no-float.end-date-wrapper.container-inline-date > div > div.controls {
+	
+	float:left;
+}
+
+#edit-field-loan-duration-und-0-value, #edit-field-loan-duration-und-0-value2 {
+	
+	padding-top:8px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.control-group.form-type-date-text.form-item-field-loan-duration-und-0-value2.form-item {
+	
+	margin-bottom:-10px;
+}
+
+.control-group.form-type-date-text.form-item-field-loan-duration-und-0-value.form-item {
+	
+	margin-bottom:0px;
 }
 
 #field-bib-rel-object-values > tbody > tr > td > div > label {
@@ -2577,9 +2606,52 @@ article {
 	display:none;
 }
 
-.date-date > label {
+#edit-field-loan-other-notes-und-0-value {
 	
-	clear:both;
+	width:531px !important;
+	height:90px !important;
+}
+
+/* by Thom: style check in and check out elements on add loan form */
+
+.date-wrapper-edit-field-loan-duration-und-0-value2-year, .date-wrapper-edit-field-loan-duration-und-0-value2-month, .date-wrapper-edit-field-loan-duration-und-0-value2-day {
+	
 	float:left;
-	width:125px;
+	margin-right:10px;
+}
+
+.date-wrapper-edit-field-loan-duration-und-0-value2-year > label, .date-wrapper-edit-field-loan-duration-und-0-value2-month > label, .date-wrapper-edit-field-loan-duration-und-0-value2-day > label {
+	
+	width:auto;
+}
+
+.date-wrapper-edit-field-loan-duration-und-0-value2-year > input {
+	
+	width:60px !important;
+}
+
+.date-wrapper-edit-field-loan-duration-und-0-value2-month > input, .date-wrapper-edit-field-loan-duration-und-0-value2-day > input {
+	
+	width:50px !important;
+}
+
+.date-wrapper-edit-field-loan-duration-und-0-value-year, .date-wrapper-edit-field-loan-duration-und-0-value-month, .date-wrapper-edit-field-loan-duration-und-0-value-day {
+	
+	float:left;
+	margin-right:10px;
+}
+
+.date-wrapper-edit-field-loan-duration-und-0-value-year > label, .date-wrapper-edit-field-loan-duration-und-0-value-month > label, .date-wrapper-edit-field-loan-duration-und-0-value-day > label {
+	
+	width:auto;
+}
+
+.date-wrapper-edit-field-loan-duration-und-0-value-year > input {
+	
+	width:60px !important;
+}
+
+.date-wrapper-edit-field-loan-duration-und-0-value-month > input, .date-wrapper-edit-field-loan-duration-und-0-value-day > input {
+	
+	width:50px !important;
 }
