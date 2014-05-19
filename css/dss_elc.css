@@ -2612,6 +2612,11 @@ article {
 	height:90px !important;
 }
 
+#loan-fields-a, #loan-fields-b, .duration-column.loan-column, .loan-columns-container, #edit-actions {
+	
+	margin:auto 8px;
+}
+
 /* by Thom: style check in and check out elements on add loan form */
 
 .date-wrapper-edit-field-loan-duration-und-0-value2-year, .date-wrapper-edit-field-loan-duration-und-0-value2-month, .date-wrapper-edit-field-loan-duration-und-0-value2-day {
@@ -2654,4 +2659,27 @@ article {
 .date-wrapper-edit-field-loan-duration-und-0-value-month > input, .date-wrapper-edit-field-loan-duration-und-0-value-day > input {
 	
 	width:50px !important;
+}
+
+/* by Thom: style ledger buttons on add loan form */
+
+.loan-subset-selection {
+	
+	margin-left:calc((100% - 570px) / 2);
+	margin-bottom:5px;
+}
+
+.btn.form-submit {
+	
+	background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #AAAAAA;
+    border-radius: 2px;
+    box-shadow: none;
+    color: #404040;
+    text-shadow: none;
+}
+
+.btn.form-submit.active {
+	
+	background:#E4E4E4;
 }
