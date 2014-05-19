@@ -2335,7 +2335,7 @@ article {
 
 /* by Thom: buttons on add person */
 
-#edit-publish, #add-human-modal, .field-add-more-submit.btn.btn-info.form-submit.ajax-processed {
+#edit-publish, .btn.btn-primary.form-submit.add-node-modal, .field-add-more-submit.btn.btn-info.form-submit.ajax-processed, .add-node-modal.btn.btn-info {
 	
 	background: none repeat scroll 0 0 #F5F5F5;
     border: 1px solid #AAAAAA;
@@ -2429,7 +2429,7 @@ article {
 	float:left;
 } 
 
-#add-human-modal, #edit-field-human-pers-rels-und-add-more {
+.btn.btn-primary.form-submit.add-node-modal, #edit-field-human-pers-rels-und-add-more, .add-node-modal.btn.btn-info {
 	
 	margin-left:5px;
 }
@@ -2442,6 +2442,17 @@ article {
 #field-human-pers-rels-values > thead > tr > th {
 	
 	padding-top:0px;
+	padding-bottom:0px;
+}
+
+.field-human-pers-rels-fields {
+	
+	padding-top:8px;
+}
+
+.human-column > div > div > div.clearfix > button {
+	
+	float:right;
 }
 
 /* by Thom: headings on add forms */
@@ -2677,4 +2688,26 @@ article {
 .btn.form-submit.active {
 	
 	background:#E4E4E4;
+}
+
+/* by Thom: style add human modal form */
+
+div#add-human-modal {
+	
+	margin-left:0px;
+}
+
+#add-human-modal > form > div > div > div:nth-child(2), #add-human-modal > form > div > div > div:nth-child(3) {
+	
+	display:none;
+}
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable {
+	
+	box-shadow: 0px 10px 5px #888888;
+}
+
+#add-human-modal > form > div > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div#edit-actions {
+	
+	margin:0px;
 }
