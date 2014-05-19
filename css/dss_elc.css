@@ -2503,11 +2503,6 @@ article {
 	vertical-align: middle;
 }
 
-.control-group.error input, .control-group.error select, .control-group.error textarea {
-	
-	width:300px !important;
-}
-
 .book-column > div > div > .control-label, .book-column > div > .control-label {
 	
 	float:left;
