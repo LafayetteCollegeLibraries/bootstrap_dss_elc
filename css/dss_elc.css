@@ -2711,3 +2711,34 @@ div#add-human-modal {
 	
 	margin:0px;
 }
+
+/* by Thom: style legend on add loan form */
+
+.add-form-legend-circle {
+	
+	font-size:36px;
+	vertical-align:top;
+}
+
+.add-form-legend-asterisk {
+	
+	font-size:large;
+	font-weight:bold;
+	vertical-align:middle;
+}
+
+.add-form-legend {
+	
+	text-align:center;
+}
+
+.add-form-legend > ul {
+	
+	list-style:none;
+	margin-left:0px;
+}
+
+.add-form-legend > ul > li {
+	
+	line-height:18px;
+}
