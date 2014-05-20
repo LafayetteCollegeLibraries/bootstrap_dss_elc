@@ -2453,6 +2453,10 @@ article {
 .human-column > div > div > div.clearfix > button {
 	
 	float:right;
+	font-size: x-large;
+    margin-top: -30px;
+    padding-bottom: 6px;
+    padding-top: 2px;
 }
 
 /* by Thom: headings on add forms */
@@ -2625,7 +2629,7 @@ article {
 
 button#add-item-modal {
 	
-	margin-bottom:10px;
+	margin-bottom:8px;
 }
 
 /* by Thom: style check in and check out elements on add loan form */
