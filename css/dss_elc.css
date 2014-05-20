@@ -2039,15 +2039,21 @@ p {
 	clear:both;
 }
 
+
+
 /* style pagination to indicate current page */
 
-.pager-current > a {
+/*
+ * disabled by Thom for ELC
+ */
+
+/*.pager-current > a {
 	
 	background-color:#E2E2E2 !important;
 	box-shadow: inset 0px 0px 5px 1px #EAEAEA;
 	-moz-box-shadow: inset 0px 0px 5px 1px #EAEAEA;
 	-webkit-box-shadow: inset 0px 0px 5px 1px #EAEAEA;
-}
+}*/
 
 /* fix color of page heading on search results */
 
@@ -2701,9 +2707,10 @@ button#add-item-modal {
 
 /* by Thom: style add human modal form */
 
-div#add-human-modal {
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-human-modal {
 	
 	margin-left:0px;
+	height: 620px !important;
 }
 
 #add-human-modal > form > div > div > div:nth-child(2), #add-human-modal > form > div > div > div:nth-child(3) {
@@ -2721,7 +2728,7 @@ div#add-human-modal {
 	margin:0px;
 }
 
-/* by Thom: style legend on add loan form */
+/* by Thom: style legend on add forms */
 
 .add-form-legend-circle {
 	
@@ -2750,4 +2757,44 @@ div#add-human-modal {
 .add-form-legend > ul > li {
 	
 	line-height:18px;
+}
+
+/* by Thom: style browse loans table */
+
+.view-loans > div > table > thead > tr > th, .view-loans > div > table > tbody > tr > td, .view-loans > div > table > thead {
+	
+	border: 1px solid #D6CDBC;
+	border-collapse:collapse;
+	background: #F7EEDD;
+}
+
+.view-loans > div > table > thead > tr > th {
+	
+	text-align:center;
+}
+
+/*by Thom: style browse loans pagination controls */
+
+.view-loans > .pagination > ul > li > a, .view-loans > .pagination > ul > li > span {
+	
+	background: #F7EEDD;
+	border-width: 1px 1px 1px 0px; 
+	border-style:solid;
+	border-color: #D6CDBC;
+	border-collapse:collapse;
+}
+
+.view-loans > .pagination > ul > li.first > a {
+	
+	border-width: 1px 1px 1px 1px; 
+	border-style: solid;
+	border-color: #D6CDBC;
+}
+
+.view-loans > .pagination > ul > li.pager-current > a {
+	
+	background: #ECE3D2;
+	box-shadow: inset 0px 0px 5px 1px #EAE2D1;
+	-moz-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
+	-webkit-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 }
