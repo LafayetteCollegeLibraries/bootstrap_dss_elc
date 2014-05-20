@@ -2540,10 +2540,10 @@ article {
 	float:left;
 }
 
-#field-item-was-authored-by-add-more-wrapper > div.node-add-author {
+/* #field-item-was-authored-by-add-more-wrapper > div.node-add-author {
 	
 	margin-left:125px;
-}
+} */
 
 .token-list {
 	
