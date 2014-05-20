@@ -2623,6 +2623,11 @@ article {
 	margin:auto 8px;
 }
 
+button#add-item-modal {
+	
+	margin-bottom:10px;
+}
+
 /* by Thom: style check in and check out elements on add loan form */
 
 .date-wrapper-edit-field-loan-duration-und-0-value2-year, .date-wrapper-edit-field-loan-duration-und-0-value2-month, .date-wrapper-edit-field-loan-duration-und-0-value2-day {
