@@ -2713,9 +2713,13 @@ button#add-item-modal {
 	height: 620px !important;
 }
 
+/**
+ * Disabled by griffinj for EDDC-45
+ *
+ */
 #add-human-modal > form > div > div > div:nth-child(2), #add-human-modal > form > div > div > div:nth-child(3) {
 	
-	display:none;
+    /* display:none; */
 }
 
 .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable {
