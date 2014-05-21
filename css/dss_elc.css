@@ -2802,3 +2802,83 @@ button#add-item-modal {
 	-moz-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 	-webkit-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 }
+
+/* by Thom: style browse people table */
+
+.view-people > div > table > thead > tr > th, .view-people > div > table > tbody > tr > td, .view-people > div > table > thead {
+	
+	border: 1px solid #D6CDBC;
+	border-collapse:collapse;
+	background: #F7EEDD;
+}
+
+.view-people > div > table > thead > tr > th {
+	
+	text-align:center;
+}
+
+/*by Thom: style browse people pagination controls */
+
+.view-people > .pagination > ul > li > a, .view-people > .pagination > ul > li > span {
+	
+	background: #F7EEDD;
+	border-width: 1px 1px 1px 0px; 
+	border-style:solid;
+	border-color: #D6CDBC;
+	border-collapse:collapse;
+}
+
+.view-people > .pagination > ul > li.first > a {
+	
+	border-width: 1px 1px 1px 1px; 
+	border-style: solid;
+	border-color: #D6CDBC;
+}
+
+.view-people > .pagination > ul > li.pager-current > a {
+	
+	background: #ECE3D2;
+	box-shadow: inset 0px 0px 5px 1px #EAE2D1;
+	-moz-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
+	-webkit-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
+}
+
+/* by Thom: style browse items table */
+
+.view-items > div > table > thead > tr > th, .view-items > div > table > tbody > tr > td, .view-items > div > table > thead {
+	
+	border: 1px solid #D6CDBC;
+	border-collapse:collapse;
+	background: #F7EEDD;
+}
+
+.view-items > div > table > thead > tr > th {
+	
+	text-align:center;
+}
+
+/*by Thom: style browse people pagination controls */
+
+.view-items > .pagination > ul > li > a, .view-items > .pagination > ul > li > span {
+	
+	background: #F7EEDD;
+	border-width: 1px 1px 1px 0px; 
+	border-style:solid;
+	border-color: #D6CDBC;
+	border-collapse:collapse;
+}
+
+.view-items > .pagination > ul > li.first > a {
+	
+	border-width: 1px 1px 1px 1px; 
+	border-style: solid;
+	border-color: #D6CDBC;
+}
+
+.view-items > .pagination > ul > li.pager-current > a {
+	
+	background: #ECE3D2;
+	box-shadow: inset 0px 0px 5px 1px #EAE2D1;
+	-moz-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
+	-webkit-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
+}
