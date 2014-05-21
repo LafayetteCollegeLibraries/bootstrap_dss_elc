@@ -2705,33 +2705,6 @@ button#add-item-modal {
 	background:#E4E4E4;
 }
 
-/* by Thom: style add human modal form */
-
-.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-human-modal {
-	
-	margin-left:0px;
-	height: 620px !important;
-}
-
-/**
- * Disabled by griffinj for EDDC-45
- *
- */
-#add-human-modal > form > div > div > div:nth-child(2), #add-human-modal > form > div > div > div:nth-child(3) {
-	
-    /* display:none; */
-}
-
-.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable {
-	
-	box-shadow: 0px 10px 5px #888888;
-}
-
-#add-human-modal > form > div > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div#edit-actions {
-	
-	margin:0px;
-}
-
 /* by Thom: style legend on add forms */
 
 .add-form-legend-circle {
@@ -2881,4 +2854,48 @@ button#add-item-modal {
 	box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 	-moz-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 	-webkit-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
+}
+
+/* by Thom: style add human modal form */
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-human-modal {
+	
+	margin-left:0px;
+	height: 580px !important;
+}
+
+#add-human-modal > form > div > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div#edit-actions {
+	
+	margin:0px;
+}
+
+/* by Thom: style add item modal form */
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-item-modal {
+	
+	margin-left:0px;
+	height: 700px !important;
+}
+
+/* by Thom: box shadow on modal forms */
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable {
+	
+	box-shadow: 0px 10px 5px #888888;
+}
+
+/* by Thom: fix font on modal forms */
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-human-modal, .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-item-modal {
+	
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:14px;
+	line-height:20px;
+}
+
+/* by Thom: hide extraneous divs on add person modal */
+
+#add-human-modal > form > div > div > div:nth-child(3), #add-human-modal > form > div > div > div:nth-child(4) {
+	
+	display:none;
 }
