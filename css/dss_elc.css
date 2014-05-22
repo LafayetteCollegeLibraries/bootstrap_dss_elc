@@ -2953,3 +2953,10 @@ body > div {
 	
 	display:none;
 }
+
+/* by Thom: hide search control for now to restrict widget access */
+
+#simple-search-control-container {
+	
+	display:none;
+}
