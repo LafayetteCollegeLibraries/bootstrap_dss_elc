@@ -2783,7 +2783,7 @@ button#add-item-modal {
 
 /* by Thom: style browse people table */
 
-.view-people > div > table > thead > tr > th, .view-people > div > table > tbody > tr > td, .view-people > div > table > thead {
+.view-people > div > table > tbody > tr > td, .view-people > div > table > thead {
 	
 	border: 1px solid #D6CDBC;
 	border-collapse:collapse;
@@ -2792,6 +2792,12 @@ button#add-item-modal {
 
 .view-people > div > table > thead > tr > th {
 	
+	border-top: 1px solid #D6CDBC;
+	border-left: 1px solid #D6CDBC;
+	border-right: 1px solid #D6CDBC;
+	border-bottom:2px solid #BDB5A4;
+	border-collapse:collapse;
+	background: #EBE3D2;
 	text-align:center;
 }
 
@@ -2823,7 +2829,7 @@ button#add-item-modal {
 
 /* by Thom: style browse items table */
 
-.view-items > div > table > thead > tr > th, .view-items > div > table > tbody > tr > td, .view-items > div > table > thead {
+.view-items > div > table > tbody > tr > td, .view-items > div > table > thead {
 	
 	border: 1px solid #D6CDBC;
 	border-collapse:collapse;
@@ -2832,6 +2838,12 @@ button#add-item-modal {
 
 .view-items > div > table > thead > tr > th {
 	
+	border-top: 1px solid #D6CDBC;
+	border-left: 1px solid #D6CDBC;
+	border-right: 1px solid #D6CDBC;
+	border-bottom:2px solid #BDB5A4;
+	border-collapse:collapse;
+	background: #EBE3D2;
 	text-align:center;
 }
 
