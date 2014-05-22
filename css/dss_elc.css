@@ -2946,3 +2946,10 @@ body > div {
 	
 	width:auto;
 }
+
+/* by Thom: hide ajax throbber on browse pages */
+
+.ajax-progress .throbber {
+	
+	display:none;
+}
