@@ -2293,7 +2293,7 @@ header {
 
 article {
 	
-	background:#E4DBCA;
+	background:#DBD2C1;
 }
 
 /* by Thom: get rid of border on top of footer section */
@@ -2737,7 +2737,7 @@ button#add-item-modal {
 
 /* by Thom: style browse loans table */
 
-.view-loans > div > table > thead > tr > th, .view-loans > div > table > tbody > tr > td, .view-loans > div > table > thead {
+.view-loans > div > table > tbody > tr > td, .view-loans > div > table > thead {
 	
 	border: 1px solid #D6CDBC;
 	border-collapse:collapse;
@@ -2746,6 +2746,12 @@ button#add-item-modal {
 
 .view-loans > div > table > thead > tr > th {
 	
+	border-top: 1px solid #D6CDBC;
+	border-left: 1px solid #D6CDBC;
+	border-right: 1px solid #D6CDBC;
+	border-bottom:2px solid #BDB5A4;
+	border-collapse:collapse;
+	background: #EBE3D2;
 	text-align:center;
 }
 
@@ -2923,7 +2929,7 @@ body.toolbar-drawer, body.toolbar {
 
 body > div {
 	
-	background-color:#E4DBCA;
+	background-color:#DBD2C1;
 }
 
 .navbar {
@@ -2938,7 +2944,7 @@ body > div {
 
 .footer.container {
 	
-	background-color:#E4DBCA;
+	background-color:#DBD2C1;
 	margin-top:0px;
 }
 
