@@ -198,3 +198,6 @@
 <footer class="footer container">
   <?php print render($page['footer']); ?>
 </footer>
+
+<!-- Modify this for styling below the footer -->
+<div></div>

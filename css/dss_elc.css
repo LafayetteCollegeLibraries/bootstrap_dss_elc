@@ -7,7 +7,7 @@
 
 body {
 	
-    background-color:#e4dbca;
+    background-color:#FAF0D7;
 }
 
 /**
@@ -137,7 +137,6 @@ ul.breadcrumb {
 	border:none;
 	width:100%;
 	background-image: linear-gradient(to bottom, #545454, #333333);
-	margin-top:1%;
 }
 
 .footer.container {
@@ -2906,4 +2905,44 @@ button#add-item-modal {
 	
 	background-repeat:no-repeat;
 	background-color:#FAF0D7;
+}
+
+/* by Thom: fix height above header banner when logged in through drupal */
+
+body.toolbar-drawer, body.toolbar {
+	
+	padding-top:65px !important;
+}
+
+/* by Thom: footer background to bottom of browser viewport */
+
+.footer.container {
+	
+	padding-bottom:0px;
+}
+
+body > div {
+	
+	background-color:#E4DBCA;
+}
+
+.navbar {
+	
+	margin-bottom:0px;
+}
+
+.panel-container {
+	
+	padding-top:20px;
+}
+
+.footer.container {
+	
+	background-color:#E4DBCA;
+	margin-top:0px;
+}
+
+.panel-container.container {
+	
+	width:auto;
 }
