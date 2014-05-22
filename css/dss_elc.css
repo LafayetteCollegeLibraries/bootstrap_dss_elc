@@ -2899,3 +2899,11 @@ button#add-item-modal {
 	
 	display:none;
 }
+
+/* by Thom: background on ELC header */
+
+.navbar-header {
+	
+	background-repeat:no-repeat;
+	background-color:#FAF0D7;
+}
