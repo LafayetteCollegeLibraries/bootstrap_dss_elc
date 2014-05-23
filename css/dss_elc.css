@@ -3137,3 +3137,36 @@ body > div {
 	
 	margin-left:calc((100% - 481px) / 2);
 }
+
+/* by Thom: fix column widths browse loans table */
+
+.views-field.views-field-field-loan-shareholder {
+	
+	width:175px;
+}
+
+.views-field.views-field-field-bib-rel-subject {
+	
+	width:175px;
+}
+
+.views-field.views-field-field-loan-duration {
+	
+	width:75px;
+	text-align:center;
+}
+
+.views-field.views-field-field-bib-rel-object {
+	
+	width:325px;
+}
+
+.views-field.views-field-field-loan-volumes-loaned {
+	
+	width:40px;
+}
+
+.view-loans table {
+	
+	margin-left:calc((100% - 1072px) / 2);
+}
