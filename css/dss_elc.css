@@ -2426,6 +2426,11 @@ article {
 	margin-left:calc((100% - 570px) / 2);
 }
 
+#human-node-form .field-label {
+	
+	background-color:#F7EEDD;
+}
+
 /* by Thom: position elements on add person */
 
 .draggable > td {

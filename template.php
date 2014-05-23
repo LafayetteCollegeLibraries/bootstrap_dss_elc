@@ -86,7 +86,6 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     hide($vars['content']['body']);
   } else if($vars['type'] == 'human') {
 
-    dpm($vars);
     /**
      * Hide fields for the node
      *
@@ -100,8 +99,15 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     /**
      * Embed an actual view for the human
      */
-    $loans_view = views_embed_view('loans_by_human', 'default', $vars['nid']);
+    //$loans_view = views_embed_view('loans_by_human', 'default', $vars['nid']);
+    $loans_view = '';
     $vars['loans_view'] = $loans_view;
+  } else if($vars['type'] == 'book'
+	    or $vars['type'] == 'periodical'
+	    or $vars['type'] == 'item'
+	    ) {
+    
+    
   }
 
   if($vars['page']) {
