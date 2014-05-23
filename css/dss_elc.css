@@ -3102,3 +3102,38 @@ body > div {
 	padding:4px 10px;
 	width:500px;
 }
+
+/* by Thom: fix column widths browse people table */
+
+.views-field.views-field-title {
+	
+	width:275px;
+}
+
+.views-field.views-field-changed {
+	
+	width:75px;
+	text-align:center;
+}
+
+.views-field.views-field-view-node {
+	
+	width:30px;
+	text-align:center;
+}
+
+.views-field.views-field-edit-node {
+	
+	width:30px;
+	text-align:center;
+}
+
+.views-table {
+	
+	width:auto;
+}
+
+.view-people table {
+	
+	margin-left:calc((100% - 481px) / 2);
+}
