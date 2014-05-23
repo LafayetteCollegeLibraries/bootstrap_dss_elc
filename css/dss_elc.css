@@ -2914,7 +2914,7 @@ button#add-item-modal {
 .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-item-modal {
 	
 	margin-left:0px;
-	height: 700px !important;
+	height: 605px !important;
 }
 
 /* by Thom: box shadow on modal forms */
@@ -3014,7 +3014,7 @@ body > div {
 	width:100% !important;
 }
 
-/* by Thom: resize column widths for elements on modal forms */
+/* by Thom: resize column widths for elements on add person modal form */
 
 #human-node-form .human-column > div > div > label, #human-node-form .human-column > div > label, #human-node-form .field-human-pers-rels-fields > div > div > label {
 	
@@ -3026,7 +3026,7 @@ body > div {
 	width:445px !important;
 }
 
-#human-node-form .edit-body-und-0-value {
+#human-node-form #edit-body-und-0-value {
 	
 	width:544px !important;
 }
@@ -3039,4 +3039,32 @@ body > div {
 .ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se.ui-icon-grip-diagonal-se {
 	
 	display:none;
+}
+
+/* by Thom: resize column widths for elements on add item modal form */
+
+#item-node-form .book-column > div > div > label, #item-node-form .book-column > div > label {
+	
+	width:115px;
+}
+
+#item-node-form div.controls > input {
+	
+	width:430px !important;
+}
+
+#item-node-form #edit-body-und-0-value {
+	
+	width:544px !important;
+}
+
+#item-node-form .token-list li {
+	
+	margin-top:0px;
+}
+
+#item-node-form .book-column {
+	
+	margin-left:0px;
+	margin-right:0px;
 }
