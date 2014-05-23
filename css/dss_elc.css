@@ -3170,3 +3170,35 @@ body > div {
 	
 	margin-left:calc((100% - 1072px) / 2);
 }
+
+/* by Thom: set column widths for browse items table */
+
+.views-field.views-field-field-artifact-was-authored-by {
+	
+	width:175px;
+}
+
+.view-items .views-field.views-field-title {
+	
+	width:325px;
+}
+
+.views-field.views-field-field-item-volume {
+	
+	width:40px;
+}
+
+.views-field.views-field-type {
+	
+	width:60px;
+}
+
+.views-field.views-field-field-item-subject {
+	
+	width:100px;
+}
+
+.view-items table {
+	
+	margin-left:calc((100% - 974px) / 2);
+}
