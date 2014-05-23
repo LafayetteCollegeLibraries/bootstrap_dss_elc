@@ -2974,7 +2974,7 @@ body > div {
 
 /* by Thom: hide search control for now to restrict widget access */
 
-/*#simple-search-control-container {
+#simple-search-control-container {
 	
 	display:none;
-}*/
+}

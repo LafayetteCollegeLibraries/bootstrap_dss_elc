@@ -23,6 +23,20 @@ require_once dirname(__FILE__) . '/includes/breadcrumb.inc';
 
 function bootstrap_dss_elc_preprocess_node(&$vars) {
 
+  /**
+   * Theming for loans
+   *
+   */
+  if($vars['type'] == 'loan') {
+
+    $vars['field_entries'] = array(
+				   t('Shareholder:') => 'field_loan_shareholder',
+				   t('Representative:') => 'field_loan_representative',
+				   );
+    
+    dpm($vars);
+  }
+
   if($vars['page']) {
 
     // Add header meta tag for IE to head
