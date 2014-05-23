@@ -3063,3 +3063,36 @@ body > div {
 	margin-left:0px;
 	margin-right:0px;
 }
+
+/* by Thom: style view loan page */
+
+.field-entries {
+	
+	padding:0px;
+	border:1px solid #d6cdbc;
+	background-color: #f7eedd;
+	border-radius: 0px;
+	width:auto;
+	margin-left:calc((100% - 722px) / 2);
+}
+
+.field {
+	
+	border-top:1px solid #D6CDBC;
+	border-collapse:collapse;
+	display:flex;
+}
+
+.field-label {
+	
+	border-right:1px solid #d6cdbc;
+	padding:4px 10px;
+	width:180px;
+}
+
+.field-items {
+	
+	border-left:1px solid #d6cdbc;
+	padding:4px 10px;
+	width:500px;
+}
