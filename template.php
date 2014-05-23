@@ -29,6 +29,8 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
    */
   if($vars['type'] == 'loan') {
 
+    drupal_add_css(drupal_get_path('theme', 'bootstrap_dss_elc') . '/css/node__loan.css');
+
     /*
     $vars['field_entries'] = array(
 				   t('Shareholder:') => 'field_loan_shareholder',
@@ -56,11 +58,16 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     $vars['loan_duration_returned'] = date('Y-m-d', $loan_duration_returned);
     hide($vars['content']['field_loan_duration']);
 
-    //ELCv2_C2_082 -> ELCv2:C2_082
+    /**
+     * Generates the link to the Islandora Page Object
+     * Parses the filename structure in order to construct the Fedora Commons PID: ELCv2_C2_082 -> ELCv2:C2_082
+     *
+     */
     $filename_term = $vars['field_loan_filename'][0]['taxonomy_term'];
     preg_match('/(.+?)_(.+)/', $filename_term->name, $m); 
     $islandora_pid = $m[1] . ':' . $m[2];
-    $vars['islandora_object_link'] = l('View Ledger Image', 'islandora/object/' . $islandora_pid);
+    $vars['islandora_object_link'] = l(t('View Ledger Image'), 'islandora/object/' . $islandora_pid);
+    hide($vars['content']['field_loan_filename']);
   }
 
   if($vars['page']) {

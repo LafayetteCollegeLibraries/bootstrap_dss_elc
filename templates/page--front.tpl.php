@@ -14,7 +14,7 @@
 
     <div class="logo-container logo pull-left">
 
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+      <a href="http://digital.lafayette.edu" title="<?php print t('Home'); ?>">
 
         <?php print $dss_logo_image; ?>
       </a>
