@@ -3016,29 +3016,24 @@ body > div {
 
 /* by Thom: resize column widths for elements on add person modal form */
 
-#human-node-form .human-column > div > div > label, #human-node-form .human-column > div > label, #human-node-form .field-human-pers-rels-fields > div > div > label {
+#add-human-modal .human-column > div > div > label, #add-human-modal .human-column > div > label, #add-human-modal .field-human-pers-rels-fields > div > div > label {
 	
 	width:100px;
 }
 
-#human-node-form div.controls > input {
+#add-human-modal div.controls > input {
 	
 	width:445px !important;
 }
 
-#human-node-form #edit-body-und-0-value {
+#add-human-modal #edit-body-und-0-value {
 	
 	width:544px !important;
 }
 
-#human-node-form .token-list li {
+#add-human-modal .token-list li {
 	
 	margin-top:0px;
-}
-
-.ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se.ui-icon-grip-diagonal-se {
-	
-	display:none;
 }
 
 /* by Thom: resize column widths for elements on add item modal form */
