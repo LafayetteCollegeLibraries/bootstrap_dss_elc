@@ -3038,27 +3038,27 @@ body > div {
 
 /* by Thom: resize column widths for elements on add item modal form */
 
-#item-node-form .book-column > div > div > label, #item-node-form .book-column > div > label {
+#add-item-modal .book-column > div > div > label, #add-item-modal .book-column > div > label {
 	
 	width:115px;
 }
 
-#item-node-form div.controls > input {
+#add-item-modal div.controls > input {
 	
 	width:430px !important;
 }
 
-#item-node-form #edit-body-und-0-value {
+#add-item-modal #edit-body-und-0-value {
 	
 	width:544px !important;
 }
 
-#item-node-form .token-list li {
+#add-item-modal .token-list li {
 	
 	margin-top:0px;
 }
 
-#item-node-form .book-column {
+#add-item-modal .book-column {
 	
 	margin-left:0px;
 	margin-right:0px;
