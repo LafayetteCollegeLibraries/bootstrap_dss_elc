@@ -2305,6 +2305,11 @@ article {
 
 /* by Thom: style navbar submenus */
 
+.dropdown-menu:before, .dropdown-menu:after {
+	
+	border-bottom-color: #545454 !important;
+}
+
 .dropdown-menu {
 	
 	background-image: linear-gradient(to bottom, #545454, #333333);
@@ -2312,23 +2317,34 @@ article {
 	border:0px;
 	box-shadow:none;
 	padding:0px;
-}
-
-.dropdown-menu:hover, .dropdown-menu:focus {
-	
-	background-color:#DDDDDD;
+	border-radius:2px;
+	box-shadow: 1px 3px 11px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 1px 3px 11px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 1px 3px 11px rgba(0, 0, 0, 0.5);
 }
 
 .dropdown-menu > li > a {
 	
-	color: #DDDDDD;
+	color:#DDDDDD;
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
 	
+	color: #545454;
 	background-color: #DDDDDD;
-	color:#545454;
 	background-image:none;
+}
+
+.dropdown-menu > li.first > a:hover, .dropdown-menu > li.first > a:focus {
+	
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+}
+
+.dropdown-menu > li.last > a:hover, .dropdown-menu > li.last > a:focus {
+	
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px;
 }
 
 /* by Thom: relationships on add person form */
