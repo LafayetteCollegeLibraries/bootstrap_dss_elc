@@ -21,6 +21,18 @@ require_once dirname(__FILE__) . '/includes/islandora_basic_collection.inc';
 
 require_once dirname(__FILE__) . '/includes/breadcrumb.inc';
 
+function bootstrap_dss_elc_process_node(&$vars) {
+
+  if($vars['type'] == 'loan') {
+
+    /*
+    hide($vars['content']['field_loan_ledger']);
+    hide($vars['content']['field_loan_volumes_loaned']);
+    hide($vars['content']['field_loan_issues_loaned']);
+    */
+  }
+}
+
 function bootstrap_dss_elc_preprocess_node(&$vars) {
 
   /**
@@ -38,7 +50,6 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
 				   );
     */
 
-    dpm($vars);
     /**
      * For rendering the type of item loaned
      * Need to retrieve the individual Book/Periodical/Item Entity in order to retrieve the actual type
@@ -70,9 +81,9 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     hide($vars['content']['field_loan_filename']);
 
     hide($vars['content']['field_loan_ledger']);
-    hide($vars['content']['field_loan_volumes_loaned']);
-    hide($vars['content']['field_loan_issues_loaned']);
-
+    hide($vars['content']['field_loan_volumes_text']);
+    hide($vars['content']['field_loan_issues_text']);
+    hide($vars['content']['body']);
   }
 
   if($vars['page']) {

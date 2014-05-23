@@ -2901,7 +2901,7 @@ button#add-item-modal {
 .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-human-modal {
 	
 	margin-left:0px;
-	height: 580px !important;
+	height: 515px !important;
 }
 
 #add-human-modal > form > div > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div#edit-actions {
@@ -3012,4 +3012,31 @@ body > div {
 #edit-submitted-message {
 	
 	width:100% !important;
+}
+
+/* by Thom: resize column widths for elements on modal forms */
+
+#human-node-form .human-column > div > div > label, #human-node-form .human-column > div > label, #human-node-form .field-human-pers-rels-fields > div > div > label {
+	
+	width:100px;
+}
+
+#human-node-form div.controls > input {
+	
+	width:445px !important;
+}
+
+#human-node-form .edit-body-und-0-value {
+	
+	width:544px !important;
+}
+
+#human-node-form .token-list li {
+	
+	margin-top:0px;
+}
+
+.ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se.ui-icon-grip-diagonal-se {
+	
+	display:none;
 }
