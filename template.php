@@ -84,6 +84,24 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     hide($vars['content']['field_loan_volumes_text']);
     hide($vars['content']['field_loan_issues_text']);
     hide($vars['content']['body']);
+  } else if($vars['type'] == 'human') {
+
+    dpm($vars);
+    /**
+     * Hide fields for the node
+     *
+     */
+    hide($vars['content']['field_human_surname']);
+    hide($vars['content']['field_person_location']);
+    hide($vars['content']['field_human_middle_initials']);
+    hide($vars['content']['field_pers_rel_object']);
+    hide($vars['content']['field_pers_rel_role']);
+
+    /**
+     * Embed an actual view for the human
+     */
+    $loans_view = views_embed_view('loans_by_human', 'default', $vars['nid']);
+    $vars['loans_view'] = $loans_view;
   }
 
   if($vars['page']) {
