@@ -68,6 +68,11 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     $islandora_pid = $m[1] . ':' . $m[2];
     $vars['islandora_object_link'] = l(t('View Ledger Image'), 'islandora/object/' . $islandora_pid);
     hide($vars['content']['field_loan_filename']);
+
+    hide($vars['content']['field_loan_ledger']);
+    hide($vars['content']['field_loan_volumes_loaned']);
+    hide($vars['content']['field_loan_issues_loaned']);
+
   }
 
   if($vars['page']) {

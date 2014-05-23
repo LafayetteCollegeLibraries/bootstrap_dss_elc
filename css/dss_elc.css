@@ -3001,3 +3001,15 @@ body > div {
 	
 	display:none;
 }
+
+/* by Thom: style inputs on contact form */
+
+#edit-submitted-your-name, #edit-submitted-your-e-mail-address, #edit-submitted-subject {
+	
+	width: 206px !important;
+}
+
+#edit-submitted-message {
+	
+	width:100% !important;
+}
