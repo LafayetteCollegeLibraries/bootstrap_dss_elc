@@ -23,59 +23,61 @@
     hide($content['field_tags']);
 ?>
 
-    <php dpm($content); ?>
 <?php
-  //foreach( as $label => $field_key):
+  //foreach( ):
 ?>
-<div class="loan-field-row">
-      <div class="loan-field-label">Shareholder:</div>
-      <div class="loan-field-value"><?php print render($content['field_loan_shareholder']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Representative:</div>
-      <div class="loan-field-value"><?php print render($content['field_bib_rel_subject']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Item Title:</div>
-      <div class="loan-field-value"><?php print render($content['field_bib_rel_object']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Item Type:</div>
-      <div class="loan-field-value"><?php print 'type'; ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Volumes:</div>
-      <div class="loan-field-value"><?php print render($content['field_loan_volumes_loaned']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Issues:</div>
-      <div class="loan-field-value"><?php print render($content['field_loan_issues_loaned']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Checkout Date:</div>
-      <div class="loan-field-value"><?php print render($content['field_loan_duration'][0]['value']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Return Date:</div>
-      <div class="loan-field-value"><?php print render($content['field_loan_duration'][0]['value2']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Notes:</div>
-      <div class="loan-field-value"><?php print render($content['field_loan_notes']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Fine:</div>
-      <div class="loan-field-value"><?php print render($content['field_loan_fine']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Other Notes:</div>
-      <div class="loan-field-value"><?php print render($content['field_loan_other_notes']); ?></div>
-</div><!--/.loan-field-row -->
-<div class="loan-field-row">
-      <div class="loan-field-label">Tags:</div>
-      <div class="loan-field-value"><?php print render($content['field_bib_rel_type']); ?></div>
-</div><!--/.loan-field-row -->
-<php
+<div class="field-entries">
+
+<div class="field field-name-field-loan-filename field-type-taxonomy-term-reference field-label-above">
+<div class="field-label">Facsimile: </div>
+<div class="field-items">
+<div class="field-item even">
+<!-- <a datatype="" property="rdfs:label skos:prefLabel" typeof="skos:Concept" href="/taxonomy/term/748">ELCv2_C2_082</a> -->
+      <?php print $islandora_object_link; ?>
+</div>
+</div>
+</div>
+
+      <?php print render($content['field_loan_shareholder']); ?>
+      <?php print render($content['field_bib_rel_subject']); ?>
+      <?php print render($content['field_bib_rel_object']); ?>
+
+<div class="field field-name-field-loan-volumes-loaned field-type-text field-label-above">
+<div class="field-label">Item Type: </div>
+<div class="field-items">
+<div class="field-item even">
+      <?php print $bib_rel_object_type; ?>
+</div><!--/.field-item -->
+</div><!--/.field-items -->
+</div><!--/.field -->
+
+      <?php print render($content['field_loan_volumes_loaned']); ?>
+      <?php print render($content['field_loan_issues_loaned']); ?>
+
+<div class="field field-name-field-loan-volumes-loaned field-type-text field-label-above">
+<div class="field-label">Checkout Date: </div>
+<div class="field-items">
+<div class="field-item even">
+      <?php print $loan_duration_checkout; ?>
+</div><!--/.field-item -->
+</div><!--/.field-items -->
+</div><!--/.field -->
+
+<div class="field field-name-field-loan-volumes-loaned field-type-text field-label-above">
+<div class="field-label">Return Date: </div>
+<div class="field-items">
+<div class="field-item even">
+      <?php print $loan_duration_returned; ?>
+</div><!--/.field-item -->
+</div><!--/.field-items -->
+</div><!--/.field -->
+
+      <?php print render($content['field_loan_notes']); ?>
+      <?php print render($content['field_loan_fine']); ?>
+      <?php print render($content['field_loan_other_notes']); ?>
+      <?php print render($content['field_bib_rel_type']); ?>
+</div>
+<?php
   //endforeach;
 ?>
 

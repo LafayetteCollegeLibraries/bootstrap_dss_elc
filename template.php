@@ -29,12 +29,38 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
    */
   if($vars['type'] == 'loan') {
 
+    /*
     $vars['field_entries'] = array(
 				   t('Shareholder:') => 'field_loan_shareholder',
 				   t('Representative:') => 'field_loan_representative',
 				   );
-    
+    */
+
     dpm($vars);
+    /**
+     * For rendering the type of item loaned
+     * Need to retrieve the individual Book/Periodical/Item Entity in order to retrieve the actual type
+     *
+     */
+    $bib_rel_object_entity = $vars['field_bib_rel_object'][0]['entity'];
+    $vars['bib_rel_object_type'] = $bib_rel_object_entity->type;
+
+    /**
+     * For rendering the loan duration separately
+     *
+     */
+    $loan_duration_checkout = $vars['field_loan_duration'][0]['value'];
+    $vars['loan_duration_checkout'] = date('Y-m-d', $loan_duration_checkout);
+
+    $loan_duration_returned = $vars['field_loan_duration'][0]['value2'];
+    $vars['loan_duration_returned'] = date('Y-m-d', $loan_duration_returned);
+    hide($vars['content']['field_loan_duration']);
+
+    //ELCv2_C2_082 -> ELCv2:C2_082
+    $filename_term = $vars['field_loan_filename'][0]['taxonomy_term'];
+    preg_match('/(.+?)_(.+)/', $filename_term->name, $m); 
+    $islandora_pid = $m[1] . ':' . $m[2];
+    $vars['islandora_object_link'] = l('View Ledger Image', 'islandora/object/' . $islandora_pid);
   }
 
   if($vars['page']) {
