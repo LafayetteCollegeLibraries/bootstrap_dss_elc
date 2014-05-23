@@ -2489,7 +2489,7 @@ article {
 
 /* by Thom: headings on add forms */
 
-.control-label, .field-human-pers-rels-fields > div > div > label, .field-label > label, #field-bib-rel-object-values > thead > tr > th > label {
+.loan-row .control-label, .human-row .control-label, .field-human-pers-rels-fields > div > div > label, .field-label > label, #field-bib-rel-object-values > thead > tr > th > label {
 	
 	font-weight:bold;
 }
