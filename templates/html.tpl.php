@@ -11,6 +11,10 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
+  <!-- @author griffinj@lafayette.edu: Work-around for views caching issues -->
+  <!-- @todo Resolve EDDC-160 -->
+  <script src="/sites/all/libraries/DataTables/media/js/jquery.dataTables.js"></script>
+  <script src="/sites/all/modules/islandora_dss_solution_pack_elc/js/build/dss_elc_views_filter.min.js"></script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?> data-spy="scroll" data-target="#navbar-header">
 
