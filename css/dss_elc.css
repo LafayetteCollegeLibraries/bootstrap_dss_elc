@@ -2855,6 +2855,34 @@ button#add-item-modal {
 	-webkit-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 }
 
+/**
+ * Views styling
+ * @author griffinj@lafayette.edu
+ * @todo Restructure and migrate into a different stylesheet
+ */
+
+/**
+ * DataTables widget integration
+ * @author griffinj@lafayette.edu (Properties by @goodnowt; Restructuring selectors for more generic application)
+ */
+.views-table tbody td, .views-table thead {
+	
+	border: 1px solid #D6CDBC;
+	border-collapse:collapse;
+	background: #F7EEDD;
+}
+
+.views-table thead th {
+	
+	border-top: 1px solid #D6CDBC;
+	border-left: 1px solid #D6CDBC;
+	border-right: 1px solid #D6CDBC;
+	border-bottom:2px solid #BDB5A4;
+	border-collapse:collapse;
+	background: #EBE3D2;
+	text-align:center;
+}
+
 /* by Thom: style browse items table */
 
 .view-items > div > table > tbody > tr > td, .view-items > div > table > thead {
