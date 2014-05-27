@@ -2977,8 +2977,8 @@ button#add-item-modal {
 
 .navbar-header {
 	
-	background-repeat:no-repeat;
-	background-color:#FAF0D7;
+	background-image: url("../files/ELC_Banner.jpg"), url("../files/ELCrepeatingtile.jpg");
+	background-repeat:no-repeat, repeat;
 }
 
 /* by Thom: fix height above header banner when logged in through drupal */
