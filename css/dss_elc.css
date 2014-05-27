@@ -3336,7 +3336,7 @@ body > div {
 
 /* by Thom: jquery data tables ui controls */
 
-#DataTables_Table_0_length {
+#DataTables_Table_0_length, #DataTables_Table_0_filter {
 	
 	background-color: #F7EEDD;
 	border:1px solid #D6CDBC;
@@ -3345,7 +3345,7 @@ body > div {
 	margin-bottom:10px;
 }
 
-#DataTables_Table_0_length label {
+#DataTables_Table_0_length label, #DataTables_Table_0_filter label, #DataTables_Table_0_filter input {
 	
 	margin-bottom:0px;
 }
@@ -3354,4 +3354,13 @@ body > div {
 	
 	width:65px;
 	margin-bottom:0px;
+}
+
+#DataTables_Table_0_info, #DataTables_Table_0_paginate {
+	
+	background-color: #F7EEDD;
+	border:1px solid #D6CDBC;
+	padding:5px;
+	border-radius:3px;
+	margin-top:10px;
 }
