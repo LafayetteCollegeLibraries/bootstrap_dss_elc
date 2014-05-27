@@ -3233,3 +3233,53 @@ body > div {
 	
 	margin-left:calc((100% - 974px) / 2);
 }
+
+/* by Thom: reset navbar button width for six buttons */
+
+.navbar .nav > li.btn {
+	
+	width:87px;
+}
+
+/* by Thom: style recent blog posts index page */
+
+#node-167133 {
+	
+	max-width:548px;
+	margin-left:calc((100% - 548px) / 2);
+	background-color:#F7EEDD;
+    border: 1px solid #D6CDBC;
+}
+
+#node-167133 > header {
+	
+	margin: auto 8px 8px;
+}
+
+#node-167133 > header > h2 {
+	
+	margin-bottom:0px;
+	font-size:30px;
+	font-weight:normal;
+	line-height: 34px;
+}
+
+#node-167133 > div {
+	
+	margin: auto 8px;
+}
+
+#node-167133 > footer {
+	
+	margin: auto 8px;
+}
+
+#node-167133 .user-picture {
+	
+	display:none;
+}
+
+#node-167133 .blog_usernames_blog {
+	
+	display:none;
+}
