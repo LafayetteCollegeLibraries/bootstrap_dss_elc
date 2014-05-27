@@ -3333,3 +3333,25 @@ body > div {
 	
 	display:none;
 }
+
+/* by Thom: jquery data tables ui controls */
+
+#DataTables_Table_0_length {
+	
+	background-color: #F7EEDD;
+	border:1px solid #D6CDBC;
+	padding:5px;
+	border-radius:3px;
+	margin-bottom:10px;
+}
+
+#DataTables_Table_0_length label {
+	
+	margin-bottom:0px;
+}
+
+#DataTables_Table_0_length select {
+	
+	width:65px;
+	margin-bottom:0px;
+}
