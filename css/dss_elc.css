@@ -2767,25 +2767,30 @@ button#add-item-modal {
 
 .view-loans > div > table > tbody > tr > td, .view-loans > div > table > thead {
 	
-	border: 1px solid #D6CDBC;
-	border-collapse:collapse;
-	background: #F7EEDD;
+	border: 1px solid #D6CDBC !important;
+	border-collapse:collapse !important;
+	background: #F7EEDD !important;
 }
 
 .view-loans > div > table > thead > tr > th {
 	
-	border-top: 1px solid #D6CDBC;
-	border-left: 1px solid #D6CDBC;
-	border-right: 1px solid #D6CDBC;
-	border-bottom:2px solid #BDB5A4;
-	border-collapse:collapse;
-	background: #EBE3D2;
-	text-align:center;
+	border-top: 1px solid #D6CDBC !important;
+	border-left: 1px solid #D6CDBC !important;
+	border-right: 1px solid #D6CDBC !important;
+	border-bottom:2px solid #BDB5A4 !important;
+	border-collapse:collapse !important;
+	background: #EBE3D2 !important;
+	text-align:center !important;
 }
 
 /*by Thom: style browse loans pagination controls */
 
-.view-loans > .pagination > ul > li > a, .view-loans > .pagination > ul > li > span {
+.view-loans > .pagination {
+	
+	display:none;
+}
+
+/* .view-loans > .pagination > ul > li > a, .view-loans > .pagination > ul > li > span {
 	
 	background: #F7EEDD;
 	border-width: 1px 1px 1px 0px; 
@@ -2807,31 +2812,36 @@ button#add-item-modal {
 	box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 	-moz-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 	-webkit-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
-}
+} */
 
 /* by Thom: style browse people table */
 
 .view-people > div > table > tbody > tr > td, .view-people > div > table > thead {
 	
-	border: 1px solid #D6CDBC;
-	border-collapse:collapse;
-	background: #F7EEDD;
+	border: 1px solid #D6CDBC !important;
+	border-collapse:collapse !important;
+	background: #F7EEDD !important;
 }
 
 .view-people > div > table > thead > tr > th {
 	
-	border-top: 1px solid #D6CDBC;
-	border-left: 1px solid #D6CDBC;
-	border-right: 1px solid #D6CDBC;
-	border-bottom:2px solid #BDB5A4;
-	border-collapse:collapse;
-	background: #EBE3D2;
-	text-align:center;
+	border-top: 1px solid #D6CDBC !important;
+	border-left: 1px solid #D6CDBC !important;
+	border-right: 1px solid #D6CDBC !important;
+	border-bottom:2px solid #BDB5A4 !important;
+	border-collapse:collapse !important;
+	background: #EBE3D2 !important;
+	text-align:center !important;
 }
 
 /*by Thom: style browse people pagination controls */
 
-.view-people > .pagination > ul > li > a, .view-people > .pagination > ul > li > span {
+.view-people > .pagination {
+	
+	display:none;
+}
+
+/* .view-people > .pagination > ul > li > a, .view-people > .pagination > ul > li > span {
 	
 	background: #F7EEDD;
 	border-width: 1px 1px 1px 0px; 
@@ -2853,7 +2863,7 @@ button#add-item-modal {
 	box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 	-moz-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 	-webkit-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
-}
+} */
 
 /**
  * Views styling
@@ -2867,45 +2877,73 @@ button#add-item-modal {
  */
 .views-table tbody td, .views-table thead {
 	
-	border: 1px solid #D6CDBC;
-	border-collapse:collapse;
-	background: #F7EEDD;
+	border: 1px solid #D6CDBC !important;
+	border-collapse:collapse !important;
+	background: #F7EEDD  !important;
 }
 
 .views-table thead th {
 	
-	border-top: 1px solid #D6CDBC;
-	border-left: 1px solid #D6CDBC;
-	border-right: 1px solid #D6CDBC;
-	border-bottom:2px solid #BDB5A4;
-	border-collapse:collapse;
-	background: #EBE3D2;
-	text-align:center;
+	border-top: 1px solid #D6CDBC !important;
+	border-left: 1px solid #D6CDBC !important;
+	border-right: 1px solid #D6CDBC !important;
+	border-bottom:2px solid #BDB5A4 !important;
+	border-collapse:collapse !important;
+	background: #EBE3D2 !important;
+	text-align:center !important;
 }
 
 /* by Thom: style browse items table */
 
 .view-items > div > table > tbody > tr > td, .view-items > div > table > thead {
 	
-	border: 1px solid #D6CDBC;
-	border-collapse:collapse;
-	background: #F7EEDD;
+	border: 1px solid #D6CDBC !important;
+	border-collapse:collapse !important;
+	background: #F7EEDD !important;
 }
 
 .view-items > div > table > thead > tr > th {
 	
-	border-top: 1px solid #D6CDBC;
-	border-left: 1px solid #D6CDBC;
-	border-right: 1px solid #D6CDBC;
-	border-bottom:2px solid #BDB5A4;
-	border-collapse:collapse;
-	background: #EBE3D2;
-	text-align:center;
+	border-top: 1px solid #D6CDBC !important;
+	border-left: 1px solid #D6CDBC !important;
+	border-right: 1px solid #D6CDBC !important;
+	border-bottom:2px solid #BDB5A4 !important;
+	border-collapse:collapse !important;
+	background: #EBE3D2 !important;
+	text-align:center !important;
+}
+
+/* by Thom: CSS to override data tables CSS */
+
+table.dataTable.no-footer {
+	
+	border-bottom:0px !important;
+}
+
+table.dataTable {
+	
+	border-collapse: collapse !important;
+	width:auto !important;
+}
+
+table.dataTable, table.dataTable th, table.dataTable td {
+	
+	box-sizing:border-box !important;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+	
+	padding:8px !important;
 }
 
 /*by Thom: style browse items pagination controls */
 
-.view-items > .pagination > ul > li > a, .view-items > .pagination > ul > li > span {
+.view-items > .pagination {
+	
+	display:none;
+}
+
+/* .view-items > .pagination > ul > li > a, .view-items > .pagination > ul > li > span {
 	
 	background: #F7EEDD;
 	border-width: 1px 1px 1px 0px; 
@@ -2927,7 +2965,7 @@ button#add-item-modal {
 	box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 	-moz-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
 	-webkit-box-shadow: inset 0px 0px 5px 1px #EAE2D1;
-}
+} */
 
 /* by Thom: style add human modal form */
 
@@ -3138,35 +3176,47 @@ body > div {
 
 .views-field.views-field-title {
 	
-	width:275px;
+	width:275px !important;
+}
+
+.views-field.views-field-title > input {
+	
+	width:100% !important;
 }
 
 .views-field.views-field-changed {
 	
-	width:75px;
+	width:150px !important;
 	text-align:center;
+}
+
+.views-field.views-field-changed > input {
+	
+	width:100% !important;
 }
 
 .views-field.views-field-view-node {
 	
-	width:30px;
+	width:30px !important;
 	text-align:center;
+	vertical-align:middle;
 }
 
 .views-field.views-field-edit-node {
 	
-	width:30px;
+	width:30px !important;
 	text-align:center;
+	vertical-align:middle;
 }
 
 .views-table {
 	
-	width:auto;
+	width:auto !important;
 }
 
 .view-people table {
 	
-	margin-left:calc((100% - 481px) / 2);
+	margin-left:calc((100% - 481px) / 2) !important;
 }
 
 /* by Thom: fix column widths browse loans table */
