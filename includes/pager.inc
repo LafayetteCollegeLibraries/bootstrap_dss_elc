@@ -199,11 +199,6 @@ function bootstrap_dss_elc_pager($variables) {
   $parameters = $variables['parameters'];
   $quantity = $variables['quantity'];
 
-  dpm($tags);
-  dpm($element);
-  dpm($parameters);
-  dpm($quantity);
-
   global $pager_page_array, $pager_total;
 
   // Calculate various markers within this pager piece:
@@ -329,9 +324,6 @@ function bootstrap_dss_elc_pager($variables) {
           );
         }
       }
-      dpm($pager_max);
-      dpm($i);
-      dpm(array('trace1'));
 
       if ($i < $pager_max) {
         $items[] = array(

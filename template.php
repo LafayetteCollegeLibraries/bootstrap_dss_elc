@@ -99,15 +99,52 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     /**
      * Embed an actual view for the human
      */
-    //$loans_view = views_embed_view('loans_by_human', 'default', $vars['nid']);
+
+    /** (Ensure that this is only rendered for Pages and not Teaser Views) */
     $loans_view = '';
+    if(!$vars['teaser']) {
+
+      $loans_view = views_embed_view('loans_by_human', 'default', $vars['nid']);
+    }
     $vars['loans_view'] = $loans_view;
+
   } else if($vars['type'] == 'book'
 	    or $vars['type'] == 'periodical'
 	    or $vars['type'] == 'item'
 	    ) {
-    
-    
+
+    /**
+     * Embed an actual view for the human
+     */
+
+    /** (Ensure that this is only rendered for Pages and not Teaser Views) */
+    $loans_view = '';
+    if(!$vars['teaser']) {
+
+      // Retrieve the Manifestation Node for the Item Node
+      // Loosely based upon the FRBR data model
+      $manifestation_nid = '';
+
+      /**
+       * @todo Create an appropriate field and store this relationship
+       */
+      $drupalQuery = new EntityFieldQuery();
+      $result = $drupalQuery->entityCondition('entity_type', 'node')
+	->entityCondition('bundle', 'manifestation')
+	->fieldCondition('field_artifact_title', 'value', $vars['field_artifact_title'][0]['value'])
+	->execute();
+
+      if(isset($result['node'])) {
+	  
+	//$bib_entities = array_merge(entity_load('node', array_keys($result['node'])));
+	$manifestation_nid = array_shift(array_keys($result['node']));
+      }
+
+      $loans_view = views_embed_view('loans_by_item', 'default', $manifestation_nid);
+      dpm($manifestation_nid);
+      dpm(array('test'));
+    }
+    $vars['loans_view'] = $loans_view;
   }
 
   if($vars['page']) {
@@ -778,24 +815,16 @@ function bootstrap_dss_elc_preprocess_islandora_book_book(array &$variables) {
 
 function bootstrap_dss_elc_preprocess_islandora_book_page(array &$variables) {
 
-  $object = $variables['object'];
-
-  // Refactor
-  // Retrieve the MODS Metadata
   try {
 
-    $mods_str = $object['MODS']->content;
-
-    $mods_str = preg_replace('/<\?xml .*?\?>/', '', $mods_str);
-    //$mods_str = '<modsCollection>' . $mods_str . '</modsCollection>';
-
-    $mods_object = new DssMods($mods_str);
+    $object = $variables['object'];
   } catch (Exception $e) {
     
     drupal_set_message(t('Error retrieving object %s %t', array('%s' => $object->id, '%t' => $e->getMessage())), 'error', FALSE);
   }
 
-  $variables['mods_object'] = isset($mods_object) ? $mods_object->toArray() : array();
+  // Retrieve the related loan records for the Page Object
+  
 }
 
 function bootstrap_dss_elc_preprocess_islandora_book_pages(array &$variables) {

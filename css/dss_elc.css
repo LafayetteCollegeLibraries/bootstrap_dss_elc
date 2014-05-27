@@ -3030,9 +3030,9 @@ body > div {
 
 /* by Thom: hide search control for now to restrict widget access */
 
-#simple-search-control-container {
+#advanced-search-modal {
 	
-	display:none;
+	display:none !important;
 }
 
 /* by Thom: style inputs on contact form */
