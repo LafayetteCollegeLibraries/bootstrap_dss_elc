@@ -3364,3 +3364,63 @@ body > div {
 	border-radius:3px;
 	margin-top:10px;
 }
+
+.paginate_button {
+	
+	padding: 1px 8px !important;
+}
+
+.paginate_button.current, .paginate_button.current:hover {
+	
+	background-color: #EBE3D2 !important;
+	background-image: none !important;
+	border:1px solid #BDB5A4 !important;
+}
+
+.paginate_button:hover {
+	
+	background-color: #F7EEDD !important;
+	border:1px solid #BDB5A4 !important;
+}
+
+/* by Thom: style view person page */
+
+.node-human .field-entries {
+	
+	width:auto;
+	background: #F7EEDD;
+	border: 1px solid #D6CDBC;
+	overflow:auto;
+	margin-bottom:20px;
+	width: 752px;
+	margin-left:calc((100% - 752px) / 2);
+} 
+
+.node-human .field-entries .field {
+	
+	clear:both;
+	border-top:1px solid #D6CDBC;
+	display:flex;
+}
+
+.node-human .field-entries .field:first {
+	
+	border-top:0px;
+}
+
+.node-human .field-entries .field-label {
+	
+	float:left;
+	width:110px;
+	border-right: 1px solid #D6CDBC;
+	padding: 4px 10px;
+	background-color:#EBE3D2;
+}
+
+.node-human .field-entries .field-items {
+	
+	float:left;
+	width:600px;
+	border-left: 1px solid #D6CDBC;
+	padding: 4px 10px;
+}
