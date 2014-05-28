@@ -3172,6 +3172,26 @@ body > div {
 	width:500px;
 }
 
+.node-loan .node-human {
+	
+	margin:0px;
+	background-color: #f7eedd;
+}
+
+.node-loan .node-human h2 {
+	
+	margin:0px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight:normal;
+}
+
+.node-loan .node-human .field-entries {
+	
+	display:none;
+}
+
 /* by Thom: fix column widths browse people table */
 
 .views-field.views-field-title {
@@ -3583,9 +3603,15 @@ body > div {
 
 /* by Thom: style home page content */
 
-#node-100791 p {
+.elc-home-matter {
 	
 	background-color:#F7EEDD;
     border: 1px solid #D6CDBC;
     padding:7px 14px;
+    border-radius:3px;
+}
+
+.easton-front-image {
+	
+	border:1px solid #C9C0AF;
 }
