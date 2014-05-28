@@ -3439,7 +3439,7 @@ body > div {
 	display:none;
 }
 
-/* by Thom: style item record view page */
+/* by Thom: style manifestation record view page */
 
 .node-manifestation {
 	
@@ -3479,6 +3479,56 @@ body > div {
 	width:600px;
 	border-left: 1px solid #D6CDBC;
 	padding: 4px 10px;
+}
+
+/* by Thom: style item record view page */
+
+.node-book {
+	
+	width:auto;
+} 
+
+.node-book > .field {
+	
+	clear:both;
+	border-top:1px solid #D6CDBC;
+	display:flex;
+	background: #F7EEDD;
+	margin-left:calc((100% - 752px) / 2);
+	width:752px;
+}
+
+.node-book .field.field-name-body.field-type-text-with-summary.field-label-hidden {
+	
+	display:none;
+}
+
+.node-book .field-name-field-item-number-taxon {
+	
+	border-bottom:1px solid #D6CDBC;
+	margin-bottom:20px;
+}
+
+.node-book > .field > .field-label {
+	
+	float:left;
+	width:130px;
+	border-right: 1px solid #D6CDBC;
+	padding: 4px 10px;
+	background-color:#EBE3D2;
+}
+
+.node-book > .field > .field-items {
+	
+	float:left;
+	width:600px;
+	border-left: 1px solid #D6CDBC;
+	padding: 4px 10px;
+}
+
+.node-book .pagination {
+	
+	display:none;
 }
 
 /* by Thom: style add relationship form */
