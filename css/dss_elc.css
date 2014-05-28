@@ -3424,3 +3424,50 @@ body > div {
 	border-left: 1px solid #D6CDBC;
 	padding: 4px 10px;
 }
+
+.node-human .pagination {
+	
+	display:none;
+}
+
+/* by Thom: style item record view page */
+
+.node-manifestation {
+	
+	width:auto;
+	background: #F7EEDD;
+	border: 1px solid #D6CDBC;
+	overflow:auto;
+	margin-bottom:20px;
+	width: 772px;
+	margin-left:calc((100% - 752px) / 2);
+} 
+
+.node-manifestation .field {
+	
+	clear:both;
+	border-top:1px solid #D6CDBC;
+	display:flex;
+}
+
+.node-manifestation .field:first {
+	
+	border-top:0px;
+}
+
+.node-manifestation .field-label {
+	
+	float:left;
+	width:130px;
+	border-right: 1px solid #D6CDBC;
+	padding: 4px 10px;
+	background-color:#EBE3D2;
+}
+
+.node-manifestation .field-items {
+	
+	float:left;
+	width:600px;
+	border-left: 1px solid #D6CDBC;
+	padding: 4px 10px;
+}
