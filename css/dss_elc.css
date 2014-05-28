@@ -3315,32 +3315,67 @@ body > div {
 
 .views-field.views-field-field-artifact-was-authored-by {
 	
-	width:175px;
+	width:175px !important;
+	vertical-align:middle;
+}
+
+.views-field.views-field-field-artifact-was-authored-by > input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .view-items .views-field.views-field-title {
 	
-	width:325px;
+	width:300px !important;
+	vertical-align:middle;
+}
+
+.view-items .views-field.views-field-title > input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .views-field.views-field-field-item-volume {
 	
-	width:40px;
+	width:110px !important;
+	vertical-align:middle;
+}
+
+.views-field.views-field-field-item-volume >input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .views-field.views-field-type {
 	
-	width:60px;
+	width:110px !important;
+	vertical-align:middle;
+}
+
+.views-field.views-field-type >input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .views-field.views-field-field-item-subject {
 	
-	width:100px;
+	width:130px !important;
+	vertical-align:middle;
+}
+
+.views-field.views-field-field-item-subject > input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .view-items table {
 	
-	margin-left:calc((100% - 974px) / 2);
+	margin-left:calc((100% - 1060px) / 2) !important;
 }
 
 /* by Thom: reset navbar button width for six buttons */
@@ -3653,4 +3688,11 @@ body > div {
 .easton-front-image {
 	
 	border:1px solid #C9C0AF;
+}
+
+/* by Thom: set margins on pages for single record view */
+
+.node-human, .node-book, .node-loan {
+	
+	margin:0px;
 }
