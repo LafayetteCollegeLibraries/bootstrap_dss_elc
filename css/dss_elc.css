@@ -3490,3 +3490,34 @@ body > div {
 	
 	margin-bottom:8px;
 }
+
+/* by Thom: ledger page OSD viewer pages */
+
+.main-container.snap-collapse-left {
+	
+	float:none;
+}
+
+.span12 > a {
+	
+	background-color: #F7EEDD;
+    border: 1px solid #D6CDBC;
+    border-radius: 3px;
+    padding: 7px 14px;
+    margin-left:1%;
+}
+
+.span12 > a#main-content {
+	
+	display:none;
+}
+
+#book-page-viewer {
+	
+	margin-top: 15px;
+}
+
+#book-page-viewer fieldgroup {
+	
+	margin-left:2px !important;
+}
