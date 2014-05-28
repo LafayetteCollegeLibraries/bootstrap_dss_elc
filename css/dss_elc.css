@@ -3653,7 +3653,10 @@ body > div {
 
 .span12 > a {
 	
-	background-color: #F7EEDD;
+	display:none;
+}
+	
+	/*background-color: #F7EEDD;
     border: 1px solid #D6CDBC;
     border-radius: 3px;
     padding: 7px 14px;
@@ -3663,7 +3666,7 @@ body > div {
 .span12 > a#main-content {
 	
 	display:none;
-}
+}*/
 
 #book-page-viewer {
 	
@@ -3695,4 +3698,11 @@ body > div {
 .node-human, .node-book, .node-loan {
 	
 	margin:0px;
+}
+
+/* by Thom: modify background color of OSD */
+
+#islandora-openseadragon > form > div > canvas {
+	
+	background-color:#F7EEDD !important;
 }
