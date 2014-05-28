@@ -3530,3 +3530,12 @@ body > div {
 	
 	margin-left:2px !important;
 }
+
+/* by Thom: style home page content */
+
+#node-100791 p {
+	
+	background-color:#F7EEDD;
+    border: 1px solid #D6CDBC;
+    padding:7px 14px;
+}
