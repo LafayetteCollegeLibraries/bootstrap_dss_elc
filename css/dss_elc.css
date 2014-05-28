@@ -3471,3 +3471,22 @@ body > div {
 	border-left: 1px solid #D6CDBC;
 	padding: 4px 10px;
 }
+
+/* by Thom: style add relationship form */
+
+#personal-relationship-node-form .loan-column {
+	
+	float: left;
+    margin: auto 8px;
+    width: auto;
+}
+
+#personal-relationship-node-form #edit-field-pers-rel-object-und {
+	
+	margin-bottom: 0px;
+}
+
+#personal-relationship-node-form button#add-human-modal {
+	
+	margin-bottom:8px;
+}
