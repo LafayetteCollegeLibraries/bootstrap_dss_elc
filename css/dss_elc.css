@@ -3197,22 +3197,26 @@ body > div {
 .views-field.views-field-title {
 	
 	width:275px !important;
+	vertical-align:middle;
 }
 
 .views-field.views-field-title > input {
 	
 	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .views-field.views-field-changed {
 	
-	width:150px !important;
+	width:140px !important;
 	text-align:center;
+	vertical-align:middle;
 }
 
 .views-field.views-field-changed > input {
 	
 	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .views-field.views-field-view-node {
@@ -3243,33 +3247,68 @@ body > div {
 
 .views-field.views-field-field-loan-shareholder {
 	
-	width:175px;
+	width:175px !important;
+	vertical-align:middle;
+}
+
+.views-field.views-field-field-loan-shareholder > input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .views-field.views-field-field-bib-rel-subject {
 	
-	width:175px;
+	width:175px !important;
+	vertical-align:middle;
+}
+
+.views-field.views-field-field-bib-rel-subject > input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .views-field.views-field-field-loan-duration {
 	
-	width:75px;
+	width:145px !important;
 	text-align:center;
+	vertical-align:middle;
+}
+
+.views-field.views-field-field-loan-duration > input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .views-field.views-field-field-bib-rel-object {
 	
-	width:325px;
+	width:300px !important;
+	vertical-align:middle;
+}
+
+.views-field.views-field-field-bib-rel-object > input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .views-field.views-field-field-loan-volumes-loaned {
 	
-	width:40px;
+	width:110px !important;
+	vertical-align:middle;
+}
+
+.views-field.views-field-field-loan-volumes-loaned > input {
+	
+	width:100% !important;
+	margin-bottom:0px !important;
 }
 
 .view-loans table {
 	
-	margin-left:calc((100% - 1072px) / 2);
+	margin-left:calc((100% - 1140px) / 2) !important;
 }
 
 /* by Thom: set column widths for browse items table */
