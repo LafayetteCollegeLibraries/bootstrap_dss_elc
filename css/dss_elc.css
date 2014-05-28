@@ -3356,7 +3356,16 @@ body > div {
 	margin-bottom:0px;
 }
 
-#DataTables_Table_0_info, #DataTables_Table_0_paginate {
+#DataTables_Table_0_info {
+	
+	background-color: #F7EEDD;
+	border:1px solid #D6CDBC;
+	padding:7px 10px;
+	border-radius:3px;
+	margin-top:10px;
+}
+
+#DataTables_Table_0_paginate {
 	
 	background-color: #F7EEDD;
 	border:1px solid #D6CDBC;
