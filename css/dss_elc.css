@@ -2785,7 +2785,7 @@ button#add-item-modal {
 
 /*by Thom: style browse loans pagination controls */
 
-.view-loans > .pagination {
+.view > .pagination {
 	
 	display:none;
 }
@@ -3706,3 +3706,117 @@ body > div {
 	
 	background-color:#F7EEDD !important;
 }
+
+/* by Thom: style network analysis tool */
+
+.well {
+	
+	background-color: #F7EEDD;
+	border: 1px solid #d6cdbc;
+	width:822px;
+	margin-left:calc((100% - 822px) / 2);
+}
+
+#block-dss-elc-visualize-network {
+	
+	margin-top:0px;
+	padding:0px;
+}
+
+#block-dss-elc-visualize-network > h2 {
+	
+	line-height:34px;
+	margin-bottom:15px;
+}
+
+#block-dss-elc-visualize-network #edit-network-metrics {
+	
+	margin-left:10px;
+}
+
+#block-dss-elc-visualize-network .form-type-entityreference {
+	
+	width:auto;
+	float:left;
+}
+
+#block-dss-elc-visualize-network .form-type-entityreference label {
+	
+	width:auto;
+}
+
+#block-dss-elc-visualize-network .form-type-entityreference  div.controls {
+	
+	width:auto;
+}
+
+#block-dss-elc-visualize-network .form-type-entityreference  div.controls > input {
+	
+	height:29px !important;
+}
+
+
+#block-dss-elc-visualize-network .form-type-select {
+	
+	width:auto;
+	float:left;
+	margin-left:10px;
+}
+
+#block-dss-elc-visualize-network .form-type-select div.controls select {
+	
+	width:250px;
+}
+
+#block-dss-elc-visualize-network .form-type-slider {
+	
+	clear:both;
+	width:
+}
+
+#block-dss-elc-visualize-network .form-type-slider > div.controls {
+	
+	margin-left:8px;
+}
+
+#block-dss-elc-visualize-network .form-type-slider > label {
+	
+	width:111px;
+	text-align:center;
+}
+
+#block-dss-elc-visualize-network .ui-slider-legend {
+	
+	margin-top:3px;
+	width:111px;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+#block-dss-elc-visualize-network #edit-network-metrics > button {
+	
+	margin-bottom:15px;
+}
+
+#block-dss-elc-visualize-network #edit-actions--4 {
+	
+	display:none;
+}
+
+#network-visualize {
+	
+	clear:both;
+}
+
+#network-visualize > svg {
+	
+	background-color: #F5F5F5;
+	padding:10px;
+	border: 1px solid #E5DCCB;
+	border-radius:2px;
+}
+
+#node-167134.node-page {
+	
+	display:none;
+} 
