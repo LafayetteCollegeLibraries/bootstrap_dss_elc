@@ -31,6 +31,7 @@ function bootstrap_dss_elc_process_node(&$vars) {
     hide($vars['content']['field_loan_issues_loaned']);
     */
   }
+
 }
 
 function bootstrap_dss_elc_preprocess_node(&$vars) {
@@ -141,8 +142,6 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
       }
 
       $loans_view = views_embed_view('loans_by_item', 'default', $manifestation_nid);
-      dpm($manifestation_nid);
-      dpm(array('test'));
     }
     $vars['loans_view'] = $loans_view;
   }
@@ -215,6 +214,28 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     drupal_add_js('jQuery(document).ready(function() { setTimeout(function() { window.location.replace("/"); }, 5000); });',
 		  array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
 		  );
+  }
+
+  /**
+   * Implemented in response to there being no clear means by which to decode the HTML character entity references within the Drupal stack
+   * EDDC-184
+   * @todo Refactor
+   */
+
+  if($vars['type'] == 'loan'
+     or $vars['type'] == 'manifestation'
+     or $vars['type'] == 'item'
+     or $vars['type'] == 'book'
+     or $vars['type'] == 'periodical') {
+
+    $title = $vars['title'];
+
+    $title = preg_replace('/&amp;amp;/', '&', $title);
+    $title = preg_replace('/&amp;/', '&', $title);
+    $title = preg_replace('/&#039;/', "'", $title);
+
+    $vars['title'] = $title;
+    drupal_set_title($title);
   }
 }
 

@@ -17,7 +17,19 @@ function bootstrap_dss_elc_breadcrumb($variables) {
 
   $breadcrumb = $variables['breadcrumb'];
   $breadcrumb[] = l(t('Home'), '<front>');
-  $breadcrumb[] = '<a href="' . drupal_get_path_alias() . '">' . drupal_get_title() . '</a>';
+
+  $title = drupal_get_title();
+
+  /**
+   * Implemented in response to there being no clear means by which to decode the HTML character entity references within the Drupal stack
+   * EDDC-184
+   * @todo Refactor
+   */
+  $title = preg_replace('/&amp;amp;/', '&', $title);
+  $title = preg_replace('/&amp;/', '&', $title);
+  $title = preg_replace('/&#039;/', "'", $title);
+
+  $breadcrumb[] = '<a href="' . drupal_get_path_alias() . '">' . $title . '</a>';
 
   if (!empty($breadcrumb)) {
     $breadcrumbs = '<ul class="breadcrumb">';

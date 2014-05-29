@@ -118,6 +118,15 @@
      */
     $title = html_entity_decode($title);
     $title = preg_replace('/&#039;/', "'", $title);
+
+    /**
+     * Implemented for the sake of conserving time
+     * Resolves EDDC-184
+     * @todo Refactor
+     */
+    $title = preg_replace('/&amp;amp;/', "&", $title);
+    $title = preg_replace('/&amp;/', "&", $title);
+
     $lead_content = l($title, current_path(), array('HTML' => TRUE));
   }
 ?>
