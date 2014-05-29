@@ -3820,3 +3820,13 @@ body > div {
 	
 	display:none;
 } 
+
+.node-Representative {
+	
+	fill:#9A1321 !important;
+}
+
+.node-Shareholder {
+	
+	fill:#FF9F46 !important;
+}
