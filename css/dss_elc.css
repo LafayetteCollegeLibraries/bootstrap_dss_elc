@@ -2889,7 +2889,7 @@ button#add-item-modal {
 	border-right: 1px solid #D6CDBC !important;
 	border-bottom:2px solid #BDB5A4 !important;
 	border-collapse:collapse !important;
-	background: #EBE3D2 !important;
+	background-color: #EBE3D2 !important;
 	text-align:center !important;
 }
 
@@ -2933,7 +2933,7 @@ table.dataTable, table.dataTable th, table.dataTable td {
 
 table.dataTable thead th, table.dataTable thead td {
 	
-	padding:8px !important;
+	padding:8px 18px !important;
 }
 
 /*by Thom: style browse items pagination controls */
@@ -3200,7 +3200,7 @@ body > div {
 	vertical-align:middle;
 }
 
-.views-field.views-field-title > input {
+.views-field > input {
 	
 	width:100% !important;
 	margin-bottom:0px !important;
@@ -3208,15 +3208,9 @@ body > div {
 
 .views-field.views-field-changed {
 	
-	width:140px !important;
+	width:155px !important;
 	text-align:center;
 	vertical-align:middle;
-}
-
-.views-field.views-field-changed > input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
 }
 
 .views-field.views-field-view-node {
@@ -3240,7 +3234,7 @@ body > div {
 
 .view-people table {
 	
-	margin-left:calc((100% - 481px) / 2) !important;
+	margin-left:calc((100% - 563px) / 2) !important;
 }
 
 /* by Thom: fix column widths browse loans table */
@@ -3251,64 +3245,34 @@ body > div {
 	vertical-align:middle;
 }
 
-.views-field.views-field-field-loan-shareholder > input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
-}
-
 .views-field.views-field-field-bib-rel-subject {
 	
-	width:175px !important;
+	width:200px !important;
 	vertical-align:middle;
-}
-
-.views-field.views-field-field-bib-rel-subject > input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
 }
 
 .views-field.views-field-field-loan-duration {
 	
-	width:145px !important;
+	width:160px !important;
 	text-align:center;
 	vertical-align:middle;
 }
 
-.views-field.views-field-field-loan-duration > input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
-}
-
 .views-field.views-field-field-bib-rel-object {
 	
-	width:300px !important;
+	width:200px !important;
 	vertical-align:middle;
-}
-
-.views-field.views-field-field-bib-rel-object > input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
 }
 
 .views-field.views-field-field-loan-volumes-loaned {
 	
-	width:110px !important;
+	width:130px !important;
 	vertical-align:middle;
-}
-
-.views-field.views-field-field-loan-volumes-loaned > input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
 }
 
 .view-loans table {
 	
-	margin-left:calc((100% - 1140px) / 2) !important;
+	margin-left:calc((100% - 1153px) / 2) !important;
 }
 
 /* by Thom: set column widths for browse items table */
@@ -3319,63 +3283,33 @@ body > div {
 	vertical-align:middle;
 }
 
-.views-field.views-field-field-artifact-was-authored-by > input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
-}
-
 .view-items .views-field.views-field-title {
 	
-	width:300px !important;
+	width:200px !important;
 	vertical-align:middle;
-}
-
-.view-items .views-field.views-field-title > input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
 }
 
 .views-field.views-field-field-item-volume {
-	
-	width:110px !important;
-	vertical-align:middle;
-}
-
-.views-field.views-field-field-item-volume >input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
-}
-
-.views-field.views-field-type {
-	
-	width:110px !important;
-	vertical-align:middle;
-}
-
-.views-field.views-field-type >input {
-	
-	width:100% !important;
-	margin-bottom:0px !important;
-}
-
-.views-field.views-field-field-item-subject {
 	
 	width:130px !important;
 	vertical-align:middle;
 }
 
-.views-field.views-field-field-item-subject > input {
+.views-field.views-field-type {
 	
-	width:100% !important;
-	margin-bottom:0px !important;
+	width:135px !important;
+	vertical-align:middle;
+}
+
+.views-field.views-field-field-item-subject {
+	
+	width:155px !important;
+	vertical-align:middle;
 }
 
 .view-items table {
 	
-	margin-left:calc((100% - 1060px) / 2) !important;
+	margin-left:calc((100% - 1083px) / 2) !important;
 }
 
 /* by Thom: reset navbar button width for six buttons */
@@ -3807,6 +3741,8 @@ body > div {
 	
 	clear:both;
 }
+
+/* by Thom: style D3 network svg */
 
 #network-visualize > svg {
 	
