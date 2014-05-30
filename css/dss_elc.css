@@ -3248,50 +3248,70 @@ body > div {
 
 .view-people table {
 	
-	margin-left:calc((100% - 563px) / 2) !important;
+	margin-left:calc((100% - 561px) / 2) !important;
 }
 
 /* by Thom: fix column widths browse loans table */
 
 .views-field.views-field-field-loan-shareholder {
 	
-	width:175px !important;
+	width:180px !important;
 	vertical-align:middle;
 }
 
-/* .sorting, .sorting_asc, .sorting_desc {
+.views-field-field-loan-shareholder.sorting, .views-field-field-loan-shareholder.sorting_asc, .views-field-field-loan-shareholder.sorting_desc {
 	
-	background-position: 90% 8px !important;
-} */
+	background-position: 130px 8px !important;
+}
 
 .views-field.views-field-field-bib-rel-subject {
 	
-	width:200px !important;
+	width:180px !important;
 	vertical-align:middle;
+}
+
+.views-field-field-bib-rel-subject.sorting, .views-field-field-bib-rel-subject.sorting_asc, .views-field-field-bib-rel-subject.sorting_desc {
+	
+	background-position: 140px 8px !important;
 }
 
 .views-field.views-field-field-loan-duration {
 	
-	width:160px !important;
+	width:145px !important;
 	text-align:center;
 	vertical-align:middle;
 }
 
+.views-field-field-loan-duration.sorting, .views-field-field-loan-duration.sorting_asc, .views-field-field-loan-duration.sorting_desc {
+	
+	background-position: 105px 8px !important;
+}
+
 .views-field.views-field-field-bib-rel-object {
 	
-	width:200px !important;
+	width:250px !important;
 	vertical-align:middle;
+}
+
+.views-field-field-bib-rel-object.sorting, .views-field-field-bib-rel-object.sorting_asc, .views-field-field-bib-rel-object.sorting_desc {
+	
+	background-position: 140px 8px !important;
 }
 
 .views-field.views-field-field-loan-volumes-loaned {
 	
-	width:130px !important;
+	width:115px !important;
 	vertical-align:middle;
+}
+
+.views-field-field-loan-volumes-loaned.sorting, .views-field-field-loan-volumes-loaned.sorting_asc, .views-field-field-loan-volumes-loaned.sorting_desc {
+	
+	background-position: 70px 8px !important;
 }
 
 .view-loans table {
 	
-	margin-left:calc((100% - 1153px) / 2) !important;
+	margin-left:calc((100% - 1131px) / 2) !important;
 }
 
 /* by Thom: set column widths for browse items table */
@@ -3301,6 +3321,11 @@ body > div {
 	width:175px !important;
 	vertical-align:middle;
 }
+
+/* .sorting, .sorting_asc, .sorting_desc {
+	
+	background-position: 90% 8px !important;
+} */
 
 .view-items .views-field.views-field-title {
 	
