@@ -4028,3 +4028,57 @@ body > div {
     border-radius: 2px;
     margin-bottom: 15px;
 }
+
+/* by Thom: style bivariate analysis page */
+
+#node-167136.node-page {
+	
+	display:none;
+}
+
+#block-dss-elc-visualize-bivariate {
+	
+	margin-top:0px;
+	padding:0px;
+}
+
+#block-dss-elc-visualize-bivariate > h2 {
+	
+	line-height:34px;
+	margin-bottom:15px;
+}
+
+#block-dss-elc-visualize-bivariate #edit-bivariate {
+	
+	margin-left:10px;
+}
+
+#block-dss-elc-visualize-bivariate #edit-actions--4 {
+	
+	display:none;
+}
+
+#block-dss-elc-visualize-bivariate div.form-type-select {
+	
+	float:left;
+	margin-right:10px;
+	clear:both;	
+}
+
+#block-dss-elc-visualize-bivariate #bundle-fields-u-div, #block-dss-elc-visualize-bivariate #bundle-fields-v-div {
+	
+	float:left;
+}
+
+#block-dss-elc-visualize-bivariate #edit-submit--4 {
+	
+	clear:both;
+	width:auto;
+}
+
+#bivariate-visualize {
+	
+	background-color: #F5F5F5;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
