@@ -3816,7 +3816,7 @@ body > div {
 	border-radius:2px;
 }
 
-.metricsLegend, .nodeLegend {
+.metricsLegend, .nodeLegend, .linkLegend {
 	
 	font-weight:bold;
 }
@@ -3942,4 +3942,36 @@ body > div {
 .nodeLegendSibling {
 	
 	fill: #961161 !important;
+}
+
+/* by Thom: style line colors on network visualization */
+
+.link-hasEmployee {
+	
+	stroke: #4E9BAE !important;
+}
+
+.link-isChildOf {
+	
+	stroke: #FFBD44 !important;
+}
+
+.link-isSiblingOf {
+	
+	stroke: #D550A0 !important;
+}
+
+.link-isParentOf {
+	
+	stroke: #F5D73A !important;
+}
+
+.link-hasServant {
+	
+	stroke: #96AC6C !important;
+}
+
+.link-isMemberOf {
+	
+	stroke: #AE8842 !important;
 }
