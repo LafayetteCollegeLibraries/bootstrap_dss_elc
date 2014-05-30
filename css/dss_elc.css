@@ -3752,6 +3752,11 @@ body > div {
 	border-radius:2px;
 }
 
+.metricsLegend, .nodeLegend {
+	
+	font-weight:bold;
+}
+
 #node-167134.node-page {
 	
 	display:none;
@@ -3759,12 +3764,27 @@ body > div {
 
 .node-Representative {
 	
-	fill:#9A1321 !important;
+	fill:#FF9F46 !important;
 }
 
 .node-Shareholder {
 	
-	fill:#FF9F46 !important;
+	fill:#9A1321 !important;
+}
+
+.node-human {
+	
+	fill:#9A1321 !important;
+}
+
+.node-book {
+	
+	fill:#027002 !important;
+}
+
+.node-periodical {
+	
+	fill:#4B28FF !important;
 }
 
 /**
@@ -3775,10 +3795,27 @@ body > div {
  */
 .nodeLegendShareholder {
 
-    fill: #FF9F46 !important;
+    fill: #9A1321 !important;
 }
 
 .nodeLegendRepresentative {
 
-    fill: #9A1321 !important;
+    fill: #FF9F46 !important;
+}
+
+/*by Thom: rest of legend for D3 */
+
+.nodeLegendPerson {
+	
+	fill:#9A1321 !important;
+}
+
+.nodeLegendBook {
+	
+	fill:#027002 !important;
+}
+
+.nodeLegendPeriodical {
+	
+	fill:#4B28FF !important;
 }
