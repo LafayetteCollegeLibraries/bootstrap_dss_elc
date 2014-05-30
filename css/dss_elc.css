@@ -2933,7 +2933,7 @@ table.dataTable, table.dataTable th, table.dataTable td {
 
 table.dataTable thead th, table.dataTable thead td {
 	
-	padding:8px 18px !important;
+	padding:8px 10px !important;
 }
 
 /*by Thom: style browse items pagination controls */
@@ -3196,8 +3196,13 @@ body > div {
 
 .views-field.views-field-title {
 	
-	width:275px !important;
+	width:300px !important;
 	vertical-align:middle;
+}
+
+.views-field-title.sorting, .views-field-title.sorting_asc, .views-field-title.sorting_desc {
+	
+	background-position: 170px 8px !important;
 }
 
 .views-field > input {
@@ -3208,23 +3213,32 @@ body > div {
 
 .views-field.views-field-changed {
 	
-	width:155px !important;
+	width:140px !important;
 	text-align:center;
 	vertical-align:middle;
+}
+
+.views-field-changed.sorting, .views-field-changed.sorting_asc, .views-field-changed.sorting_desc {
+	
+	background-position: 100px 8px !important;
 }
 
 .views-field.views-field-view-node {
 	
-	width:30px !important;
+	width:60px !important;
 	text-align:center;
 	vertical-align:middle;
+	background-image:none !important;
+	cursor:default !important;
 }
 
 .views-field.views-field-edit-node {
 	
-	width:30px !important;
+	width:60px !important;
 	text-align:center;
 	vertical-align:middle;
+	background-image:none !important;
+	cursor:default !important;
 }
 
 .views-table {
@@ -3244,6 +3258,11 @@ body > div {
 	width:175px !important;
 	vertical-align:middle;
 }
+
+/* .sorting, .sorting_asc, .sorting_desc {
+	
+	background-position: 90% 8px !important;
+} */
 
 .views-field.views-field-field-bib-rel-subject {
 	
