@@ -3975,3 +3975,56 @@ body > div {
 	
 	stroke: #AE8842 !important;
 }
+
+/* by Thom: style univariate analysis page */
+
+#node-167137.node-page {
+	
+	display:none;
+}
+
+#block-dss-elc-visualize-univariate {
+	
+	margin-top:0px;
+	padding:0px;
+}
+
+#block-dss-elc-visualize-univariate > h2 {
+	
+	line-height:34px;
+	margin-bottom:15px;
+}
+
+#block-dss-elc-visualize-univariate #edit-univariate {
+	
+	margin-left:10px;
+}
+
+#block-dss-elc-visualize-univariate #edit-actions--4 {
+	
+	display:none;
+}
+
+#block-dss-elc-visualize-univariate div.form-type-select {
+	
+	float:left;
+	margin-right:10px;
+}
+
+#block-dss-elc-visualize-univariate #bundle-fields-div {
+	
+	float:left;
+}
+
+#block-dss-elc-visualize-univariate #edit-submit--4 {
+	
+	clear:both;
+	width:auto;
+}
+
+#univariate-visualize {
+	
+	background-color: #F5F5F5;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
