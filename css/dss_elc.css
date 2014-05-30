@@ -3766,3 +3766,19 @@ body > div {
 	
 	fill:#FF9F46 !important;
 }
+
+/**
+ * @author griffinj@lafayette.edu
+ * Terrible work-around implemented in the name of conserving time
+ * @todo These should be properly integrated into the color map for the D3 visualization
+ * Resolves EDDC-198
+ */
+.nodeLegendShareholder {
+
+    fill: #FF9F46 !important;
+}
+
+.nodeLegendRepresentative {
+
+    fill: #9A1321 !important;
+}
