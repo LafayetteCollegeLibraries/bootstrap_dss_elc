@@ -3851,6 +3851,36 @@ body > div {
 	fill:#4B28FF !important;
 }
 
+.node-Parent {
+	
+	fill:#CFAC02 !important;
+}
+
+.node-Child {
+	
+	fill:#E89413 !important;
+}
+
+.node-Church {
+	
+	fill:#87611B !important;
+}
+
+.node-Employee {
+	
+	fill: #004D60 !important;
+}
+
+.node-Servant {
+	
+	fill: #637939 !important;
+}
+
+.node-Sibling {
+	
+	fill: #961161 !important;
+}
+
 /**
  * @author griffinj@lafayette.edu
  * Terrible work-around implemented in the name of conserving time
@@ -3882,4 +3912,34 @@ body > div {
 .nodeLegendPeriodical {
 	
 	fill:#4B28FF !important;
+}
+
+.nodeLegendChild {
+	
+	fill:#E89413 !important;
+}
+
+.nodeLegendParent {
+	
+	fill:#CFAC02 !important;
+}
+
+.nodeLegendChurch {
+	
+	fill:#87611B !important;
+}
+
+.nodeLegendEmployee {
+	
+	fill: #004D60 !important;
+}
+
+.nodeLegendServant {
+	
+	fill: #637939 !important;
+}
+
+.nodeLegendSibling {
+	
+	fill: #961161 !important;
 }
