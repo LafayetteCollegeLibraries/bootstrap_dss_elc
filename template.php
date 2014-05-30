@@ -233,6 +233,7 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     $title = preg_replace('/&amp;amp;/', '&', $title);
     $title = preg_replace('/&amp;/', '&', $title);
     $title = preg_replace('/&#039;/', "'", $title);
+    $title = preg_replace('/&quot;/', "'", $title);
 
     $vars['title'] = $title;
     drupal_set_title($title);
@@ -770,68 +771,6 @@ function bootstrap_dss_elc_preprocess_islandora_large_image(array &$variables) {
 function bootstrap_dss_elc_preprocess_islandora_book_book(array &$variables) {
 
   $object = $variables['object'];
-
-  /**
-   * Work-around for displaying metadata
-   * Refactor after re-indexing as transformed MODS
-   *
-   */
-  if(in_array('islandora:newspaper', $object->getParents())) {
-
-    $mods_object = new DssDc($object['DC']->content);
-  } else {
-
-    // Refactor
-    // Retrieve the MODS Metadata
-    try {
-
-      $mods_str = $object['MODS']->content;
-
-      $mods_str = preg_replace('/<\?xml .*?\?>/', '', $mods_str);
-      //$mods_str = '<modsCollection>' . $mods_str . '</modsCollection>';
-
-      $mods_object = new DssMods($mods_str);
-    } catch (Exception $e) {
-    
-      drupal_set_message(t('Error retrieving object %s %t', array('%s' => $object->id, '%t' => $e->getMessage())), 'error', FALSE);
-    }
-  }
-
-  $label_map = array_flip(islandora_solr_get_fields('result_fields', FALSE));
-
-  $variables['mods_object'] = isset($mods_object) ? $mods_object->toArray($label_map) : array();
-  
-  $rendered_fields = array();
-  foreach($variables['mods_object'] as $key => &$value) {
-
-    if(!in_array($value['label'], $rendered_fields)) {
-
-      //$value['class'] .= ' islandora-inline-metadata-displayed';
-      $rendered_fields[] = $value['label'];
-    } else {
-
-      $value['label'] = '';
-    }
-  }
-
-  /**
-   * Work-around for appended site-generated resource metadata into the Object
-   * Refactor (or, ideally, update the MODS when Drush creates or updates the path alias)
-   * Resolves DSS-243
-   *
-   */
-
-  global $base_url;
-  // The proper approach (production)
-  //$path_alias = $base_url . '/' . drupal_get_path_alias("islandora/object/{$object->id}");
-  // The less proper approach (enforce HTTP while ensuring that other linked metadata field values are possibly tunneled through TLS/SSL)
-  //$path_alias = str_replace('https', 'http', $base_url) . '/' . drupal_get_path_alias("islandora/object/{$object->id}");
-  // Specific to the production environment
-  $path_alias = 'http://digital.lafayette.edu/' . drupal_get_path_alias("islandora/object/{$object->id}");
-  $variables['mods_object']['drupal_path'] = array('class' => '',
-						   'label' => 'URL',
-						   'value' => $path_alias,
-						   'href' =>  $path_alias);
 }
 
 function bootstrap_dss_elc_preprocess_islandora_book_page(array &$variables) {

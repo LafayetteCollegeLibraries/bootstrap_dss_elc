@@ -126,6 +126,7 @@
      */
     $title = preg_replace('/&amp;amp;/', "&", $title);
     $title = preg_replace('/&amp;/', "&", $title);
+    $title = preg_replace('/&quot;/', "'", $title);
 
     $lead_content = l($title, current_path(), array('HTML' => TRUE));
   }
