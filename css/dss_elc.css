@@ -3306,7 +3306,7 @@ body > div {
 
 .views-field-field-loan-volumes-loaned.sorting, .views-field-field-loan-volumes-loaned.sorting_asc, .views-field-field-loan-volumes-loaned.sorting_desc {
 	
-	background-position: 70px 8px !important;
+	background-position: 72px 8px !important;
 }
 
 .view-loans table {
@@ -3318,42 +3318,62 @@ body > div {
 
 .views-field.views-field-field-artifact-was-authored-by {
 	
-	width:175px !important;
+	width:180px !important;
 	vertical-align:middle;
 }
 
-/* .sorting, .sorting_asc, .sorting_desc {
+.views-field-field-artifact-was-authored-by.sorting, .views-field-field-artifact-was-authored-by.sorting_asc, .views-field-field-artifact-was-authored-by.sorting_desc {
 	
-	background-position: 90% 8px !important;
-} */
+	background-position: 110px 8px !important;
+}
 
-.view-items .views-field.views-field-title {
+.views-field.views-field-title {
 	
-	width:200px !important;
+	width:250px !important;
 	vertical-align:middle;
+}
+
+.views-field-title.sorting, .views-field-title.sorting_asc, .views-field-title.sorting_desc {
+	
+	background-position: 140px 8px !important;
 }
 
 .views-field.views-field-field-item-volume {
 	
-	width:130px !important;
+	width:115px !important;
 	vertical-align:middle;
 }
 
+.views-field-field-item-volume.sorting, .views-field-field-item-volume.sorting_asc, .views-field-field-item-volume.sorting_desc {
+	
+	background-position: 72px 8px !important;
+}
+
 .views-field.views-field-type {
+	
+	width:115px !important;
+	vertical-align:middle;
+}
+
+.views-field-type.sorting, .views-field-type.sorting_asc, .views-field-type.sorting_desc {
+	
+	background-position: 72px 8px !important;
+}
+
+.views-field.views-field-field-item-subject {
 	
 	width:135px !important;
 	vertical-align:middle;
 }
 
-.views-field.views-field-field-item-subject {
+.views-field-field-item-subject.sorting, .views-field-field-item-subject.sorting_asc, .views-field-field-item-subject.sorting_desc {
 	
-	width:155px !important;
-	vertical-align:middle;
+	background-position: 92px 8px !important;
 }
 
 .view-items table {
 	
-	margin-left:calc((100% - 1083px) / 2) !important;
+	margin-left:calc((100% - 1056px) / 2) !important;
 }
 
 /* by Thom: reset navbar button width for six buttons */
