@@ -29,13 +29,16 @@ function bootstrap_dss_elc_breadcrumb($variables) {
   $title = preg_replace('/&amp;/', '&', $title);
   $title = preg_replace('/&#039;/', "'", $title);
 
-  $breadcrumb[] = '<a href="' . drupal_get_path_alias() . '">' . $title . '</a>';
+  $breadcrumb[] = '<a href="/' . drupal_get_path_alias() . '">' . $title . '</a>';
 
   if (!empty($breadcrumb)) {
     $breadcrumbs = '<ul class="breadcrumb">';
     
     $count = count($breadcrumb) - 1;
     foreach ($breadcrumb as $key => $value) {
+
+      dpm($value);
+
       if ($count != $key) {
         $breadcrumbs .= '<li>' . $value . '<span class="divider">/</span></li>';
       }
