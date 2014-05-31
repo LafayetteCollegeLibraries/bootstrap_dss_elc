@@ -37,8 +37,6 @@ function bootstrap_dss_elc_breadcrumb($variables) {
     $count = count($breadcrumb) - 1;
     foreach ($breadcrumb as $key => $value) {
 
-      dpm($value);
-
       if ($count != $key) {
         $breadcrumbs .= '<li>' . $value . '<span class="divider">/</span></li>';
       }
