@@ -67,13 +67,57 @@ function bootstrap_dss_elc_form_alter(&$form, $form_state, $form_id) {
     //if (isset($form['#form_id']) && !in_array($form['#form_id'], $form_ids) && !isset($form['#node_edit_form']) && isset($form['actions']) && ($form['actions']['#type'] == 'actions')) {
 
     break;
-  }
+	
+	//Adding an extra button for "save and add another" on add loan form
+	case 'loan_node_form':
+	$form['actions']['publish_and_save'] = array(
+											     '#type' => 'submit',
+											   	 '#value' => t('Save and Add Another'),
+												 '#weight' => '40',
+											   	 '#submit' => array('publish_add_button_publish_node'),
+);
 
-  if(!array_key_exists('#type', $form['actions'])) {
-
-    $form['actions']['#type'] = 'actions';
+	break;
+	
+	//Adding it for add person
+	case 'human_node_form': 
+	$form['actions']['publish_and_save'] = array(
+											     '#type' => 'submit',
+											   	 '#value' => t('Save and Add Another'),
+												 '#weight' => '40',
+											   	 '#submit' => array('publish_add_button_publish_node'),
+												   );
+	
+	break;
+	
+	//Adding it for add item
+	case 'item_node_form':
+	$form['actions']['publish_and_save'] = array(
+											     '#type' => 'submit',
+											   	 '#value' => t('Save and Add Another'),
+												 '#weight' => '40',
+											   	 '#submit' => array('publish_add_button_publish_node'),
+												   );
+	break;
   }
+  
+  
+  /**
+   * Rectifying this issue (undefined 'actions' key)
+   * @author griffinj@lafayette.edu
+   * (Probably also the fault of griffinj@lafayette.edu)
+   *
+   */
+  if(isset($form) and array_key_exists('actions', $form)) {
+
+    if(!array_key_exists('#type', $form['actions'])) {
+
+      $form['actions']['#type'] = 'actions';
+    }
+  }
+  
 }
+
 
 /**
  * Preprocess variables for 
