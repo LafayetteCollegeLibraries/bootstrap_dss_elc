@@ -2488,8 +2488,19 @@ article {
 	float:right;
 	font-size: x-large;
     margin-top: -30px;
-    padding-bottom: 6px;
-    padding-top: 2px;
+    padding: 1px 4px 5px 6px;
+    width: 36px;
+    height: 30px;
+}
+
+.btn-rmv-rel {
+	
+	float:right;
+	font-size: xx-large;
+    clear: both;
+    padding: 2px 4px 5px 6px;
+    width: 36px;
+    height: 30px;
 }
 
 /* by Thom: headings on add forms */
