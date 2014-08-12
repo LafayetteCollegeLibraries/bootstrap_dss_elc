@@ -2505,7 +2505,7 @@ article {
 
 /* by Thom: headings on add forms */
 
-.loan-row .control-label, .human-row .control-label, .field-human-pers-rels-fields > div > div > label, .field-label > label, #field-bib-rel-object-values > thead > tr > th > label {
+.loan-row .control-label, .human-row .control-label, .field-human-pers-rels-fields > div > div > label, #field-bib-rel-object-values > thead > tr > th > label {
 	
 	font-weight:bold;
 }
@@ -4092,4 +4092,13 @@ body > div {
 	background-color: #F5F5F5;
     border-radius: 2px;
     margin-bottom: 15px;
+}
+
+/* by Thom: styling to differentiate relationships section heading on add person from field labels */
+
+#field-human-pers-rels-values thead th label {
+	
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 15px;
 }
