@@ -530,9 +530,9 @@ form#islandora-dss-solr-advanced-search-form div div.control-group.form-type-sel
 	width:344px;
 }
 
-div.controls {
+#human-fields-a div.controls, #human-fields-c div.controls, .control-group.form-type-textfield.form-item-field-person-type-und.form-item div.controls, #edit-field-pers-rel-object-und {
 	
-	width:220px;
+	width:395px !important;
 }
 
 form#islandora-dss-solr-advanced-search-form div div#islandora-solr-advanced-terms div div.control-group {
@@ -2454,7 +2454,7 @@ article {
 .human-column > div > div > label, .human-column > div > label, .field-human-pers-rels-fields > div > div > label {
 	
 	float:left;
-	width:125px;
+	width:135px;
 }
 
 .human-column > div > div > .controls, .human-column > div > .controls {
@@ -3100,7 +3100,7 @@ body > div {
 
 #add-human-modal .human-column > div > div > label, #add-human-modal .human-column > div > label, #add-human-modal .field-human-pers-rels-fields > div > div > label {
 	
-	width:100px;
+	width:148px;
 }
 
 #add-human-modal div.controls > input {
@@ -4101,4 +4101,12 @@ body > div {
 	text-decoration: underline;
 	font-weight: bold;
 	font-size: 15px;
+}
+
+/* by Thom: style the search authors box for the browse people view */
+
+#search_authors {
+	
+	width:200px;
+	clear:both;
 }
