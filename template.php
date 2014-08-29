@@ -827,3 +827,21 @@ function bootstrap_dss_elc_preprocess_islandora_book_pages(array &$variables) {
 					 ),
 				   );
 }
+
+/**
+ * Preprocessing for entityreference autocomplete views
+ *
+ */
+function bootstrap_dss_elc_process_views_view_fields(&$vars) {
+
+  switch($vars['view']->name) {
+
+  case 'authors_autocomplete':
+  case 'items_autocomplete':
+  case 'shareholders_autocomplete':
+  case 'representatives_autocomplete':
+
+    $vars['fields']['title']->content = preg_replace('/<a href=".+?">(.+?)<\/a>/', '\\1', $vars['fields']['title']->content);
+    break;
+  }
+}
