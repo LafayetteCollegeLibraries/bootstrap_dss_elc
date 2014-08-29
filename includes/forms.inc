@@ -63,8 +63,7 @@ function bootstrap_dss_elc_form_loan_node_form_alter(&$form, $form_state, $form_
  */
 function bootstrap_dss_elc_form_human_node_form_alter(&$form, $form_state, $form_id) {
 
-  $form['actions']['publish_and_save'] = array(
-					       '#type' => 'submit',
+  $form['actions']['publish_and_save'] = array('#type' => 'submit',
 					       '#value' => t('Save & Add Another'),
 					       '#weight' => '40',
 					       '#submit' => array('publish_add_button_publish_node'));
@@ -100,8 +99,11 @@ function bootstrap_dss_elc_form_human_node_form_alter(&$form, $form_state, $form
  */
 function bootstrap_dss_elc_form_item_node_form_alter(&$form, $form_state, $form_id) {
 
-  $form['actions']['publish_and_save'] = array(
-					       '#type' => 'submit',
+  /**
+   * @author stathisw@lafayette.edu
+   *
+   */
+  $form['actions']['publish_and_save'] = array('#type' => 'submit',
 					       '#value' => t('Save & Add Another'),
 					       '#weight' => '40',
 					       '#submit' => array('publish_add_button_publish_node'));
@@ -123,13 +125,44 @@ function bootstrap_dss_elc_form_item_node_form_alter(&$form, $form_state, $form_
 	$form['actions']['unpublish']['#submit']['0'] = 'edit_node_discard_updates';
 	
 	$form['actions']['submit']['#submit']['0'] = 'edit_node_hold_for_review';
-	
-	dpm($form);
-  	dpm($form_state);
-  	dpm($form_id);
-	
   }
   
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * @param array $form the form being altered
+ * @param array $form_state the state of the form
+ * @param string $form_id the form ID
+ *
+ */
+function bootstrap_dss_elc_form_personal_relationship_node_form_alter(&$form, $form_state, $form_id) {
+
+  /*
+  $form['actions']['publish_and_save'] = array('#type' => 'submit',
+					       '#value' => t('Save & Add Another'),
+					       '#weight' => '40',
+					       '#submit' => array('publish_add_button_publish_node'));
+  */
+						   
+  $form['actions']['submit']['#submit']['0'] = 'hold_button_publish_node';
+  
+  if(isset($form['path']['source']['#value'])){
+  	
+	$form['actions']['delete']['#value'] = t('Save Updates');
+	$form['actions']['delete']['#submit']['0'] = '_publish_button_publish_node';
+	  
+	$form['actions']['publish_and_save']['#value'] = t('Delete');
+	$form['actions']['publish_and_save']['#submit']['0'] = 'node_form_delete_submit';
+	
+	$form['actions']['publish']['#value'] = t('Discard Updates');
+	$form['actions']['publish']['#submit']['0'] = 'edit_node_discard_updates';
+	
+	$form['actions']['unpublish']['#value'] = t('Discard Updates');
+	$form['actions']['unpublish']['#submit']['0'] = 'edit_node_discard_updates';
+	
+	$form['actions']['submit']['#submit']['0'] = 'edit_node_hold_for_review';
+  }
 }
 
 /**
@@ -141,6 +174,10 @@ function bootstrap_dss_elc_form_item_node_form_alter(&$form, $form_state, $form_
  */
 function bootstrap_dss_elc_form_alter(&$form, $form_state, $form_id) {
 
+  /**
+   * Implements form-specific alterations to the structure of the HTML
+   * @todo Refactor by implementing within hook_form_FORM_ID_alter() for each specified form
+   */
   switch($form_id) {
 
   case 'islandora_solr_simple_search_form':
@@ -170,52 +207,39 @@ function bootstrap_dss_elc_form_alter(&$form, $form_state, $form_id) {
     $form['simple']['submit-1']['#prefix'] = '<div class="islandora-simple-search-button-1-container">';
     $form['simple']['submit-1']['#suffix'] = '</div>';
 
-    //$form['simple']['submit']['#class'][] = 'icon-search';
-
-    /*
-    $form['simple']['#suffix'] = l('Advanced Search', '/', array('attributes' => array('data-toggle' => 'modal'),
-								 'class' => array('btn', 'btn-primary', 'btn-lg'),
-								 'fragment' => 'advanced-search-modal'));
-    */
-    //$form['simple']['#suffix'] = '<a href="#advanced-search-modal" data-toggle="lafayette-dss-modal">Advanced Search</a>';
-
-    //if (isset($form['#form_id']) && !in_array($form['#form_id'], $form_ids) && !isset($form['#node_edit_form']) && isset($form['actions']) && ($form['actions']['#type'] == 'actions')) {
-
     break;
 	
-	//Adding an extra button for "save and add another" on add loan form
-	case 'loan_node_form':
-	  $form['actions']['publish_and_save'] = array(
-											     '#type' => 'submit',
-											     '#value' => t('Save & Add Another'),
-											     '#weight' => '40',
-											     '#submit' => array('publish_add_button_publish_node'),
-						     );
-	$form['actions']['publish']['#value'] = t('Save & View Record');											
-	break;
+    //Adding an extra button for "save and add another" on add loan form
+  case 'loan_node_form':
+    $form['actions']['publish_and_save'] = array('#type' => 'submit',
+						 '#value' => t('Save & Add Another'),
+						 '#weight' => '40',
+						 '#submit' => array('publish_add_button_publish_node'),
+						 );
+    break;
 	
-	//Adding it for add person
-	case 'human_node_form': 
-	$form['actions']['publish_and_save'] = array(
-											     '#type' => 'submit',
-											   	 '#value' => t('Save & Add Another'),
-												 '#weight' => '40',
-											   	 '#submit' => array('publish_add_button_publish_node'),
-												   );
-	$form['actions']['publish']['#value'] = t('Save & View Record');
-	break;
-	
-	//Adding it for add item
-	case 'item_node_form':
-	$form['actions']['publish_and_save'] = array(
-											     '#type' => 'submit',
-											   	 '#value' => t('Save & Add Another'),
-												 '#weight' => '40',
-											   	 '#submit' => array('publish_add_button_publish_node'),
-												   );
-    $form['actions']['publish']['#value'] = t('Save & View Record'); 
-	break;
+    //Adding it for add person
+  case 'human_node_form': 
+    $form['actions']['publish_and_save'] = array('#type' => 'submit',
+						 '#value' => t('Save & Add Another'),
+						 '#weight' => '40',
+						 '#submit' => array('publish_add_button_publish_node'),
+						 );
+    break;
+
+    // @author stathisw@lafayette.edu
+    //Adding it for add item
+  case 'item_node_form':
+    $form['actions']['publish_and_save'] = array('#type' => 'submit',
+						 '#value' => t('Save & Add Another'),
+						 '#weight' => '40',
+						 '#submit' => array('publish_add_button_publish_node'),
+						 );
+											     
+    break;
   }
+
+  $form['actions']['publish']['#value'] = t('Save & View Record'); 
   
   /**
    * Rectifying this issue (undefined 'actions' key)
