@@ -4117,3 +4117,18 @@ body > div {
 	
 	background-color:#FFFBA1 !important;
 }
+
+
+/* @author goodnowt modify close button on modal forms to pop more */
+
+.page-node-add-personal-relationship .ui-widget-header .ui-icon, .page-node-add-item .ui-widget-header .ui-icon, .page-node-add-human .ui-widget-header .ui-icon, .page-node-add-loan .ui-widget-header .ui-icon {
+	
+	background-image: url("../files/CloseIcon.png");
+	background-position: inherit;
+    background-size: contain;
+}
+
+.page-node-add-personal-relationship .ui-dialog .ui-dialog-titlebar-close, .page-node-add-item .ui-dialog .ui-dialog-titlebar-close, .page-node-add-human .ui-dialog .ui-dialog-titlebar-close, .page-node-add-loan .ui-dialog .ui-dialog-titlebar-close {
+	
+	opacity:.9;
+}
