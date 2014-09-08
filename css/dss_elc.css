@@ -2510,6 +2510,24 @@ article {
 	font-weight:bold;
 }
 
+/* @author goodnowt style legend at top of add forms */
+
+.add-form-legend {
+	
+	background-color: #f7eedd;
+	border: 1px solid #d6cdbc;
+	overflow:auto;
+	padding:10px;
+	width:548px;
+	margin-left:calc((100% - 570px) / 2);
+}
+
+.add-form-legend ul {
+	
+	margin-bottom: 5px;
+	font-size:15px;
+}
+
 /* by Thom: backgrounds on divs on add item */
 
 .loan-row {
