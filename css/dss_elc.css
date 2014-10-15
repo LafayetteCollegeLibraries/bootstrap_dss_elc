@@ -3567,6 +3567,54 @@ body > div {
 	display:none;
 }
 
+/* @author goodnowt style relationship view page */
+
+.node-personal-relationship > header {
+	
+	display:none;
+}
+
+.node-personal-relationship div.field-label-hidden, .node-personal-relationship div.field-name-field-pers-rel-type {
+	
+	display:none;
+}
+
+.node-personal-relationship .field {
+	
+	background: #F7EEDD;
+	border-bottom: 1px solid #D6CDBC;
+	overflow:auto;
+	width: 372px;
+	margin-left:calc((100% - 372px) / 2);
+} 
+
+.node-personal-relationship .field .field-label {
+	
+	float:left;clear:both;
+	display:flex;
+	width:80px;
+	background-color:#EBE3D2;
+	padding:4px 10px;
+	border-right: 1px solid #D6CDBC;
+}
+
+.node-personal-relationship .field .field-items {
+	
+	float:left;
+	display:flex;
+	padding:4px 10px;
+	width:250px;
+	border-left: 1px solid #D6CDBC;
+}
+
+/* @author goodnowt style footer on relationship record view */
+
+.node-personal-relationship footer {
+	
+	margin-top: 10px;
+	text-align:center;
+}
+
 /* by Thom: style manifestation record view page */
 
 .node-manifestation {
