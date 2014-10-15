@@ -3707,6 +3707,56 @@ body > div {
 	display:none;
 }
 
+/* @author goodnowt style item record view page */
+
+.node-itemk {
+	
+	width:auto;
+} 
+
+.node-item > .field {
+	
+	clear:both;
+	border-top:1px solid #D6CDBC;
+	display:flex;
+	background: #F7EEDD;
+	margin-left:calc((100% - 752px) / 2);
+	width:752px;
+}
+
+.node-item .field.field-name-body.field-type-text-with-summary.field-label-hidden {
+	
+	display:none;
+}
+
+.node-item .field-name-field-initial-publication-date{
+	
+	border-bottom:1px solid #D6CDBC;
+	margin-bottom:20px;
+}
+
+.node-item > .field > .field-label {
+	
+	float:left;
+	width:130px;
+	border-right: 1px solid #D6CDBC;
+	padding: 4px 10px;
+	background-color:#EBE3D2;
+}
+
+.node-item > .field > .field-items {
+	
+	float:left;
+	width:600px;
+	border-left: 1px solid #D6CDBC;
+	padding: 4px 10px;
+}
+
+.node-item .pagination {
+	
+	display:none;
+}
+
 /* by Thom: style add relationship form */
 
 #personal-relationship-node-form .loan-column {
