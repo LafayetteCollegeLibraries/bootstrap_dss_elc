@@ -3513,6 +3513,13 @@ body > div {
 	border:1px solid #BDB5A4 !important;
 }
 
+/* @author goodnowt hide universal search input on browse views for now */
+
+#DataTables_Table_0_filter {
+	
+	display:none;
+}
+
 /* by Thom: style view person page */
 
 .node-human .field-entries {
