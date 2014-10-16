@@ -2478,9 +2478,10 @@ article {
 	padding-bottom:0px;
 }
 
-.field-human-pers-rels-fields {
+.human-record .field-human-pers-rels-fields {
 	
 	padding-top:8px;
+	width:530px;
 }
 
 .human-column > div > div > div.clearfix > button {
@@ -2652,10 +2653,7 @@ article {
 
 #edit-field-loan-duration-und-0-value, #edit-field-loan-duration-und-0-value2 {
 	
-	padding-top:8px;
-	padding-bottom:0px;
-	padding-left:0px;
-	padding-right:0px;
+	padding:0px;
 }
 
 .control-group.form-type-date-text.form-item-field-loan-duration-und-0-value2.form-item {
@@ -2691,7 +2689,7 @@ article {
 
 button#add-item-modal {
 	
-	margin-bottom:8px;
+	margin-bottom:10px;
 }
 
 /* by Thom: style check in and check out elements on add loan form */
@@ -4214,7 +4212,12 @@ body > div {
 
 /* by Thom: styling to differentiate relationships section heading on add person from field labels */
 
-#field-human-pers-rels-values thead th label {
+#human-fields-b thead th.field-label {
+	
+	padding: 0px;
+}
+
+#human-fields-b thead th label {
 	
 	text-decoration: underline;
 	font-weight: bold;
@@ -4254,4 +4257,63 @@ body > div {
 .page-node-add-personal-relationship .ui-dialog .ui-dialog-titlebar-close, .page-node-add-item .ui-dialog .ui-dialog-titlebar-close, .page-node-add-human .ui-dialog .ui-dialog-titlebar-close, .page-node-add-loan .ui-dialog .ui-dialog-titlebar-close {
 	
 	opacity:.9;
+}
+
+/* @author goodnowt tags and init publ date fields on add item form */
+
+.item-record .form-item-field-artifact-type-und {
+	
+	margin: auto 8px;
+}
+
+.item-record .form-item-field-artifact-type-und label {
+	
+	float:left;
+	width:125px;
+}
+
+.item-record .form-item-field-artifact-type-und div.controls {
+	
+	float:left;
+	width:auto !important;
+}
+
+#field-initial-publication-date-add-more-wrapper legend {
+	
+	font-size: 14px;
+	margin: 0px;
+	border: 0px;
+	font-weight: bold;
+	width: 155px;
+	float: left;
+	margin-top: -9px;
+}
+
+#field-initial-publication-date-add-more-wrapper div.fieldset-wrapper {
+	
+	float: left;
+	width:auto !important;
+	padding: 0x; 
+}
+
+#field-initial-publication-date-add-more-wrapper div.fieldset-wrapper > div > div {
+	
+	margin: 0px;
+}
+
+#field-initial-publication-date-add-more-wrapper div.fieldset-wrapper div.controls > div {
+	
+	padding: 0px;
+}
+
+#field-initial-publication-date-add-more-wrapper p.help-block {
+	
+	display: none;
+}
+
+#field-initial-publication-date-add-more-wrapper input {
+	
+	margin-right: 0px;
+	margin-left: 10px;
+	width: 60px !important;
 }
