@@ -2622,7 +2622,7 @@ article {
 	width:190px;
 }
 
-#edit-field-item-number-taxon-und, #edit-field-artifact-external-record-und-0-value {
+#edit-field-artifact-external-record-und-0-value {
 	
 	margin-bottom:0px;
 }
@@ -3677,7 +3677,7 @@ body > div {
 	display:none;
 }
 
-.node-book .field-name-field-item-number-taxon {
+.node-book .field-name-field-initial-publication-date {
 	
 	border-bottom:1px solid #D6CDBC;
 	margin-bottom:20px;
@@ -4331,5 +4331,13 @@ body > div {
 	
 	margin-right: 0px;
 	margin-left: 10px;
+	margin-bottom: 0px;
 	width: 60px !important;
+}
+
+/* @author goodnowt hide search button on navbar for initial release, since does not function */
+
+#simple-search-control-container {
+	
+	display: none;
 }

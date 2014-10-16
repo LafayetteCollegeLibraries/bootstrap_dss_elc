@@ -63,11 +63,21 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
      * For rendering the loan duration separately
      *
      */
-    $loan_duration_checkout = $vars['field_loan_duration'][0]['value'];
-    $vars['loan_duration_checkout'] = date('Y-m-d', $loan_duration_checkout);
 
+    $loan_duration_checkout = $vars['field_loan_duration'][0]['value'];
     $loan_duration_returned = $vars['field_loan_duration'][0]['value2'];
-    $vars['loan_duration_returned'] = date('Y-m-d', $loan_duration_returned);
+    /*
+
+    $d1 = new DateTime($loan_duration_checkout);
+    $vars['loan_duration_checkout'] = $d1->format('Y-m-d');
+
+
+    $d2 = new DateTime($loan_duration_returned);
+    $vars['loan_duration_returned'] = $d2->format('Y-m-d');
+    */
+    $vars['loan_duration_checkout'] = strftime('%Y-%m-%d', $vars['field_loan_duration'][0]['value']);
+    $vars['loan_duration_returned'] = strftime('%Y-%m-%d', $vars['field_loan_duration'][0]['value2']);
+
     hide($vars['content']['field_loan_duration']);
 
     /**
