@@ -88,19 +88,11 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     $filename_term = $vars['field_loan_filename'][0]['taxonomy_term'];
 
     /**
-     * Resolves EDDC-221
+     * Resolves EDDC-221 and EDDC-402
      * @todo Fully generate the path aliases for all newly migrated Page Objects
      */
-    if($filename_term->name == 'ELCv2_C1_136') {
+    $vars['islandora_object_link'] = l(t('View Ledger Image'), 'collections/eastonlibrary/' . $filename_term->name);
 
-      $vars['islandora_object_link'] = l(t('View Ledger Image'), 'ledger/2/' . $filename_term->name);
-    } else {
-
-      preg_match('/(.+?)_(.+)/', $filename_term->name, $m); 
-      $islandora_pid = $m[1] . ':' . $m[2];
-
-      $vars['islandora_object_link'] = l(t('View Ledger Image'), 'islandora/object/' . $islandora_pid);
-    }
     hide($vars['content']['field_loan_filename']);
 
     hide($vars['content']['field_loan_ledger']);
