@@ -33,7 +33,7 @@ function bootstrap_dss_elc_form_loan_node_form_alter(&$form, $form_state, $form_
 					       '#submit' => array('publish_add_button_publish_node'));
   
   $form['actions']['submit']['#submit']['0'] = 'hold_button_publish_node';
-  
+
   if(isset($form['path']['source']['#value'])){
   	
 	$form['actions']['delete']['#value'] = t('Save Updates');
@@ -49,9 +49,7 @@ function bootstrap_dss_elc_form_loan_node_form_alter(&$form, $form_state, $form_
 	$form['actions']['unpublish']['#submit']['0'] = 'edit_node_discard_updates';
 	
 	$form['actions']['submit']['#submit']['0'] = 'edit_node_hold_for_review';
-
   }
-  
 }
 
 /**

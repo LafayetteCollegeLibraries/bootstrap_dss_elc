@@ -3229,7 +3229,7 @@ body > div {
 
 .views-field-title.sorting, .views-field-title.sorting_asc, .views-field-title.sorting_desc {
 	
-	background-position: 170px 8px !important;
+	background-position: 143px 8px !important;
 }
 
 .views-field > input {
@@ -3275,7 +3275,8 @@ body > div {
 
 .view-people table {
 	
-	margin-left:calc((100% - 471px) / 2) !important;
+    /* margin-left:calc((100% - 471px) / 2) !important; */
+    margin-left:calc((100% - 411px) / 2) !important;
 }
 
 .view-people tbody tr td:nth-child(2), .view-people table tr td:nth-child(3), .view-people table tr td:nth-child(4) {
@@ -3336,6 +3337,13 @@ body > div {
 	vertical-align:middle;
 }
 
+.view-items tbody tr td:nth-child(5) {
+	
+	word-wrap: break-word;
+	word-break: break-all;
+	width: 115px !important;
+}
+
 .views-field-field-loan-volumes-loaned.sorting, .views-field-field-loan-volumes-loaned.sorting_asc, .views-field-field-loan-volumes-loaned.sorting_desc {
 	
 	background-position: 72px 8px !important;
@@ -3343,7 +3351,9 @@ body > div {
 
 .view-loans table {
 	
-	margin-left:calc((100% - 1056px) / 2) !important;
+    /*margin-left:calc((100% - 1056px) / 2) !important; */
+
+    margin-left:calc((100% - 996px) / 2) !important;
 }
 
 .view-loans tbody tr td:nth-child(6), .view-loans tbody tr td:nth-child(7), .view-loans tbody tr td:nth-child(8) {
@@ -3410,7 +3420,19 @@ body > div {
 
 .view-items table {
 	
-	margin-left:calc((100% - 1142px) / 2) !important;
+	margin-left:calc((100% - 956px) / 2) !important;
+}
+
+.view-items tbody tr td:nth-child(3) {
+	
+	word-wrap: break-word;
+	word-break: break-all;
+	width: 115px !important;
+}
+
+.view-items tbody tr td:nth-child(6), .view-items tbody tr td:nth-child(7), .view-items tbody tr td:nth-child(8) {
+	
+	text-align: center;
 }
 
 .view-items tbody tr td:nth-child(3) {
@@ -4254,7 +4276,7 @@ body > div {
     border-radius: 3px;
     float: left;
     height: 27px;
-    margin-left: calc(50% - 228px);
+    margin-left: calc(50% - 232px);
     width: 140px;
     margin-top: 10px;
 }
@@ -4362,3 +4384,21 @@ body > div {
 	
 	display: none;
 }
+
+
+/* @author goodnowt hide edit columns temporarily for browse views */
+
+.view-items th.views-field-edit-node, .view-items tbody td:nth-child(8) {
+	
+	display:none;
+}
+
+.view-loans th.views-field-edit-node, .view-loans tbody td:nth-child(8) {
+	
+	display:none;
+}
+
+.view-people th.views-field-edit-node, .view-people tbody td:nth-child(4) {
+	
+	display:none;
+} 
