@@ -4396,10 +4396,8 @@ body > div {
 
 #block-dss-elc-visualize-bivariate svg g.nv-x.nv-axis text {
 	
-	/* font-style: italic; */
-	
-	/* -webkit-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg); */
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
 }
