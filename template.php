@@ -88,19 +88,11 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
     $filename_term = $vars['field_loan_filename'][0]['taxonomy_term'];
 
     /**
-     * Resolves EDDC-221
+     * Resolves EDDC-221 and EDDC-402
      * @todo Fully generate the path aliases for all newly migrated Page Objects
      */
-    if($filename_term->name == 'ELCv2_C1_136') {
+    $vars['islandora_object_link'] = l(t('View Ledger Image'), 'collections/eastonlibrary/' . $filename_term->name);
 
-      $vars['islandora_object_link'] = l(t('View Ledger Image'), 'ledger/2/' . $filename_term->name);
-    } else {
-
-      preg_match('/(.+?)_(.+)/', $filename_term->name, $m); 
-      $islandora_pid = $m[1] . ':' . $m[2];
-
-      $vars['islandora_object_link'] = l(t('View Ledger Image'), 'islandora/object/' . $islandora_pid);
-    }
     hide($vars['content']['field_loan_filename']);
 
     hide($vars['content']['field_loan_ledger']);
@@ -129,43 +121,44 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
 
       $loans_view = views_embed_view('loans_by_human', 'default', $vars['nid']);
     }
+
     $vars['loans_view'] = $loans_view;
 
-  } else if($vars['type'] == 'book'
-	    or $vars['type'] == 'periodical'
-	    or $vars['type'] == 'item'
-	    ) {
+  } else if($vars['type'] == 'manifestation' or
+	    $vars['type'] == 'book' or
+	    $vars['type'] == 'periodical' or
+	    $vars['type'] == 'item') {
 
     /**
-     * Embed an actual view for the human
+     * Embed an actual view for Item, Book, and Periodical Nodes
      */
+
+    // Retrieve the Manifestation Node for the Item Node
+    // Loosely based upon the FRBR data model
+    $manifestation_nid = $vars['nid'];
 
     /** (Ensure that this is only rendered for Pages and not Teaser Views) */
     $loans_view = '';
     if(!$vars['teaser']) {
 
-      // Retrieve the Manifestation Node for the Item Node
-      // Loosely based upon the FRBR data model
-      $manifestation_nid = '';
+      if($vars['type'] == 'book' or
+	 $vars['type'] == 'periodical' or
+	 $vars['type'] == 'item') {
 
-      /**
-       * @todo Create an appropriate field and store this relationship
-       */
-      $drupalQuery = new EntityFieldQuery();
-      $result = $drupalQuery->entityCondition('entity_type', 'node')
-	->entityCondition('bundle', 'manifestation')
-	->fieldCondition('field_artifact_title', 'value', $vars['field_artifact_title'][0]['value'])
-	->execute();
+	/**
+	 * @todo Create an appropriate field and store this relationship
+	 */
 
-      if(isset($result['node'])) {
-	  
-	//$bib_entities = array_merge(entity_load('node', array_keys($result['node'])));
-	$manifestation_nid = array_shift(array_keys($result['node']));
+	if(!empty($vars['field_item_embodies'][$vars['language']])) {
+
+	  $manifestation_nid = $vars['field_item_embodies'][$vars['language']][0]['target_id'];
+	}
       }
 
       $loans_view = views_embed_view('loans_by_item', 'default', $manifestation_nid);
+
+      $vars['loans_view'] = $loans_view;
     }
-    $vars['loans_view'] = $loans_view;
   }
 
   if($vars['page']) {
