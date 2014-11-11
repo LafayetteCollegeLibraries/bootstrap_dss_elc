@@ -4388,3 +4388,18 @@ body > div {
 	
 	display:none;
 } 
+
+
+
+
+/* @author goodnowt position labels for linear chart from NVD3 */
+
+#block-dss-elc-visualize-bivariate svg g.nv-x.nv-axis text {
+	
+	/* font-style: italic; */
+	
+	/* -webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg); */
+}
