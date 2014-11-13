@@ -3446,11 +3446,23 @@ body > div {
 	text-align: center;
 }
 
-/* by Thom: reset navbar button width for six buttons */
+/* by Thom: reset navbar button width for custom buttons */
 
 .navbar .nav > li.btn {
 	
-	width:87px;
+	width:auto;
+}
+
+.navbar .nav > li.btn:nth-child(1) > a, .navbar .nav > li.btn:nth-child(2) > a {
+	
+	padding-left:14px;
+	padding-right:14px;
+}
+
+.navbar .nav > li.btn:nth-child(3) > a, .navbar .nav > li.btn:nth-child(4) > a, .navbar .nav > li.btn:nth-child(5) > a {
+	
+	padding-left:14px;
+	padding-right:8px;
 }
 
 /* by Thom: style recent blog posts index page */
