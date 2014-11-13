@@ -727,10 +727,13 @@ function bootstrap_dss_elc_preprocess_islandora_large_image(array &$variables) {
   // Retrieve the MODS Metadata
   try {
 
-    $mods_str = $object['MODS']->content;
+    if(!is_null($object['MODS'])) {
 
-    $mods_str = preg_replace('/<\?xml .*?\?>/', '', $mods_str);
-    $mods_object = new DssMods($mods_str);
+      $mods_str = $object['MODS']->content;
+
+      $mods_str = preg_replace('/<\?xml .*?\?>/', '', $mods_str);
+      $mods_object = new DssMods($mods_str);
+    }
   } catch (Exception $e) {
     
     drupal_set_message(t('Error retrieving object %s %t', array('%s' => $object->id, '%t' => $e->getMessage())), 'error', FALSE);
@@ -802,7 +805,10 @@ function bootstrap_dss_elc_preprocess_islandora_book_page(array &$variables) {
   
 }
 
-function bootstrap_dss_elc_preprocess_islandora_book_pages(array &$variables) {
+function bootstrap_dss_elc_preprocess_islandora_book_pages(array &$vars) {
+  
+  $object = array_key_exists('object', $vars) ? $vars['object'] : NULL;
+  $object_id = is_null($object) ? variable_get('islandora_repository_pid', 'islandora:root') : $object->id;
 
   // View Links.
   $display = (empty($_GET['display'])) ? 'grid' : $_GET['display'];
@@ -811,10 +817,10 @@ function bootstrap_dss_elc_preprocess_islandora_book_pages(array &$variables) {
 
   $query_params = drupal_get_query_parameters($_GET);
 
-  $variables['view_links'] = array(
+  $vars['view_links'] = array(
 				   array(
 					 'title' => 'Grid view',
-					 'href' => url("islandora/object/{$object->id}/pages", array('absolute' => TRUE)),
+					 'href' => url("islandora/object/$object_id/pages", array('absolute' => TRUE)),
 					 'attributes' => array(
 							       'class' => "islandora-view-grid $grid_active",
 							       ),
@@ -822,7 +828,7 @@ function bootstrap_dss_elc_preprocess_islandora_book_pages(array &$variables) {
 					 ),
 				   array(
 					 'title' => 'List view',
-					 'href' => url("islandora/object/{$object->id}/pages", array('absolute' => TRUE)),
+					 'href' => url("islandora/object/$object_id/pages", array('absolute' => TRUE)),
 					 'attributes' => array(
 							       'class' => "islandora-view-list $list_active",
 							       ),
