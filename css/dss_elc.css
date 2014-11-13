@@ -4403,12 +4403,30 @@ body > div {
 	display:none;
 } 
 
-/* @author goodnowt position labels for linear chart from NVD3 */
+/* @author goodnowt styling for ledgers index */
 
-/* #block-dss-elc-visualize-bivariate svg g.nv-x.nv-axis text {
+body.page-islandora-object-islandoraelc div.islandora-discovery-controls {
 	
-	-webkit-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-} */
+	display:none;
+}
+
+body.page-islandora-object-islandoraelc div.islandora-basic-collection-wrapper {
+	
+	padding:0px;
+	background-color: #f7eedd;
+	border-radius: 4px;
+}
+
+body.page-islandora-object-islandoraelc div.islandora-solr-content {
+	
+	background-color: #f7eedd;
+	border-radius: 4px;
+}
+
+body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
+	
+	background-color: #f7eedd;
+	border: 1px solid #d6cdbc;
+	border-radius: 4px;
+	padding-top:25px;
+}
