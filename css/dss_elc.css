@@ -530,11 +530,6 @@ form#islandora-dss-solr-advanced-search-form div div.control-group.form-type-sel
 	width:344px;
 }
 
-#human-fields-a div.controls, #human-fields-c div.controls, .control-group.form-type-textfield.form-item-field-person-type-und.form-item div.controls, #edit-field-pers-rel-object-und {
-	
-	width:395px !important;
-}
-
 form#islandora-dss-solr-advanced-search-form div div#islandora-solr-advanced-terms div div.control-group {
 
     width: 220px;
@@ -2433,6 +2428,11 @@ article {
 
 /* by Thom: position elements on add person */
 
+#human-fields-a div.human-column > div > div > div.controls, #human-fields-c div.controls, .control-group.form-type-textfield.form-item-field-person-type-und.form-item div.controls, #edit-field-pers-rel-object-und {
+	
+	width:calc(100% - 140px) !important;
+}
+
 .draggable > td {
 	
 	padding:0px;
@@ -2462,9 +2462,19 @@ article {
 	float:left;
 } 
 
-.btn.btn-primary.form-submit.add-node-modal, #edit-field-human-pers-rels-und-add-more, .add-node-modal.btn.btn-info {
+.btn.btn-primary.form-submit.add-node-modal, .add-node-modal.btn.btn-info {
 	
 	margin-left:5px;
+}
+
+#edit-field-human-pers-rels-und-add-more {
+	
+	margin-right:5px;
+}
+
+.form-item-field-human-gender-und div.controls {
+	
+	width:300px !important;
 }
 
 #edit-field-person-location-und, #edit-field-person-type-und {
@@ -2543,6 +2553,16 @@ article {
 
 /* by Thom: position and size elements on add item */
 
+#item-node-form div.item-record > div:nth-child(2) > div:nth-child(1) div.controls, #item-node-form div.item-record > div:nth-child(2) > div:nth-child(4) div.controls, #item-node-form div.item-record > div:nth-child(3) div.controls, #item-node-form div.item-record > div:nth-child(4) div.controls {
+	
+	width:calc(100% - 130px) !important;
+}
+
+#item-node-form div.item-record > div:nth-child(5) > div:nth-child(1) div.controls {
+	
+	width:calc(100% - 130px) !important;
+}
+
 .book-column {
 	
 	width:auto;
@@ -2599,9 +2619,9 @@ article {
 
 #loan-node-form #edit-body-und-0-value {
 	
-	width:auto !important;
+	width:calc(100% - 130px) !important;
 	height:90px !important;
-	float:right;
+	float:left;
 }
 
 #field-item-was-authored-by-add-more-wrapper > div.control-group {
@@ -2646,6 +2666,7 @@ article {
 .loan-column > div > div.controls, .loan-column > div > div > div.controls, #field-bib-rel-object-values > tbody {
 	
 	float:left;
+	width:calc(100% - 130px) !important;
 }
 
 .date-no-float.start-date-wrapper.container-inline-date > div > div.controls, .date-no-float.end-date-wrapper.container-inline-date > div > div.controls {
@@ -2680,9 +2701,9 @@ article {
 
 #edit-field-loan-other-notes-und-0-value {
 	
-	width:auto !important;
+	width:calc(100% - 130px) !important;
 	height:90px !important;
-	float:right;
+	float:left;
 }
 
 #loan-fields-a, #loan-fields-b, .duration-column.loan-column, .loan-columns-container, #edit-actions {
@@ -4335,11 +4356,6 @@ body > div {
 
 /* @author goodnowt tags and init publ date fields on add item form */
 
-.item-record .form-item-field-artifact-type-und {
-	
-	margin: auto 8px;
-}
-
 .item-record .form-item-field-artifact-type-und label {
 	
 	float:left;
@@ -4349,7 +4365,6 @@ body > div {
 .item-record .form-item-field-artifact-type-und div.controls {
 	
 	float:left;
-	width:auto !important;
 }
 
 #field-initial-publication-date-add-more-wrapper legend {
@@ -4478,6 +4493,11 @@ body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
 
 #item-node-form #edit-body-und-0-value {
 	
-	width:auto !important;
 	height:90px !important;
+	width:calc(100% - 151px) !important;
+}
+
+.nvd3 .nv-legend .disabled circle {
+
+  fill-opacity: 0;
 }
