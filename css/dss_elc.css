@@ -4477,6 +4477,7 @@ body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
 .pager-ellipsis > span {
 	
 	border-color: #b8af9e !important;
+	background-color: #f7f4e3 !important;
 }
 
 .page-islandora-object-elc759 .islandora-book-pages-display-switch {
@@ -4526,29 +4527,6 @@ body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
 }
 
 /* styling for tablets */
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-
-    header > div.navbar-header > h1 > a {
-    	
-    	line-height: 45px;
-    	font-size: 42px;
-    }
-    
-    header > div.navbar-header > h1 {
-    	
-    	line-height: 42px;
-    }
-    
-    header > div.navbar-header > h2 {
-    	
-    	padding-top:15px;
-    }
-    
-}
 
 @media only screen 
 and (min-device-width : 768px) 
@@ -4702,6 +4680,29 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)
 and (orientation : portrait) {
+	
+	#block-dss-elc-visualize-network #edit-network-metrics > button {
+	
+		margin-left:11px;
+		margin-top:0px;
+		margin-bottom:15px;
+	}
+	
+	header > div.navbar-header > h1 > a {
+    	
+    	line-height: 45px;
+    	font-size: 42px;
+    }
+    
+    header > div.navbar-header > h1 {
+    	
+    	line-height: 42px;
+    }
+    
+    header > div.navbar-header > h2 {
+    	
+    	padding-top:15px;
+    }
 	
 	.view-loans .views-field.views-field-field-loan-shareholder {
     	
@@ -5030,4 +5031,11 @@ and (min-width : 1025px) {
 	-ms-transform: translateX(-6px);
 	-moz-transform: translateX(-6px);
 	-o-trasnform: translateX(-6px);
+}
+
+/* placement of network visualization in well */
+
+#network-visualize svg {
+	
+	width:calc(100% - 19px);
 }
