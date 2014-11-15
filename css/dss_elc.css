@@ -5035,7 +5035,7 @@ and (min-width : 1025px) {
 
 /* placement of network visualization in well */
 
-#network-visualize svg {
+#network-visualize {
 	
 	width:calc(100% - 19px);
 }
