@@ -3350,8 +3350,19 @@ body > div {
 /* by Thom: reset navbar button width for custom buttons */
 
 .navbar .nav > li.btn {
-	
-	width:auto;
+
+    width: auto;
+}
+
+/*
+ * @author griffinj@lafayette.edu
+ * Ensures that widths are overridden when the responsive menu is expanded
+ * Resolves EDDC-466
+ *
+ */
+.nav-collapse.in.collapse .nav > li.btn {
+
+    width: 100%;
 }
 
 .navbar .nav > li.btn:nth-child(1) > a, .navbar .nav > li.btn:nth-child(2) > a {
@@ -4288,10 +4299,16 @@ body > div {
 
 /* @author goodnowt hide search button on navbar for initial release, since does not function */
 
+/* @author griffinj@lafayette.edu
+ * This does not hide the parent container (necessary for consistent rendering across browsers)
+ *
+ */
+/*
 #simple-search-control-container {
 	
 	display: none;
 }
+*/
 
 
 /* @author goodnowt hide edit columns temporarily for browse views */

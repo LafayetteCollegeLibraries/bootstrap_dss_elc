@@ -66,8 +66,7 @@
 
       <div class="auth-share-container container">
 
-        <?php print $search_container; ?>
-
+        <!-- search_container -->
         <?php print $share_container; ?>
         <?php print $auth_container; ?>
 
