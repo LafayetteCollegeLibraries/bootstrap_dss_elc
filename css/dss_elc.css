@@ -4819,6 +4819,19 @@ and (orientation : portrait) {
 	
 		margin-left: 0px;
 	}
+	
+	/* styling for visualizations */
+	
+	.page-node-167134 .well, .page-node-167137 .well, .page-node-167136 .well {
+		
+		width:calc(100% - 40px);
+		margin-left:0px;
+	}
+	
+	.page-node-167134 #edit-network-metrics .form-type-entityreference div.controls {
+		
+		width:350px !important;
+	}
 
 }
 
