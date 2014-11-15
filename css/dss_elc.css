@@ -3810,7 +3810,7 @@ body > div {
 
 /* by Thom: modify background color of OSD */
 
-#islandora-openseadragon canvas {
+#islandora-openseadragon, #islandora-openseadragon form, #islandora-openseadragon canvas, #islandora-openseadragon > form > div:nth-child(1) {
 	
 	background-color:#F7EEDD !important;
 }
