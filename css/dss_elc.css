@@ -20,7 +20,7 @@ body {
 }
 
 #block-menu-menu-authentication-cas .menu li {
-http://digital.stage.lafayette.edu/collections/eastasia
+
     width: auto;
     border-right: none;
 }
@@ -3071,11 +3071,11 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 /* by Thom: fix height above header banner when logged in through drupal */
-/* Can't find why this had to be done, seems to be redundant now */
-/* body.logged-in {
+
+body.logged-in {
 	
 	padding-top:65px !important;
-} */
+}
 
 /* by Thom: footer background to bottom of browser viewport */
 
@@ -3629,42 +3629,51 @@ body > div {
 	width:auto;
 } 
 
-.node-book > .field {
+.node-book > .field-entries > .field {
 	
-	clear:both;
+	border-collapse: collapse;
 	border-top:1px solid #D6CDBC;
 	display:flex;
-	background: #F7EEDD;
-	margin-left:calc((100% - 752px) / 2);
-	width:752px;
+	clear:both;
 }
 
-.node-book .field.field-name-body.field-type-text-with-summary.field-label-hidden {
+.node-book > .field-entries {
+	
+	background-color: #f7eedd;
+	padding:0px;
+	border-left:1px solid #d6cdbc;
+	border-right:1px solid #d6cdbc;
+	border-bottom:1px solid #d6cdbc;
+	border-top:0px;
+	border-radius: 0px;
+	width:auto;
+	margin-left:calc((100% - 772px) / 2);
+	display:inline-block;
+	margin-bottom:20px;
+}
+
+.node-book .field-entries .field-label-hidden {
 	
 	display:none;
 }
 
-.node-book .field-name-field-initial-publication-date {
-	
-	border-bottom:1px solid #D6CDBC;
-	margin-bottom:20px;
-}
-
-.node-book > .field > .field-label {
+.node-book > .field-entries > div > .field-label {
 	
 	float:left;
 	width:130px;
 	border-right: 1px solid #D6CDBC;
 	padding: 4px 10px;
 	background-color:#EBE3D2;
+	display:inline;
 }
 
-.node-book > .field > .field-items {
+.node-book > .field-entries > div > .field-items {
 	
 	float:left;
 	width:600px;
 	border-left: 1px solid #D6CDBC;
 	padding: 4px 10px;
+	display: inline;
 }
 
 .node-book .pagination {
@@ -4680,6 +4689,16 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)
 and (orientation : portrait) {
+	
+	.node-book > .field-entries > div > .field-items {
+	
+		width:300px;
+	}
+	
+	.node-book > .field-entries {
+		
+		margin-left:calc((100% - 452px) / 2);
+	}
 	
 	.node-loan > .field-entries > div > .field-items {
 		
