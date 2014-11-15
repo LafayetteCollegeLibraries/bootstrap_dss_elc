@@ -2428,7 +2428,7 @@ article {
 
 /* by Thom: position elements on add person */
 
-#human-fields-a div.human-column > div > div > div.controls, #human-fields-c div.controls, .control-group.form-type-textfield.form-item-field-person-type-und.form-item div.controls, #edit-field-pers-rel-object-und {
+#human-node-form #human-fields-a div.human-column > div > div > div.controls, #human-node-form #human-fields-c div.controls, #human-node-form .control-group.form-type-textfield.form-item-field-person-type-und.form-item div.controls, #human-node-form #edit-field-pers-rel-object-und {
 	
 	width:calc(100% - 140px) !important;
 }
@@ -2477,7 +2477,7 @@ article {
 	width:300px !important;
 }
 
-#edit-field-person-location-und, #edit-field-person-type-und {
+#edit-field-person-location-und {
 	
 	margin-bottom:0px;
 }
@@ -4477,12 +4477,8 @@ body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
 
 #human-node-form .human-notes-column div.controls {
 	
-	float:right;
-}
-
-#human-node-form #edit-body-und-0-value {	
-
-	width:395px !important;
+	float:left;
+	width:calc(100% - 137px) !important;
 	height:90px !important;
 }
 
@@ -4497,7 +4493,17 @@ body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
 	width:calc(100% - 151px) !important;
 }
 
-.nvd3 .nv-legend .disabled circle {
+/* fix notes field placement on add relationship */
 
-  fill-opacity: 0;
+#personal-relationship-node-form #body-add-more-wrapper label {
+	
+	float: left;
+	width: 125px;
+}
+
+#personal-relationship-node-form #body-add-more-wrapper div.controls {
+	
+	float:left;
+	height:90px !important;
+	width:calc(100% - 130px) !important;
 }
