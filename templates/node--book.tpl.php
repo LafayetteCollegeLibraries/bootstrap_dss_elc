@@ -21,8 +21,15 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
+	?>
+	
+  <div class="field-entries">
+  <?php
     print render($content);
+  ?>
+  </div>
 
+  <?php
     // Render the loans view
     print $loans_view;
   ?>
