@@ -2467,7 +2467,7 @@ article {
 	margin-left:5px;
 }
 
-#edit-field-human-pers-rels-und-add-more {
+#edit-field-human-pers-rels-und-add-more, .btn.btn-primary.form-submit.add-node-modal.btn-rmv-rel, .field-add-more-submit.btn.form-submit.ajax-processed {
 	
 	margin-right:5px;
 }
