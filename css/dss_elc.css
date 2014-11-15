@@ -4457,6 +4457,11 @@ body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
 	border-color: #b8af9e;
 }
 
+.pager-ellipsis > span {
+	
+	border-color: #b8af9e !important;
+}
+
 .page-islandora-object-elc759 .islandora-book-pages-display-switch {
 	
 	display:none;
@@ -4992,3 +4997,20 @@ and (min-width : 1025px) {
 		
 		width:400px !important;
 	}
+	
+/* style data points on line chart */
+
+.nv-point {
+	
+	fill-opacity: 0.95 !important;
+	stroke-opacity: 0.95 !important;
+	stroke-width: 7px !important;
+}
+
+.nv-y.nv-axis text {
+	
+	-webkit-transform: translateX(-6px);
+	-ms-transform: translateX(-6px);
+	-moz-transform: translateX(-6px);
+	-o-trasnform: translateX(-6px);
+}
