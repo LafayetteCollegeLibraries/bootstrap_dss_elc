@@ -7,7 +7,7 @@
 
 body {
 	
-    background-color:#FAF0D7;
+    background-color:#f7eedd;
 }
 
 /**
@@ -3071,11 +3071,11 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 /* by Thom: fix height above header banner when logged in through drupal */
-
-body.logged-in {
+/* Can't find why this had to be done, seems to be redundant now */
+/* body.logged-in {
 	
 	padding-top:65px !important;
-}
+} */
 
 /* by Thom: footer background to bottom of browser viewport */
 
@@ -3794,7 +3794,7 @@ body > div {
 
 /* by Thom: modify background color of OSD */
 
-#islandora-openseadragon > form > div > canvas {
+#islandora-openseadragon canvas {
 	
 	background-color:#F7EEDD !important;
 }
