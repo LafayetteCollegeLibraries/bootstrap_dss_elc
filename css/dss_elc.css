@@ -4507,3 +4507,120 @@ body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
 	height:90px !important;
 	width:calc(100% - 130px) !important;
 }
+
+/* style ledger indeces page browse */
+
+.page-islandora-object-elc10 .islandora-book-pages-display-switch {
+	
+	display:none;
+}
+
+.page-islandora-object-elc10 .islandora-book-pages.clearfix {
+	
+	background-color: #f7eedd;
+	border-radius: 4px;
+	border: 1px solid #d6cdbc;
+}
+
+.page-islandora-object-elc10 .islandora-book-pages.clearfix .islandora.islandora-book-pages {
+	
+	background-color: #f7eedd;
+}
+
+.page-islandora-object-elc10 .pagination ul > li > a, .page-islandora-object-elc10 .pagination ul > li > span {
+	
+	background-color: #f7f4e3;
+	border-color: #b8af9e;
+}
+
+.page-islandora-object-elc198 .islandora-book-pages-display-switch {
+	
+	display:none;
+}
+
+.page-islandora-object-elc198 .islandora-book-pages.clearfix {
+	
+	background-color: #f7eedd;
+	border-radius: 4px;
+	border: 1px solid #d6cdbc;
+}
+
+.page-islandora-object-elc198 .islandora-book-pages.clearfix .islandora.islandora-book-pages {
+	
+	background-color: #f7eedd;
+}
+
+.page-islandora-object-elc198 .pagination ul > li > a, .page-islandora-object-elc10 .pagination ul > li > span {
+	
+	background-color: #f7f4e3;
+	border-color: #b8af9e;
+}
+
+.page-islandora-object-elc490 .islandora-book-pages-display-switch {
+	
+	display:none;
+}
+
+.page-islandora-object-elc490 .islandora-book-pages.clearfix {
+	
+	background-color: #f7eedd;
+	border-radius: 4px;
+	border: 1px solid #d6cdbc;
+}
+
+.page-islandora-object-elc490 .islandora-book-pages.clearfix .islandora.islandora-book-pages {
+	
+	background-color: #f7eedd;
+}
+
+.page-islandora-object-elc490 .pagination ul > li > a, .page-islandora-object-elc10 .pagination ul > li > span {
+	
+	background-color: #f7f4e3;
+	border-color: #b8af9e;
+}
+
+.page-islandora-object-elc759 .islandora-book-pages-display-switch {
+	
+	display:none;
+}
+
+.page-islandora-object-elc759 .islandora-book-pages.clearfix {
+	
+	background-color: #f7eedd;
+	border-radius: 4px;
+	border: 1px solid #d6cdbc;
+}
+
+.page-islandora-object-elc759 .islandora-book-pages.clearfix .islandora.islandora-book-pages {
+	
+	background-color: #f7eedd;
+}
+
+.page-islandora-object-elc759 .pagination ul > li > a, .page-islandora-object-elc10 .pagination ul > li > span {
+	
+	background-color: #f7f4e3;
+	border-color: #b8af9e;
+}
+
+.page-islandora-object-elc1047 .islandora-book-pages-display-switch {
+	
+	display:none;
+}
+
+.page-islandora-object-elc1047 .islandora-book-pages.clearfix {
+	
+	background-color: #f7eedd;
+	border-radius: 4px;
+	border: 1px solid #d6cdbc;
+}
+
+.page-islandora-object-elc1047 .islandora-book-pages.clearfix .islandora.islandora-book-pages {
+	
+	background-color: #f7eedd;
+}
+
+.page-islandora-object-elc1047 .pagination ul > li > a, .page-islandora-object-elc10 .pagination ul > li > span {
+	
+	background-color: #f7f4e3;
+	border-color: #b8af9e;
+}
