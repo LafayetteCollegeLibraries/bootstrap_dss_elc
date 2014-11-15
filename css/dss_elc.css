@@ -5053,3 +5053,8 @@ and (min-width : 1025px) {
 	
 	margin-left:calc((100% - 700px) / 2);
 }
+
+#dss-elc-visualize-bivariate-form svg {
+	
+	margin-left:calc((100% - 695px) / 2);
+}
