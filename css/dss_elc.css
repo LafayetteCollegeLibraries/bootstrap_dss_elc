@@ -3072,7 +3072,7 @@ table.dataTable thead th, table.dataTable thead td {
 
 /* by Thom: fix height above header banner when logged in through drupal */
 
-body.toolbar-drawer, body.toolbar {
+body.logged-in {
 	
 	padding-top:65px !important;
 }
@@ -3245,13 +3245,13 @@ body > div {
 
 /* by Thom: fix column widths browse people table */
 
-.views-field.views-field-title {
+.view-people .views-field.views-field-title {
 	
-	width:300px !important;
+	width:250px !important;
 	vertical-align:middle;
 }
 
-.views-field-title.sorting, .views-field-title.sorting_asc, .views-field-title.sorting_desc {
+.view-people .views-field-title.sorting, .view-people .views-field-title.sorting_asc, .view-people .views-field-title.sorting_desc {
 	
 	background-position: 143px 8px !important;
 }
@@ -3262,14 +3262,14 @@ body > div {
 	margin-bottom:0px !important;
 }
 
-.views-field.views-field-changed {
+.view-people .views-field.views-field-changed {
 	
 	width:100px !important;
 	text-align:center;
 	vertical-align:middle;
 }
 
-.views-field-changed.sorting, .views-field-changed.sorting_asc, .views-field-changed.sorting_desc {
+.view-people .views-field-changed.sorting, .view-people .views-field-changed.sorting_asc, .view-people .views-field-changed.sorting_desc {
 	
 	background-position: 77px 23px !important;
 }
@@ -3310,74 +3310,11 @@ body > div {
 
 /* by Thom: fix column widths browse loans table */
 
-.views-field.views-field-field-loan-shareholder {
-	
-	width:180px !important;
-	vertical-align:middle;
-}
-
-.views-field-field-loan-shareholder.sorting, .views-field-field-loan-shareholder.sorting_asc, .views-field-field-loan-shareholder.sorting_desc {
-	
-	background-position: 130px 8px !important;
-}
-
-.views-field.views-field-field-bib-rel-subject {
-	
-	width:180px !important;
-	vertical-align:middle;
-}
-
-.views-field-field-bib-rel-subject.sorting, .views-field-field-bib-rel-subject.sorting_asc, .views-field-field-bib-rel-subject.sorting_desc {
-	
-	background-position: 140px 8px !important;
-}
-
-.views-field.views-field-field-loan-duration {
-	
-	width:110px !important;
-	text-align:center;
-	vertical-align:middle;
-}
-
-.views-field-field-loan-duration.sorting, .views-field-field-loan-duration.sorting_asc, .views-field-field-loan-duration.sorting_desc {
-	
-	background-position: 86px 23px !important;
-}
-
-.views-field.views-field-field-bib-rel-object {
-	
-	width:250px !important;
-	vertical-align:middle;
-}
-
-.views-field-field-bib-rel-object.sorting, .views-field-field-bib-rel-object.sorting_asc, .views-field-field-bib-rel-object.sorting_desc {
-	
-	background-position: 140px 8px !important;
-}
-
-.views-field.views-field-field-loan-volumes-loaned {
-	
-	width:115px !important;
-	vertical-align:middle;
-}
-
 .view-items tbody tr td:nth-child(5) {
 	
 	word-wrap: break-word;
 	word-break: break-all;
 	width: 115px !important;
-}
-
-.views-field-field-loan-volumes-loaned.sorting, .views-field-field-loan-volumes-loaned.sorting_asc, .views-field-field-loan-volumes-loaned.sorting_desc {
-	
-	background-position: 72px 8px !important;
-}
-
-.view-loans table {
-	
-    /*margin-left:calc((100% - 1056px) / 2) !important; */
-
-    margin-left:calc((100% - 996px) / 2) !important;
 }
 
 .view-loans tbody tr td:nth-child(6), .view-loans tbody tr td:nth-child(7), .view-loans tbody tr td:nth-child(8) {
@@ -3386,66 +3323,6 @@ body > div {
 }
 
 /* by Thom: set column widths for browse items table */
-
-.views-field.views-field-field-artifact-was-authored-by {
-	
-	width:180px !important;
-	vertical-align:middle;
-}
-
-.views-field-field-artifact-was-authored-by.sorting, .views-field-field-artifact-was-authored-by.sorting_asc, .views-field-field-artifact-was-authored-by.sorting_desc {
-	
-	background-position: 110px 8px !important;
-}
-
-.views-field.views-field-title {
-	
-	width:250px !important;
-	vertical-align:middle;
-}
-
-.view-items .views-field-title.sorting, .view-items .views-field-title.sorting_asc, .view-items .views-field-title.sorting_desc {
-	
-	background-position: 137px 8px !important;
-}
-
-.views-field-field-item-volume-migrate  {
-	
-	width:115px !important;
-	vertical-align:middle;
-}
-
-.views-field-field-item-volume-migrate.sorting, .views-field-field-item-volume-migrate.sorting_asc, .views-field-field-item-volume-migrate.sorting_desc {
-	
-	background-position: 72px 8px !important;
-}
-
-.views-field.views-field-type {
-	
-	width:115px !important;
-	vertical-align:middle;
-}
-
-.views-field-type.sorting, .views-field-type.sorting_asc, .views-field-type.sorting_desc {
-	
-	background-position: 72px 8px !important;
-}
-
-.views-field.views-field-field-item-subject {
-	
-	width:135px !important;
-	vertical-align:middle;
-}
-
-.views-field-field-item-subject.sorting, .views-field-field-item-subject.sorting_asc, .views-field-field-item-subject.sorting_desc {
-	
-	background-position: 92px 8px !important;
-}
-
-.view-items table {
-	
-	margin-left:calc((100% - 956px) / 2) !important;
-}
 
 .view-items tbody tr td:nth-child(3) {
 	
@@ -4623,4 +4500,474 @@ body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
 	
 	background-color: #f7f4e3;
 	border-color: #b8af9e;
+}
+
+/* styling for tablets */
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+    header > div.navbar-header > h1 > a {
+    	
+    	line-height: 45px;
+    	font-size: 42px;
+    }
+    
+    header > div.navbar-header > h1 {
+    	
+    	line-height: 42px;
+    }
+    
+    header > div.navbar-header > h2 {
+    	
+    	padding-top:15px;
+    }
+    
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	
+	.view-loans .views-field.views-field-field-loan-shareholder {
+    	
+    	width: 160px !important;
+    }
+    
+    .view-loans .views-field-field-loan-shareholder.sorting, .view-loans .views-field-field-loan-shareholder.sorting_asc, .view-loans .views-field-field-loan-shareholder.sorting_desc {
+    	
+    	background-position: 122px 8px !important;
+    }
+    
+    .views-field.views-field-field-bib-rel-subject {
+		
+		width:160px !important;
+	}
+	
+	.views-field-field-bib-rel-subject.sorting, .views-field-field-bib-rel-subject.sorting_asc, .views-field-field-bib-rel-subject.sorting_desc {
+	
+		background-position: 131px 8px !important;
+	}
+	
+	.view-loans .views-field.views-field-field-loan-duration {
+    	
+    	width: 92px !important;
+    	vertical-align:middle;
+    }
+    
+    .view-loans .views-field-field-loan-duration.sorting, .view-loans .views-field-field-loan-duration.sorting_asc, .view-loans .views-field-field-loan-duration.sorting_desc {
+    	
+    	background-position: 75px 23px !important;
+    }
+    
+    .view-loans .views-field.views-field-field-bib-rel-object {
+    	
+    	width: 200px !important;
+    }
+    
+    .view-loans .views-field-field-bib-rel-object.sorting, .view-loans .views-field-field-bib-rel-object.sorting_asc, .view-loans .views-field-field-bib-rel-object.sorting_desc {
+    	
+    	background-position: 133px 8px !important;
+    }
+    
+    .views-field.views-field-field-loan-volumes-loaned {
+	
+		width:115px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-loan-volumes-loaned.sorting, .views-field-field-loan-volumes-loaned.sorting_asc, .views-field-field-loan-volumes-loaned.sorting_desc {
+	
+		background-position: 72px 8px !important;
+	}
+    
+    .view-loans .views-field.views-field-changed {
+    	
+    	width: 92px !important;
+    	vertical-align:middle;
+    }
+    
+    .view-loans .views-field-changed.sorting, .view-loans .views-field-changed.sorting_asc, .view-loans .views-field-changed.sorting_desc {
+    	
+    	background-position: 73px 23px !important;
+    }
+    
+    .view-loans table {
+    	
+    	margin-left:0px;
+    }
+    
+    
+	.views-field.views-field-field-artifact-was-authored-by {
+	
+		width:180px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-artifact-was-authored-by.sorting, .views-field-field-artifact-was-authored-by.sorting_asc, .views-field-field-artifact-was-authored-by.sorting_desc {
+	
+		background-position: 110px 8px !important;
+	}
+	
+	.view-items .views-field.views-field-title {
+	
+		width:250px !important;
+		vertical-align:middle;
+	}
+
+	.view-items .views-field-title.sorting, .view-items .views-field-title.sorting_asc, .view-items .views-field-title.sorting_desc {
+	
+		background-position: 137px 8px !important;
+	}
+	
+	.views-field-field-item-volume-migrate  {
+	
+		width:115px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-item-volume-migrate.sorting, .views-field-field-item-volume-migrate.sorting_asc, .views-field-field-item-volume-migrate.sorting_desc {
+	
+		background-position: 72px 8px !important;
+	}
+	
+	.views-field.views-field-type {
+	
+		width:115px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-type.sorting, .views-field-type.sorting_asc, .views-field-type.sorting_desc {
+	
+		background-position: 72px 8px !important;
+	}
+	
+	.views-field.views-field-field-item-subject {
+	
+		width:135px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-item-subject.sorting, .views-field-field-item-subject.sorting_asc, .views-field-field-item-subject.sorting_desc {
+	
+		background-position: 92px 8px !important;
+	}
+	
+	.view-items .views-field.views-field-changed, .view-people .views-field.views-field-changed {
+	
+		width:100px !important;
+		text-align:center;
+		vertical-align:middle;
+	}
+
+	.view-items .views-field-changed.sorting, .view-items .views-field-changed.sorting_asc, .view-items .views-field-changed.sorting_desc {
+	
+		background-position: 77px 23px !important;
+	}
+	
+	.view-items table {
+	
+		margin-left:0px;
+	}
+    
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+	
+	.view-loans .views-field.views-field-field-loan-shareholder {
+    	
+    	width: 160px !important;
+    }
+    
+    .view-loans .views-field-field-loan-shareholder.sorting, .view-loans .views-field-field-loan-shareholder.sorting_asc, .view-loans .views-field-field-loan-shareholder.sorting_desc {
+    	
+    	background-position: 101px 8px !important;
+    }
+    
+    .views-field.views-field-field-bib-rel-subject {
+		
+		width:160px !important;
+	}
+	
+	.views-field-field-bib-rel-subject.sorting, .views-field-field-bib-rel-subject.sorting_asc, .views-field-field-bib-rel-subject.sorting_desc {
+	
+		background-position: 118px 8px !important;
+	}
+	
+	.view-loans .views-field.views-field-field-loan-duration {
+    	
+    	width: 92px !important;
+    	vertical-align:middle;
+    }
+    
+    .view-loans .views-field-field-loan-duration.sorting, .view-loans .views-field-field-loan-duration.sorting_asc, .view-loans .views-field-field-loan-duration.sorting_desc {
+    	
+    	background-position: 73px 23px !important;
+    }
+    
+    .view-loans .views-field.views-field-field-bib-rel-object {
+    	
+    	width: 200px !important;
+    }
+    
+    .view-loans .views-field-field-bib-rel-object.sorting, .view-loans .views-field-field-bib-rel-object.sorting_asc, .view-loans .views-field-field-bib-rel-object.sorting_desc {
+    	
+    	background-position: 88px 8px !important;
+    }
+    
+    .views-field.views-field-field-loan-volumes-loaned {
+	
+		width:115px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-loan-volumes-loaned.sorting, .views-field-field-loan-volumes-loaned.sorting_asc, .views-field-field-loan-volumes-loaned.sorting_desc {
+	
+		background-position: 62px 8px !important;
+	}
+    
+    .view-loans .views-field.views-field-changed {
+    	
+    	width: 92px !important;
+    	vertical-align:middle;
+    }
+    
+    .view-loans .views-field-changed.sorting, .view-loans .views-field-changed.sorting_asc, .view-loans .views-field-changed.sorting_desc {
+    	
+    	background-position: 70px 23px !important;
+    }
+    
+    .view-loans table {
+    	
+    	margin-left:0px;
+    }
+    
+    .views-field.views-field-field-artifact-was-authored-by {
+	
+		width:180px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-artifact-was-authored-by.sorting, .views-field-field-artifact-was-authored-by.sorting_asc, .views-field-field-artifact-was-authored-by.sorting_desc {
+	
+		background-position: 87px 8px !important;
+	}
+	
+	.view-items .views-field.views-field-title {
+	
+		width:250px !important;
+		vertical-align:middle;
+	}
+
+	.view-items .views-field-title.sorting, .view-items .views-field-title.sorting_asc, .view-items .views-field-title.sorting_desc {
+	
+		background-position: 102px 8px !important;
+	}
+	
+	.views-field-field-item-volume-migrate  {
+	
+		width:115px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-item-volume-migrate.sorting, .views-field-field-item-volume-migrate.sorting_asc, .views-field-field-item-volume-migrate.sorting_desc {
+	
+		background-position: 54px 8px !important;
+	}
+	
+	.views-field.views-field-type {
+	
+		width:115px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-type.sorting, .views-field-type.sorting_asc, .views-field-type.sorting_desc {
+	
+		background-position: 59px 8px !important;
+	}
+	
+	.views-field.views-field-field-item-subject {
+	
+		width:135px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-item-subject.sorting, .views-field-field-item-subject.sorting_asc, .views-field-field-item-subject.sorting_desc {
+	
+		background-position: 80px 8px !important;
+	}
+	
+	.view-items .views-field.views-field-changed, .view-people .views-field.views-field-changed {
+	
+		width:100px !important;
+		text-align:center;
+		vertical-align:middle;
+	}
+
+	.view-items .views-field-changed.sorting, .view-items .views-field-changed.sorting_asc, .view-items .views-field-changed.sorting_desc {
+	
+		background-position: 72px 23px !important;
+	}
+	
+	.view-items table {
+	
+		margin-left: 0px;
+	}
+
+}
+
+@media only screen
+and (min-width : 1025px) {
+	
+	.views-field.views-field-field-loan-shareholder {
+	
+		width:180px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-loan-shareholder.sorting, .views-field-field-loan-shareholder.sorting_asc, .views-field-field-loan-shareholder.sorting_desc {
+	
+		background-position: 130px 8px !important;
+	}
+	
+	.views-field.views-field-field-bib-rel-subject {
+		
+		width:180px !important;
+		vertical-align:middle;
+	}
+	
+	.views-field-field-bib-rel-subject.sorting, .views-field-field-bib-rel-subject.sorting_asc, .views-field-field-bib-rel-subject.sorting_desc {
+	
+		background-position: 140px 8px !important;
+	}
+	
+	.views-field.views-field-field-loan-duration {
+	
+		width:110px !important;
+		text-align:center;
+		vertical-align:middle;
+	}
+
+	.views-field-field-loan-duration.sorting, .views-field-field-loan-duration.sorting_asc, .views-field-field-loan-duration.sorting_desc {
+	
+		background-position: 86px 23px !important;
+	}
+	
+	.views-field.views-field-field-bib-rel-object {
+	
+		width:250px !important;
+		vertical-align:middle;
+	}
+	
+	.views-field-field-bib-rel-object.sorting, .views-field-field-bib-rel-object.sorting_asc, .views-field-field-bib-rel-object.sorting_desc {
+	
+		background-position: 140px 8px !important;
+	}
+	
+	.views-field.views-field-field-loan-volumes-loaned {
+	
+		width:115px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-loan-volumes-loaned.sorting, .views-field-field-loan-volumes-loaned.sorting_asc, .views-field-field-loan-volumes-loaned.sorting_desc {
+	
+		background-position: 72px 8px !important;
+	}
+	
+	.view-loans .views-field.views-field-changed, .view-loans .views-field.views-field-changed {
+	
+		width:100px !important;
+		text-align:center;
+		vertical-align:middle;
+	}
+
+	.view-loans .views-field-changed.sorting, .view-loans .views-field-changed.sorting_asc, .view-loans .views-field-changed.sorting_desc {
+	
+		background-position: 77px 23px !important;
+	}
+
+	.view-loans table {
+
+	    margin-left:calc((100% - 996px) / 2) !important;
+	}
+
+	.views-field.views-field-field-artifact-was-authored-by {
+	
+		width:180px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-artifact-was-authored-by.sorting, .views-field-field-artifact-was-authored-by.sorting_asc, .views-field-field-artifact-was-authored-by.sorting_desc {
+	
+		background-position: 110px 8px !important;
+	}
+	
+	.view-items .views-field.views-field-title {
+	
+		width:250px !important;
+		vertical-align:middle;
+	}
+
+	.view-items .views-field-title.sorting, .view-items .views-field-title.sorting_asc, .view-items .views-field-title.sorting_desc {
+	
+		background-position: 137px 8px !important;
+	}
+	
+	.views-field-field-item-volume-migrate  {
+	
+		width:115px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-item-volume-migrate.sorting, .views-field-field-item-volume-migrate.sorting_asc, .views-field-field-item-volume-migrate.sorting_desc {
+	
+		background-position: 72px 8px !important;
+	}
+	
+	.views-field.views-field-type {
+	
+		width:115px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-type.sorting, .views-field-type.sorting_asc, .views-field-type.sorting_desc {
+	
+		background-position: 72px 8px !important;
+	}
+	
+	.views-field.views-field-field-item-subject {
+	
+		width:135px !important;
+		vertical-align:middle;
+	}
+
+	.views-field-field-item-subject.sorting, .views-field-field-item-subject.sorting_asc, .views-field-field-item-subject.sorting_desc {
+	
+		background-position: 92px 8px !important;
+	}
+	
+	.view-items .views-field.views-field-changed, .view-people .views-field.views-field-changed {
+	
+		width:100px !important;
+		text-align:center;
+		vertical-align:middle;
+	}
+
+	.view-items .views-field-changed.sorting, .view-items .views-field-changed.sorting_asc, .view-items .views-field-changed.sorting_desc {
+	
+		background-position: 77px 23px !important;
+	}
+	
+	.view-items table {
+	
+		margin-left:calc((100% - 956px) / 2) !important;
+	}
+	
 }
