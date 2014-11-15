@@ -5039,3 +5039,10 @@ and (min-width : 1025px) {
 	
 	width:calc(100% - 19px);
 }
+
+/* root nodes of network vis */
+
+.nodeLegendRoot, .node-root {
+	
+	fill: red !important;
+}
