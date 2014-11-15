@@ -5058,3 +5058,23 @@ and (min-width : 1025px) {
 	
 	margin-left:calc((100% - 695px) / 2);
 }
+
+/* style dropdown menu for collapsed navbar */
+
+div.nav-collapse.in .dropdown-menu a {
+	
+	color: #dddddd;
+	border-bottom: 0px;
+	text-align: center;
+}
+
+div.nav-collapse.in .dropdown-menu a:hover, div.nav-collapse.in .dropdown-menu a:focus {
+	
+	color: #555555;
+	background-color: #DDDDDD;
+}
+
+div.nav-collapse.in nav .dropdown-menu .first.leaf {
+	
+	border-top:0px;
+}
