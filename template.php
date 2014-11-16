@@ -24,19 +24,87 @@ require_once dirname(__FILE__) . '/includes/breadcrumb.inc';
 
 function bootstrap_dss_elc_process_node(&$vars) {
 
+  // Add the RDF mapping to the head
+  
+  global $base_url;
+  $meta_elements = array();
+
   if($vars['type'] == 'loan') {
 
-    /*
-    hide($vars['content']['field_loan_ledger']);
-    hide($vars['content']['field_loan_volumes_loaned']);
-    hide($vars['content']['field_loan_issues_loaned']);
-    */
-  }
+    // RDFa
+    $subject_uri = $base_url . '/node/' . $vars['nid'];
 
+    // For the shareholder
+
+    if(!empty($vars['field_bib_rel_subject'])) {
+
+      $field_bib_rel_subject = $vars['field_bib_rel_subject'][0]['target_id'];
+
+      $meta_elements['rdfa_field_bib_rel_subject'] = array('#type' => 'html_tag',
+							   '#tag' => 'meta',
+							   '#attributes' => array(
+										  //'datatype' => 'dul:Agent',
+										  'about' => $subject_uri,
+										  'property' =>  'lode:involvedAgent',
+										  'href' => $base_url . '/node/' . $field_bib_rel_subject
+										  )
+							   );
+    }
+
+    if(!empty($vars['field_loan_shareholder'])) {
+
+      $field_loan_shareholder = $vars['field_loan_shareholder'][0]['target_id'];
+
+      // For the representative
+      $meta_elements['rdfa_field_loan_shareholder'] = array('#type' => 'html_tag',
+							    '#tag' => 'meta',
+							    '#attributes' => array('datatype' => 'dul:Agent',
+										   'about' => $subject_uri,
+										   'property' =>  'lode:involvedAgent',
+										   'href' => $base_url . '/node/' . $field_loan_shareholder
+										   )
+							    );
+    }
+
+    if(!empty($vars['field_bib_rel_object'])) {
+
+      $field_bib_rel_object = $vars['field_bib_rel_object'][0]['target_id'];
+
+      // For the item
+      $meta_elements['rdfa_field_bib_rel_object'] = array('#type' => 'html_tag',
+							  '#tag' => 'meta',
+							  '#attributes' => array('about' => $subject_uri,
+										 'property' =>  'lode:involved',
+										 'href' => $base_url . '/node/' . $field_bib_rel_object)
+							  );
+    }
+
+    if(!empty($vars['field_loan_duration'])) {
+
+      $field_loan_duration = $vars['field_loan_duration'][0]['value'];
+
+    // For the checkout date
+    $meta_elements['rdfa_field_loan_duration'] = array('#type' => 'html_tag',
+						       '#tag' => 'meta',
+						       '#attributes' => array('datatype' => "xsd:integer",
+									      'about' => $subject_uri,
+									      'property' =>  'lode:atTime',
+									      'content' => $field_loan_duration)
+						       );
+    }
+
+    foreach($meta_elements as $key => $meta_element) {
+
+      // Add header meta tag for IE to head
+      drupal_add_html_head($meta_element, $key);
+    }
+  }
 }
 
 function bootstrap_dss_elc_preprocess_node(&$vars) {
 
+  //dpm($vars);
+  
   /**
    * Theming for loans
    *

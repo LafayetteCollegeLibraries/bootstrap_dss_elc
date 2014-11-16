@@ -266,9 +266,6 @@ function bootstrap_dss_elc_form_alter(&$form, $form_state, $form_id) {
 	$form['actions']['publish']['#value'] = t('Discard Updates');
 	$form['actions']['publish']['#submit']['0'] = '_publish_button_publish_node';
 	
-	dpm($form);
-  	dpm($form_state);
-  	dpm($form_id);
 	*/
   }
  
