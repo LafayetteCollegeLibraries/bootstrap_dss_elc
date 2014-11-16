@@ -7,7 +7,7 @@
 
 body {
 	
-    background-color:#f7eedd;
+    background-color:white;
 }
 
 /**
@@ -4549,6 +4549,11 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
 	
+	body {
+		
+		background-color:white;
+	}
+	
 	.view-loans .views-field.views-field-field-loan-shareholder {
     	
     	width: 160px !important;
@@ -4697,34 +4702,39 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
 	
+	body {
+		
+		background-color:white;
+	}
+	
 	.node-human .field-entries .field-items {
 	
-		width:300px;
+		width:300px !important;
 	}
 	
 	.node-human .field-entries {
 	
-		margin-left:calc((100% - 452px) / 2);
+		margin-left:calc((100% - 452px) / 2) !important;
 	} 
 	
 	.node-book > .field-entries > div > .field-items {
 	
-		width:300px;
+		width:300px !important;
 	}
 	
 	.node-book > .field-entries {
 		
-		margin-left:calc((100% - 452px) / 2);
+		margin-left:calc((100% - 452px) / 2) !important;
 	}
 	
 	.node-loan > .field-entries > div > .field-items {
 		
-		width:300px;
+		width:300px !important;
 	}
 	
 	.node-loan > .field-entries {
 		
-		margin-left: calc((100% - 522px) / 2);
+		margin-left: calc((100% - 522px) / 2) !important;
 	}
 	
 	#block-dss-elc-visualize-network #edit-network-metrics > button {
