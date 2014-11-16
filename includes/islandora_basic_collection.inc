@@ -222,6 +222,4 @@ function bootstrap_dss_elc_preprocess_islandora_basic_collection_wrapper(&$varia
 				   'grid' => $grid_link);
 
   $variables['display'] = $display;
-
-  dpm($variables);
 }
