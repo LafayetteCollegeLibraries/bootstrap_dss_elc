@@ -7,7 +7,7 @@
 
 body {
 	
-    background-color:white;
+    background-color:#f7eedd;
 }
 
 /**
@@ -4710,6 +4710,11 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)
 and (orientation : portrait) {
+	
+	#network-visualize {
+	
+		margin-left:-14px !important;
+	}
 	
 	body {
 		
