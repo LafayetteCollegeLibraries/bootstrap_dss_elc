@@ -2349,6 +2349,15 @@ article {
 	border-bottom-right-radius:2px;
 }
 
+/*
+ * @author griffinj@lafayette.edu
+ *
+ */
+.dropdown-backdrop {
+
+    z-index: -1;
+}
+
 /* by Thom: relationships on add person form */
 
 .table-striped tbody > tr:nth-child(2n+1) > td, .table-striped tbody > tr:nth-child(2n+1) > th {
