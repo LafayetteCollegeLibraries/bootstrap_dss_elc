@@ -2437,7 +2437,7 @@ article {
 
 /* by Thom: position elements on add person */
 
-#human-node-form #human-fields-a div.human-column > div > div > div.controls, #human-node-form #human-fields-c div.controls, #human-node-form .control-group.form-type-textfield.form-item-field-person-type-und.form-item div.controls, #human-node-form #edit-field-pers-rel-object-und {
+.span12 > #human-node-form #human-fields-a div.human-column > div > div > div.controls, .span12 > #human-node-form #human-fields-c div.controls, .span12 > #human-node-form .control-group.form-type-textfield.form-item-field-person-type-und.form-item div.controls, .span12 > #human-node-form #edit-field-pers-rel-object-und {
 	
 	width:calc(100% - 140px) !important;
 }
@@ -2713,6 +2713,11 @@ article {
 	width:calc(100% - 130px) !important;
 	height:90px !important;
 	float:left;
+}
+
+.span12 #human-node-form #edit-body-und-0-value {
+	
+	height: 90px !important;
 }
 
 #loan-fields-a, #loan-fields-b, .duration-column.loan-column, .loan-columns-container, #edit-actions {
@@ -3032,7 +3037,7 @@ table.dataTable thead th, table.dataTable thead td {
 .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-human-modal {
 	
 	margin-left:0px;
-	height: 515px !important;
+	height: 505px !important;
 }
 
 #add-human-modal > form > div > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div.human-column, #add-human-modal > form > div > div > div > div#edit-actions {
@@ -3045,7 +3050,7 @@ table.dataTable thead th, table.dataTable thead td {
 .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable > #add-item-modal {
 	
 	margin-left:0px;
-	height: 605px !important;
+	height: 675px !important;
 }
 
 /* by Thom: box shadow on modal forms */
@@ -3145,21 +3150,22 @@ body > div {
 	width:100% !important;
 }
 
-/* by Thom: resize column widths for elements on add person modal form */
+/* by Thom: rework person modal form */
 
-#add-human-modal .human-column > div > div > label, #add-human-modal .human-column > div > label, #add-human-modal .field-human-pers-rels-fields > div > div > label {
+/* #add-human-modal .human-column > div > div > label, #add-human-modal .human-column > div > label, #add-human-modal .field-human-pers-rels-fields > div > div > label, #add-human-modal #body-add-more-wrapper label {
 	
-	width:148px;
-}
+	width:148px !important;
+} */
 
-#add-human-modal div.controls > input {
+#add-human-modal div.controls > input, #add-human-modal #edit-body-und-0-value {
 	
-	width:445px !important;
+	width:390px !important;
 }
 
 #add-human-modal #edit-body-und-0-value {
 	
-	width:544px !important;
+	height: 80px !important;
+	float:left;
 }
 
 #add-human-modal .token-list li {
@@ -3167,11 +3173,16 @@ body > div {
 	margin-top:0px;
 }
 
+#edit-publish-share {
+	
+	margin-right: 10px;
+}
+
 /* by Thom: resize column widths for elements on add item modal form */
 
-#add-item-modal .book-column > div > div > label, #add-item-modal .book-column > div > label {
+#add-item-modal .book-column > div > div > label, #add-item-modal .book-column > div > label, #add-item-modal #body-add-more-wrapper label {
 	
-	width:115px;
+	width:115px !important;
 }
 
 #add-item-modal div.controls > input {
@@ -3181,7 +3192,7 @@ body > div {
 
 #add-item-modal #edit-body-und-0-value {
 	
-	width:544px !important;
+	width:415px !important;
 }
 
 #add-item-modal .token-list li {
@@ -4407,7 +4418,7 @@ body.page-islandora-object-islandoraelc div.islandora-basic-collection-grid {
 	float:none;
 }
 
-#item-node-form #edit-body-und-0-value {
+.span12 #item-node-form #edit-body-und-0-value {
 	
 	height:90px !important;
 	width:calc(100% - 151px) !important;
