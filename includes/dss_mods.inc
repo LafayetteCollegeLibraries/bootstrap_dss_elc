@@ -97,7 +97,7 @@ class DssMods extends SimpleXMLElement {
 				       );
     
     $relation_is_part_of_value = (string) array_shift($this->xpath("./mods:note[@type='admin']"));
-    //dpm( $relation_is_part_of_value  );
+
 
     $template_map = array(
 			  'Genre' => "./mods:genre",
@@ -636,7 +636,6 @@ class DssMods extends SimpleXMLElement {
 
     //$this->xpath("./mods:note[@type='admin']");
 
-    //dpm($template_map);
 
     foreach($template_map as $facet => $value) {
 
