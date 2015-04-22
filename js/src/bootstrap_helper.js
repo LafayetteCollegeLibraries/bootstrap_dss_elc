@@ -10,7 +10,13 @@
 
     // Following the Drupal.theme implementation
     // Please see https://drupal.org/node/304258
-    Drupal.theme.prototype.bootstrapDssLdr = function() {
+    Drupal.theme.prototype.bootstrapDssElc = function() {
+
+	// An attempt to resolve navbar issues
+	$('nav .menu .dropdown.open .dropdown-menu a').click(function() {
+
+		console.log('tablet');
+	    });
 
 	/**
 	 * @author griffinj@lafayette.edu
@@ -293,11 +299,11 @@
     };
 
     // Ensure that the execution of all bootstrap functionality lies within a modular, Drupal-compliant context
-    Drupal.behaviors.bootstrapDssLdr = {
+    Drupal.behaviors.bootstrapDssElc = {
 
 	attach: function(context, settings) {
 
-	    Drupal.theme('bootstrapDssLdr');
+	    Drupal.theme('bootstrapDssElc');
 
 	}
     };
@@ -309,7 +315,7 @@
      */
     $(window).load(function() {
 
-	    Drupal.theme('bootstrapDssLdr');
+	    Drupal.theme('bootstrapDssElc');
 	});
 
 })(jQuery, Drupal);

@@ -31,12 +31,16 @@ function bootstrap_dss_elc_process_node(&$vars) {
 
   if($vars['type'] == 'loan') {
 
+
     // RDFa
     $subject_uri = $base_url . '/node/' . $vars['nid'];
 
     // For the shareholder
 
     if(!empty($vars['field_bib_rel_subject'])) {
+
+      //    dpm($vars);
+
 
       $field_bib_rel_subject = $vars['field_bib_rel_subject'][0]['target_id'];
 
@@ -135,17 +139,13 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
 
     $loan_duration_checkout = $vars['field_loan_duration'][0]['value'];
     $loan_duration_returned = $vars['field_loan_duration'][0]['value2'];
-    /*
 
-    $d1 = new DateTime($loan_duration_checkout);
-    $vars['loan_duration_checkout'] = $d1->format('Y-m-d');
+    $vars['loan_duration_checkout'] = strftime('%Y-%m-%d', intval($loan_duration_checkout));
+    $vars['loan_duration_returned'] = $loan_duration_returned;
+    if(!empty($loan_duration_returned)) {
 
-
-    $d2 = new DateTime($loan_duration_returned);
-    $vars['loan_duration_returned'] = $d2->format('Y-m-d');
-    */
-    $vars['loan_duration_checkout'] = strftime('%Y-%m-%d', intval($vars['field_loan_duration'][0]['value']));
-    $vars['loan_duration_returned'] = strftime('%Y-%m-%d', intval($vars['field_loan_duration'][0]['value2']));
+      $vars['loan_duration_returned'] = strftime('%Y-%m-%d', intval($loan_duration_returned));
+    }
 
     hide($vars['content']['field_loan_duration']);
 
@@ -286,6 +286,14 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
       // Add header meta tag for IE to head
       drupal_add_html_head($meta_element, $key);
     }
+  }
+
+  //dpm($vars);
+
+  // For RDFa
+  if($vars['type'] == 'loan') {
+
+    //dpm($vars);
   }
 
   /**
