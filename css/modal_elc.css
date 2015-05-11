@@ -1,0 +1,10 @@
+/**
+   @file
+   * Theming specific to the modals
+   *
+   */
+
+#recaptcha_table .recaptcha_input_area {
+
+    height: 22px !important;
+}
