@@ -26,6 +26,8 @@ function bootstrap_dss_elc_form_islandora_dss_solr_advanced_search_form_alter(&$
  */
 function bootstrap_dss_elc_form_loan_node_form_alter(&$form, $form_state, $form_id) {
 
+  dpm($form);
+
   $form['actions']['publish_and_save'] = array(
 					       '#type' => 'submit',
 					       '#value' => t('Save & Add Another'),
