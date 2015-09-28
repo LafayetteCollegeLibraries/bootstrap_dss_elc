@@ -26,8 +26,6 @@ function bootstrap_dss_elc_form_islandora_dss_solr_advanced_search_form_alter(&$
  */
 function bootstrap_dss_elc_form_loan_node_form_alter(&$form, $form_state, $form_id) {
 
-  dpm($form);
-
   $form['actions']['publish_and_save'] = array(
 					       '#type' => 'submit',
 					       '#value' => t('Save & Add Another'),
@@ -138,12 +136,14 @@ function bootstrap_dss_elc_form_item_node_form_alter(&$form, $form_state, $form_
  */
 function bootstrap_dss_elc_form_personal_relationship_node_form_alter(&$form, $form_state, $form_id) {
 
-  /*
+  /**
+   * @author stathisw@lafayette.edu
+   *
+   */
   $form['actions']['publish_and_save'] = array('#type' => 'submit',
 					       '#value' => t('Save & Add Another'),
 					       '#weight' => '40',
 					       '#submit' => array('publish_add_button_publish_node'));
-  */
 						   
   $form['actions']['submit']['#submit']['0'] = 'hold_button_publish_node';
   
@@ -170,7 +170,7 @@ function bootstrap_dss_elc_form_personal_relationship_node_form_alter(&$form, $f
  * Implements hook_form_alter()
  *
  * Theming for the advanced search form must be implemented using a hook which does not conflict with the actual form implementation within the global context
- *http://api.drupalize.me/api/drupal/function/node_page_edit/7
+ * http://api.drupalize.me/api/drupal/function/node_page_edit/7
  */
 function bootstrap_dss_elc_form_alter(&$form, $form_state, $form_id) {
 
@@ -228,8 +228,17 @@ function bootstrap_dss_elc_form_alter(&$form, $form_state, $form_id) {
     break;
 
     // @author stathisw@lafayette.edu
-    //Adding it for add item
+    // Adding it for add item
   case 'item_node_form':
+    $form['actions']['publish_and_save'] = array('#type' => 'submit',
+						 '#value' => t('Save & Add Another'),
+						 '#weight' => '40',
+						 '#submit' => array('publish_add_button_publish_node'),
+						 );
+
+    // @author griffinj@lafayette.edu
+    // Appending this for the personal relationship forms
+  case 'personal_relationship_node_form':
     $form['actions']['publish_and_save'] = array('#type' => 'submit',
 						 '#value' => t('Save & Add Another'),
 						 '#weight' => '40',
