@@ -28,6 +28,7 @@
 ?>
 <div class="field-entries">
       <?php print render($content['field_person_name']); ?>
+      <?php print render($content['field_human_surname']); ?>
       <?php print render($content['field_human_gender']); ?>
       <?php print render($content['field_human_occupation']); ?>
       <?php print render($content['field_person_membership']); ?>
