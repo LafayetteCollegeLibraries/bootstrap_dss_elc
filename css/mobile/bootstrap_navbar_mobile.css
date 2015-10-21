@@ -41,7 +41,7 @@ and (max-device-width : 1024px) {
 
 @media only screen 
 and (min-device-width : 320px) 
-and (max-device-width : 580px) {
+and (max-device-width : 767px) {
 
 	/* styling by Thom to address search results page with and without refine panel */
 
