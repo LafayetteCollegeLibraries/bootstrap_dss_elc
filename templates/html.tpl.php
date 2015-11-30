@@ -15,11 +15,10 @@
   <!-- @todo Resolve EDDC-160 -->
   <style>@import url("/sites/all/libraries/DataTables/media/css/jquery.dataTables.css");</style>
   <script src="/sites/all/libraries/DataTables/media/js/jquery.dataTables.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
   <script src="/sites/all/modules/islandora_dss_solution_pack_elc/js/build/dss_elc_views_filter.min.js"></script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?> data-spy="scroll" data-target="#navbar-header">
-
-
 
     <div id="skip-link">
       <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
@@ -27,6 +26,5 @@
     <?php print $page_top; ?>
     <?php print $page; ?>
     <?php print $page_bottom; ?>
-
 </body>
 </html>

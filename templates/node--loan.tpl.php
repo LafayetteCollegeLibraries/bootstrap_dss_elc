@@ -23,16 +23,13 @@
     hide($content['field_tags']);
 ?>
 
-<?php
-  //foreach( ):
-?>
 <div class="field-entries">
 
 <div class="field field-name-field-loan-filename field-type-taxonomy-term-reference field-label-above">
 <div class="field-label">Facsimile: </div>
 <div class="field-items">
 <div class="field-item even">
-<!-- <a datatype="" property="rdfs:label skos:prefLabel" typeof="skos:Concept" href="/taxonomy/term/748">ELCv2_C2_082</a> -->
+
       <?php print $islandora_object_link; ?>
 </div>
 </div>
