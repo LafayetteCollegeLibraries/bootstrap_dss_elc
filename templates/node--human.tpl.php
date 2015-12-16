@@ -43,7 +43,11 @@
     print render($content);
 ?>
 
-<?php print $loans_view ?>
+<?php
+  if(isset($loans_view)) {
+    print $loans_view;
+  }
+?>
 
   <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
     <footer>

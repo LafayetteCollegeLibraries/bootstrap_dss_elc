@@ -23,7 +23,9 @@
     print render($content);
 
     // Render the loans view
-    print $loans_view;
+    if(isset($loans_view)) {
+      print $loans_view;
+    }
   ?>
 
   <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
