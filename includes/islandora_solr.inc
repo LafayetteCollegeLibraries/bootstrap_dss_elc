@@ -157,8 +157,6 @@ function bootstrap_dss_elc_preprocess_islandora_solr(&$variables) {
   // For rendering non-grid content
   drupal_add_css(drupal_get_path('module', 'islandora_basic_collection') . '/css/islandora_basic_collection.base.css');
   drupal_add_css(drupal_get_path('module', 'islandora_basic_collection') . '/css/islandora_basic_collection.theme.css');
-
-  //dpm($variables);
 }
 
 function bootstrap_dss_elc_islandora_discovery_form($form, &$form_state, $collection_fields, $sorted_field) {

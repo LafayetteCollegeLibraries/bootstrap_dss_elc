@@ -39,9 +39,6 @@ function bootstrap_dss_elc_process_node(&$vars) {
 
     if(!empty($vars['field_bib_rel_subject']) and array_key_exists(0, $vars['field_bib_rel_subject'])) {
 
-      dpm($vars);
-      dpm($vars['field_bib_rel_subject']);
-
       $field_bib_rel_subject = $vars['field_bib_rel_subject'][0]['target_id'];
 
       $meta_elements['rdfa_field_bib_rel_subject'] = array('#type' => 'html_tag',
@@ -109,8 +106,6 @@ function bootstrap_dss_elc_process_node(&$vars) {
 
 function bootstrap_dss_elc_preprocess_node(&$vars) {
 
-  //dpm($vars);
-  
   /**
    * Theming for loans
    *
@@ -228,17 +223,8 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
 	}
       }
 
-      /*
-      dpm('trace');
-      dpm($manifestation_nid);
-      dpm($vars);
-      */
-
       $loans_view = views_embed_view('loans_by_item', 'default', $manifestation_nid);
 
-      //dpm($loans_view);
-
-      //$vars['loans_view'] = $loans_view;
       $vars['loans_view'] = '<div class="view view-loans-by-item view-id-loans_by_item view-display-id-default contextual-links-region">
   <div class="contextual-links-wrapper">
     <ul class="contextual-links"></ul>
@@ -331,14 +317,6 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
       // Add header meta tag for IE to head
       drupal_add_html_head($meta_element, $key);
     }
-  }
-
-  //dpm($vars);
-
-  // For RDFa
-  if($vars['type'] == 'loan') {
-
-    //dpm($vars);
   }
 
   /**
@@ -928,7 +906,7 @@ function bootstrap_dss_elc_preprocess_islandora_book_page(array &$variables) {
 }
 
 function bootstrap_dss_elc_preprocess_islandora_book_pages(array &$vars) {
-  
+
   $object = array_key_exists('object', $vars) ? $vars['object'] : NULL;
   $object_id = is_null($object) ? variable_get('islandora_repository_pid', 'islandora:root') : $object->id;
 

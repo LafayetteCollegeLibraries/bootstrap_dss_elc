@@ -71,8 +71,6 @@ class DssDc extends SimpleXMLElement {
 	 */
 	if($is_facet && array_key_exists('field', $value)) {
 
-	  //dpm($value['field']);
-
 	  //$facet_field = $value['field'];
 	  $facet_field = $value['field'];
 	}
@@ -114,12 +112,7 @@ class DssDc extends SimpleXMLElement {
 		     );
       };
 
-      //dpm($facet);
-      //dpm($xpath);
-
       $mods_elements = array_map($map, $this->xpath($xpath));
-      //dpm($mods_elements);
-      //dpm($label_map);
 
       for($i = 0; $i < sizeof($mods_elements); $i++) {
 
@@ -142,8 +135,6 @@ class DssDc extends SimpleXMLElement {
       foreach($mods_elements as $i => &$element) {
 
 	if($is_facet) {
-
-	  //dpm( $facet);
 
 	  /**
 	   * Hard-coded mapping
@@ -170,18 +161,12 @@ class DssDc extends SimpleXMLElement {
 	    $element['facet_value'] = '"' . $element['value'] . '"';
 	  }
 
-	  //dpm(array('trace' => $element['facet']));
-	  //dpm(array('trace' => $element['facet_value']));
-
 	  $facet_params_values = array();
 	  $facet_params = array();
 
 	  if($element['facet'] == 'cdm.Relation.IsPartOf') {
 
 	    $collection_elements = $this->xpath("./mods:note[@type='admin']");
-
-	    //dpm($element['value']);
-	    
 
 	    for($i=0; $i<$collection_facets; $i++) {
 
@@ -231,8 +216,6 @@ class DssDc extends SimpleXMLElement {
     }
 
     $collection_elements = array();
-
-    //dpm( $mods_array);
 
     return $mods_array;
   }

@@ -456,8 +456,6 @@ class DssMods {
       
       $elements = is_array($elements) ? $elements : array($elements);
       */
-      
-      //dpm($elements);
 
       /*
       for($i = 0; $i < sizeof($elements); $i++) {

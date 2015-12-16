@@ -18,22 +18,12 @@ function bootstrap_dss_elc_process_islandora_basic_collection(&$variables) {
     $object = $associated_object['object'];
     $pid = $associated_object['pid'];
 
-    /*
-    if(!$slow_debug) {
-
-      dpm($object['dc_array']);
-      $slow_debug = TRUE;
-    }
-    */
-
     $title = $associated_object['title_link'];
     $thumbnail_img = $associated_object['thumbnail'];
     $object = $associated_object['object'];
 
-
     // Work-around
     // Refactor
-
     $pid_relation_is_part_of_map = array(
 					 'eastAsia:imperialPostcards' => 'Imperial Postcard Collection',
 					 'eastAsia:linPostcards' => 'Lin Chia-Feng Family Postcard Collection',
@@ -114,25 +104,6 @@ function bootstrap_dss_elc_preprocess_islandora_basic_collection_wrapper(&$varia
   drupal_add_css(drupal_get_path('module', 'islandora_solr') . '/css/islandora_solr.base.css');
   drupal_add_css(drupal_get_path('module', 'islandora_solr') . '/css/islandora_solr.theme.css');
 
-  /*
-  $query_params['display'] = 'list';
-  $list_link = array(
-    'title' => t('List view'),
-    'attributes' => array(
-      'href' => url($path, array('query' => $query_params)),
-      'class' => array('islandora-view-list'),
-    ),
-  );
-
-  $query_params['display'] = 'grid';
-  $grid_link = array(
-    'title' => t('Grid view'),
-    'attributes' => array(
-      'href' => url($path, array('query' => $query_params)),
-      'class' => array('islandora-view-grid'),
-    ),
-  );
-  */
   $islandora_object = $variables['islandora_object'];
   $display = (empty($_GET['display'])) ? variable_get('islandora_basic_collection_default_view', 'grid') : $_GET['display'];
   $link_text = (empty($_GET['display'])) ? 'grid' : $_GET['display'];
@@ -144,17 +115,6 @@ function bootstrap_dss_elc_preprocess_islandora_basic_collection_wrapper(&$varia
 
     $query_params['display'] = 'list';
     
-    /*
-    $list_link = array(
-		       'title' => 'List view',
-		       'href' => $base_url . '/islandora/object/' . $islandora_object->id,
-		       'attributes' => array(
-					     'class' => 'islandora-view-list',
-					     ),
-		       'query' => $query_params,
-		       );
-    */
-
     $list_link = l('List view',
 		   $base_url . '/islandora/object/' . $islandora_object->id,
 		   array('attributes' => array('class' => array('islandora-view-list')),
@@ -162,15 +122,6 @@ function bootstrap_dss_elc_preprocess_islandora_basic_collection_wrapper(&$varia
 
     unset($query_params['display']);
     $query_params['display'] = 'grid';
-
-    /*
-    $grid_link = array(
-      'title' => 'Grid view',
-      'href' => $base_url . '/islandora/object/' . $islandora_object->id,
-      'attributes' => array('class' => array('islandora-view-grid', 'active')),
-      'query' => $query_params,
-    );
-    */
 
     $grid_link = l('Grid view',
 		   $base_url . '/islandora/object/' . $islandora_object->id,
@@ -181,15 +132,6 @@ function bootstrap_dss_elc_preprocess_islandora_basic_collection_wrapper(&$varia
 
     $query_params['display'] = 'list';
 
-    /*
-    $list_link = array(
-      'title' => 'List view',
-      'href' => $base_url . '/islandora/object/' . $islandora_object->id,
-      'attributes' => array('class' => array('islandora-view-list', 'active')),
-      'query' => $query_params,
-    );
-    */
-
     $list_link = l('List view',
 		   $base_url . '/islandora/object/' . $islandora_object->id,
 		   array('attributes' => array('class' => array('islandora-view-list', 'active')),
@@ -197,15 +139,6 @@ function bootstrap_dss_elc_preprocess_islandora_basic_collection_wrapper(&$varia
 
     unset($query_params['display']);
     $query_params['display'] = 'grid';
-
-    /*
-      $grid_link = array(
-		       'title' => 'Grid view',
-		       'href' => $base_url . '/islandora/object/' . $islandora_object->id,
-		       'attributes' => array('class' => 'islandora-view-grid'),
-		       'query' => $query_params,
-		       );
-    */
 
     $grid_link = l(t('Grid view'),
 		   $base_url . '/islandora/object/' . $islandora_object->id,
@@ -222,4 +155,15 @@ function bootstrap_dss_elc_preprocess_islandora_basic_collection_wrapper(&$varia
 				   'grid' => $grid_link);
 
   $variables['display'] = $display;
+
+  /**
+   * Work-around
+   * TN has been statically-cached, and this cannot be cleaned
+   *
+   */
+  $variables['collection_content'] = str_replace('islandora/object/elc:10/datastream/TN/view', drupal_get_path('theme', 'bootstrap_dss_elc') . '/files/elc1.jpeg', $variables['collection_content'] );
+  $variables['collection_content'] = str_replace('islandora/object/elc:198/datastream/TN/view', drupal_get_path('theme', 'bootstrap_dss_elc') . '/files/elc2.jpeg', $variables['collection_content'] );
+  $variables['collection_content'] = str_replace('islandora/object/elc:490/datastream/TN/view', drupal_get_path('theme', 'bootstrap_dss_elc') . '/files/elc3.jpeg', $variables['collection_content'] );
+  $variables['collection_content'] = str_replace('islandora/object/elc:759/datastream/TN/view', drupal_get_path('theme', 'bootstrap_dss_elc') . '/files/elc4.jpeg', $variables['collection_content'] );
+  $variables['collection_content'] = str_replace('islandora/object/elc:1047/datastream/TN/view', drupal_get_path('theme', 'bootstrap_dss_elc') . '/files/elc5.jpeg', $variables['collection_content'] );
 }

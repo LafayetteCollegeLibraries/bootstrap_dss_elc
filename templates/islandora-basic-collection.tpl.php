@@ -20,6 +20,9 @@
         <dl class="solr-thumb">
           <dt>
             <?php if (isset($associated_object['thumb_link'])): ?>
+
+	      <?php print 'trace'; ?>
+
               <?php print $associated_object['thumb_link']; ?>
             <?php endif; ?>
           </dt>
