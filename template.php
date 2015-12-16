@@ -37,10 +37,10 @@ function bootstrap_dss_elc_process_node(&$vars) {
 
     // For the shareholder
 
-    if(!empty($vars['field_bib_rel_subject'])) {
+    if(!empty($vars['field_bib_rel_subject']) and array_key_exists(0, $vars['field_bib_rel_subject'])) {
 
-      //    dpm($vars);
-
+      dpm($vars);
+      dpm($vars['field_bib_rel_subject']);
 
       $field_bib_rel_subject = $vars['field_bib_rel_subject'][0]['target_id'];
 
@@ -55,9 +55,10 @@ function bootstrap_dss_elc_process_node(&$vars) {
 							   );
     }
 
-    if(!empty($vars['field_loan_shareholder'])) {
+    /*
+    if(isset($vars['field_loan_shareholder']) and !empty($vars['field_loan_shareholder'])) {
 
-      $field_loan_shareholder = $vars['field_loan_shareholder'][0]['target_id'];
+      $field_loan_shareholder = isset($vars['field_loan_shareholder'][0]) ? $vars['field_loan_shareholder'][0]['target_id'] : '';
 
       // For the representative
       $meta_elements['rdfa_field_loan_shareholder'] = array('#type' => 'html_tag',
@@ -69,8 +70,9 @@ function bootstrap_dss_elc_process_node(&$vars) {
 										   )
 							    );
     }
+    */
 
-    if(!empty($vars['field_bib_rel_object'])) {
+    if(!empty($vars['field_bib_rel_object']) and array_key_exists(0, $vars['field_bib_rel_object']) ) {
 
       $field_bib_rel_object = $vars['field_bib_rel_object'][0]['target_id'];
 
@@ -83,18 +85,18 @@ function bootstrap_dss_elc_process_node(&$vars) {
 							  );
     }
 
-    if(!empty($vars['field_loan_duration'])) {
+    if(!empty($vars['field_loan_duration']) and array_key_exists(0, $vars['field_loan_duration']) ) {
 
       $field_loan_duration = $vars['field_loan_duration'][0]['value'];
 
-    // For the checkout date
-    $meta_elements['rdfa_field_loan_duration'] = array('#type' => 'html_tag',
-						       '#tag' => 'meta',
-						       '#attributes' => array('datatype' => "xsd:integer",
-									      'about' => $subject_uri,
-									      'property' =>  'lode:atTime',
-									      'content' => $field_loan_duration)
-						       );
+      // For the checkout date
+      $meta_elements['rdfa_field_loan_duration'] = array('#type' => 'html_tag',
+							 '#tag' => 'meta',
+							 '#attributes' => array('datatype' => "xsd:integer",
+										'about' => $subject_uri,
+										'property' =>  'lode:atTime',
+										'content' => $field_loan_duration)
+							 );
     }
 
     foreach($meta_elements as $key => $meta_element) {
@@ -130,7 +132,9 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
      *
      */
     $bib_rel_object_entity = $vars['field_bib_rel_object'][0]['entity'];
-    $vars['bib_rel_object_type'] = $bib_rel_object_entity->type;
+
+    //!@todo Resolve
+    $vars['bib_rel_object_type'] = $bib_rel_object_entity->type == 'manifestation' ? 'Book' : 'Periodical';
 
     /**
      * For rendering the loan duration separately
@@ -224,9 +228,50 @@ function bootstrap_dss_elc_preprocess_node(&$vars) {
 	}
       }
 
+      /*
+      dpm('trace');
+      dpm($manifestation_nid);
+      dpm($vars);
+      */
+
       $loans_view = views_embed_view('loans_by_item', 'default', $manifestation_nid);
 
-      $vars['loans_view'] = $loans_view;
+      //dpm($loans_view);
+
+      //$vars['loans_view'] = $loans_view;
+      $vars['loans_view'] = '<div class="view view-loans-by-item view-id-loans_by_item view-display-id-default contextual-links-region">
+  <div class="contextual-links-wrapper">
+    <ul class="contextual-links"></ul>
+  </div>
+
+  <div class="view-content">
+    <table class="views-table cols-8 table">
+<thead>
+      <tr>
+                  <th class="views-field views-field-field-loan-shareholder" >
+            Shareholder          </th>
+                  <th class="views-field views-field-field-bib-rel-subject" >
+            Representative          </th>
+                  <th class="views-field views-field-field-loan-duration active" >
+            Checkout          </th>
+                  <th class="views-field views-field-field-bib-rel-object" >
+            Title          </th>
+                  <th class="views-field views-field-field-loan-volumes-loaned" >
+            Vols.          </th>
+                  <th class="views-field views-field-changed" >
+            Modified          </th>
+                  <th class="views-field views-field-view-node" >
+            View          </th>
+                  <th class="views-field views-field-edit-node" >
+            Edit          </th>
+              </tr>
+    </thead>
+    <tbody>
+    </table>
+  </div>
+</div>';
+
+
     }
   }
 
